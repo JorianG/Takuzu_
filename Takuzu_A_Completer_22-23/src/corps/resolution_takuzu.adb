@@ -208,17 +208,24 @@ package body Resolution_Takuzu is
          if not Trouve then
             C := ObtenirCaseVide (G => G);
             if TestPropOK (G => G, C => C, x => ZERO) then
+               Put ("test");
                G := FixerChiffre (G => G, C => C, V => ZERO);
                backtracking (G => G, Trouve => Trouve);
+
             end if;
             if not Trouve then
-               G := ViderCase (G => G, C => C);
+               if not estCaseVide (G => G, C => C) then
+                  G := ViderCase (G => G, C => C);
+               end if;
                if TestPropOK (G => G, C => C, x => UN) then
+                  Put ("test2");
                   G := FixerChiffre (G => G, C => C, V => UN);
                   backtracking (G => G, Trouve => Trouve);
                end if;
                if not Trouve then
-                  G      := ViderCase (G => G, C => C);
+                  if not estCaseVide (G => G, C => C) then
+                     G := ViderCase (G => G, C => C);
+                  end if;
                   Trouve := False;
                end if;
             end if;
