@@ -170,32 +170,47 @@ package body Grille is
 
    function TestPropOK
      (G : in Type_Grille; C : in Type_Coordonnee; x: Type_Chiffre) return Boolean
-   is
+	is
+		r :  Boolean := True;
+
    begin
 		if ObtenirLigne(C)>2 and ObtenirLigne(C)<Taille(G)-2 and
 		  ObtenirColonne(C)>2 and ObtenirColonne(C)<Taille(G)-2 then
 			-- test si la case est entourré d'au moins une inconnue
-			if not ( estCaseVide(G, Haut(C)) and estCaseVide(G, Haut( haut( C )) )) and
-			  not ( estCaseVide(G, Bas(C)) and estCaseVide(G, Bas( Bas( C )) )) and
-			  not ( estCaseVide(G,gauche(C)) and estCaseVide(G,gauche( gauche( (C) )) )) and
-			  not ( estCaseVide(G,droite(C)) and estCaseVide(G,droite( droite( (C) )) )) then
-				return False;
+	       -- test Haut bas gauche droite
+			if not ( estCaseVide(G, Haut(C)) and estCaseVide(G, Haut( haut( C )) )) then
+				if (x = ObtenirChiffre(G, Haut(C)) and x = ObtenirChiffre(G,Haut(Haut(C))) )then
+					return false;
+				end if;
 			end if;
-		  -- test Haut bas gauche droite
-			if (x = ObtenirChiffre(G, Haut(C)) and x = ObtenirChiffre(G,Haut(Haut(C))) ) or
-			  (x = ObtenirChiffre(G,Bas(C)) and x = ObtenirChiffre(G,Bas(Bas(C))) ) or
-			  (x = ObtenirChiffre(G,droite(C)) and x = ObtenirChiffre(G,droite(droite(C))) ) or
-			  (x = ObtenirChiffre(G,gauche(C)) and x = ObtenirChiffre(G,gauche(gauche(C))) )
-			then
-				return False;
+
+			if not ( estCaseVide(G, Bas(C)) and estCaseVide(G, Bas( Bas( C )) )) then
+				if (x = ObtenirChiffre(G,Bas(C)) and x = ObtenirChiffre(G,Bas(Bas(C))) )then
+					return false;
+				end if;
 			end if;
+
+			if not ( estCaseVide(G,gauche(C)) and estCaseVide(G,gauche( gauche( (C) )) )) then
+				if (x = ObtenirChiffre(G,droite(C)) and x = ObtenirChiffre(G,droite(droite(C))) )then
+					return false;
+				end if;
+			end if;
+
+			if not ( estCaseVide(G,droite(C)) and estCaseVide(G,droite( droite( (C) )) )) then
+				if (x = ObtenirChiffre(G,gauche(C)) and x = ObtenirChiffre(G,gauche(gauche(C))) )then
+					return false;
+				end if;
+			end if;
+
+
+
 	   end if;
 		if ObtenirLigne(C)>1 and ObtenirLigne(C)<Taille(G)-1 and
 		  ObtenirColonne(C)>1 and ObtenirColonne(C)<Taille(G)-1 then
 			-- test sandwich
 			if (x = ObtenirChiffre(G,Haut(C)) and (x = ObtenirChiffre(G,Bas(C)) )) or (x = ObtenirChiffre(G,droite(C)) and (x = ObtenirChiffre(G,gauche(C)) ))
 			then
-				return False;
+				return false;
 			end if;
 	    end if;
 	 -- test rangée
