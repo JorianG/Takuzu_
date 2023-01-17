@@ -206,9 +206,11 @@ package body Resolution_Takuzu is
             Trouve := True;
          end if;
          if not Trouve then
-            C := ObtenirCaseVide (G => G);
+				C := ObtenirCaseVide (G => G);
+				put(ObtenirLigne(c)); put( ObtenirColonne(c));
+				AfficherGrille(G => G);
             if TestPropOK (G => G, C => C, x => ZERO) then
-               Put ("test");
+               --Put ("test");
                G := FixerChiffre (G => G, C => C, V => ZERO);
                backtracking (G => G, Trouve => Trouve);
 
