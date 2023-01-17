@@ -6,14 +6,13 @@ package body Coordonnee is
    ---------------------------
 
    function ConstruireCoordonnees
-     (Ligne, Colonne : in Integer) return Type_Coordonnee
+     (Ligne : in Integer; colonne : in Integer) return Type_Coordonnee
    is
+      c : Type_Coordonnee;
    begin
-      pragma Compile_Time_Warning
-        (Standard.True, "ConstruireCoordonnees unimplemented");
-      return
-        raise Program_Error
-          with "Unimplemented function ConstruireCoordonnees";
+      c.Ligne   := Ligne;
+      c.Colonne := colonne;
+      return (c);
    end ConstruireCoordonnees;
 
    ------------------
@@ -22,9 +21,7 @@ package body Coordonnee is
 
    function ObtenirLigne (C : in Type_Coordonnee) return Integer is
    begin
-      pragma Compile_Time_Warning
-        (Standard.True, "ObtenirLigne unimplemented");
-      return raise Program_Error with "Unimplemented function ObtenirLigne";
+      return C.Ligne;
    end ObtenirLigne;
 
    --------------------
@@ -33,9 +30,7 @@ package body Coordonnee is
 
    function ObtenirColonne (C : in Type_Coordonnee) return Integer is
    begin
-      pragma Compile_Time_Warning
-        (Standard.True, "ObtenirColonne unimplemented");
-      return raise Program_Error with "Unimplemented function ObtenirColonne";
+      return C.Colonne;
    end ObtenirColonne;
 
    ----------
