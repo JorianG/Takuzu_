@@ -199,7 +199,7 @@ package body Grille is
 	    end if;
 
 	 -- test rangée
-
+	 if nombreChiffresDeValeur(R => extraireLigne(G => ,L => ), V => )
 	end TestPropOK;
 
    ---------------
