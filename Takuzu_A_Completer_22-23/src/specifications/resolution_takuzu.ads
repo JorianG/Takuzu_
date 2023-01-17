@@ -2,14 +2,16 @@ with Grille;     use Grille;
 with Coordonnee; use Coordonnee;
 with Chiffre;    use Chiffre;
 with Rangee;     use Rangee;
+with Affichage;
+with Affichage;
 
 package Resolution_Takuzu is
 
-   -- Règle 1 : complète la lignes l qui ont déjà 4 UN ou 4 ZERO
+   -- Règle 1 : complète la lignes l qui ont déj�  4 UN ou 4 ZERO
    procedure CompleterLigne
      (G : in out Type_Grille; L : in Integer; V : in Type_Chiffre);
 
-   -- Règle 1 : complète les colonnes qui ont déjà 4 UN ou 4 ZERO
+   -- Règle 1 : complète les colonnes qui ont déj�  4 UN ou 4 ZERO
    procedure CompleterColonne
      (G : in out Type_Grille; Col : in Integer; V : in Type_Chiffre);
 

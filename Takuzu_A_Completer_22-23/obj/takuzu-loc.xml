@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <Locations >
-  <Project>
-    <vfs_file />
+  <Project >
     <file_marker column=" 1" line=" 1" >
       <vfs_project>C:\Users\lugag\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\takuzu.gpr</vfs_project>
       <vfs_file>C:\Users\lugag\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\src\corps\resolution_takuzu.adb</vfs_file>
@@ -22,7 +21,19 @@
       <vfs_project>C:\Users\lugag\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\takuzu.gpr</vfs_project>
       <vfs_file>C:\Users\lugag\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\src\specifications\pile_entier.ads</vfs_file>
     </file_marker>
-    <file_marker current="true" column=" 1" line=" 1" >
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\lugag\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\takuzu.gpr</vfs_project>
+      <vfs_file>C:\Users\lugag\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\src\specifications\TAD_Pile.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 45" line=" 14" >
+      <vfs_project>C:\Users\lugag\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\takuzu.gpr</vfs_project>
+      <vfs_file>C:\Users\lugag\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\src\specifications\TAD_Pile.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\lugag\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\takuzu.gpr</vfs_project>
+      <vfs_file>C:\Users\lugag\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\src\specifications\tad_pile.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 33" line=" 7" >
       <vfs_project>C:\Users\lugag\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\takuzu.gpr</vfs_project>
       <vfs_file>C:\Users\lugag\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\src\specifications\TAD_Pile.ads</vfs_file>
     </file_marker>

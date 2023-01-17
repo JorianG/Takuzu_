@@ -49,7 +49,7 @@ D s-stoele.adb		20210520051134 ed88f8fb system.storage_elements%b
 D s-stratt.ads		20210520051134 7bdda3fa system.stream_attributes%s
 D s-traent.ads		20210520051134 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20210520051134 2b077493 system.unsigned_types%s
-D types_tests.ads	20221201173420 b0a51c25 types_tests%s
+D types_tests.ads	20230117072924 b0a51c25 types_tests%s
 D unchconv.ads		20210520051136 ca2f9e18 unchecked_conversion%s
 G a e
 G c Z s s [test_unitaireDI types_tests 7 9 none]

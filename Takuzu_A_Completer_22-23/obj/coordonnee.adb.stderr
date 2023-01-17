@@ -1,0 +1,4 @@
+coordonnee.adb:1:14: error: missing body for "Haut" declared at coordonnee.ads:16
+coordonnee.adb:1:14: error: missing body for "Bas" declared at coordonnee.ads:19
+coordonnee.adb:1:14: error: missing body for "droite" declared at coordonnee.ads:22
+coordonnee.adb:1:14: error: missing body for "gauche" declared at coordonnee.ads:25
