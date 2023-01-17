@@ -10,7 +10,7 @@ RV NO_IO
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U tests_resolution_takuzu%b  tests_resolution_takuzu.adb  662be128 NE OO SU IL
+U tests_resolution_takuzu%b  tests_resolution_takuzu.adb  a972a997 NE OO SU IL
 W ada%s			ada.ads			ada.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
@@ -29,15 +29,15 @@ D a-stuten.ads		20210520051130 808c40ad ada.strings.utf_encoding%s
 D a-tags.ads		20210520051130 9eaa38c6 ada.tags%s
 D a-textio.ads		20210520051130 aef4d56d ada.text_io%s
 D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
-D affichage.ads		20230117073722 c65c41a0 affichage%s
-D chiffre.ads		20230117073722 37e88090 chiffre%s
-D coordonnee.ads	20230117073722 002d049f coordonnee%s
-D grille.ads		20230117073722 c9384163 grille%s
+D affichage.ads		20230117072924 c65c41a0 affichage%s
+D chiffre.ads		20230117072924 37e88090 chiffre%s
+D coordonnee.ads	20230117072924 002d049f coordonnee%s
+D grille.ads		20230117072924 c9384163 grille%s
 D interfac.ads		20210520051132 edec285f interfaces%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
-D rangee.ads		20230117073722 6de136fc rangee%s
-D remplir_grille_takuzu.ads  20230117073722 8b6fa799 remplir_grille_takuzu%s
-D resolution_takuzu.ads	20230117073722 6a34ad10 resolution_takuzu%s
+D rangee.ads		20230117072924 6de136fc rangee%s
+D remplir_grille_takuzu.ads  20230117072924 8b6fa799 remplir_grille_takuzu%s
+D resolution_takuzu.ads	20230117075042 a56de5af resolution_takuzu%s
 D system.ads		20210520051136 2ffa5114 system%s
 D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
 D s-exctab.ads		20210520051132 54135002 system.exception_table%s
@@ -53,14 +53,14 @@ D s-stoele.adb		20210520051134 ed88f8fb system.storage_elements%b
 D s-traent.ads		20210520051134 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20210520051134 2b077493 system.unsigned_types%s
 D s-wchcon.ads		20210520051136 1b7d22d2 system.wch_con%s
-D tests_resolution_takuzu.adb  20230117073722 26e03e0f tests_resolution_takuzu%b
+D tests_resolution_takuzu.adb  20230117072924 26e03e0f tests_resolution_takuzu%b
 D unchconv.ads		20210520051136 ca2f9e18 unchecked_conversion%s
 G a e
 G c Z b b [tests_resolution_takuzu standard 7 11 none]
 G r c none [tests_resolution_takuzu standard 7 11 none] [lire_grille remplir_grille_takuzu 9 13 none]
 G r c none [tests_resolution_takuzu standard 7 11 none] [affichergrille affichage 18 14 none]
 G r c none [tests_resolution_takuzu standard 7 11 none] [nombrechiffresconnus grille 34 13 none]
-G r c none [tests_resolution_takuzu standard 7 11 none] [resoudretakuzu resolution_takuzu 19 14 none]
+G r c none [tests_resolution_takuzu standard 7 11 none] [resoudretakuzu resolution_takuzu 21 14 none]
 G r c none [tests_resolution_takuzu standard 7 11 none] [afficherresultat affichage 21 14 none]
 X 1 ada.ads
 16K9*Ada 20e8 35|4r6 4r33
@@ -81,8 +81,8 @@ X 18 remplir_grille_takuzu.ads
 9V13*Lire_Grille{14|7R9} 35|39s10 40s10 41s10 42s10 43s10 44s10 45s10 46s10
 . 47s10
 X 19 resolution_takuzu.ads
-6K9*Resolution_Takuzu 21e22 35|1w6 1r33
-19U14*ResoudreTakuzu 35|22s7
+8K9*Resolution_Takuzu 23e22 35|1w6 1r33
+21U14*ResoudreTakuzu 35|22s7
 X 35 tests_resolution_takuzu.adb
 7U11*tests_Resolution_Takuzu 7b11 60l5 60t28
 12U14 test 12b14 12=20 12>44 24l8 24t12 50s4 51s4 52s4 53s4 54s4
