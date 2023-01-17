@@ -39,6 +39,7 @@ package body Coordonnee is
 
    function Haut (C : in Type_Coordonnee) return Type_Coordonnee is
    begin
+      if
       return ConstruireCoordonnees(ObtenirLigne(c), ObtenirColonne(C)+1);
    end Haut;
 
