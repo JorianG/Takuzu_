@@ -208,4 +208,16 @@ package body Rangee is
       end if;
    end RetirerChiffre;
 
+   -- Teste l'égalité de deux rangées. Retourne True ou False.
+   function "=" (r1 : in Type_Rangee; r2 : in Type_Rangee) return Boolean is
+      compteurTest : Integer;
+   begin
+      for compteurTest in 1..r1.Taille loop
+         if r1.R(compteurTest) /= r2.R(compteurTest) then
+            return False;
+         end if;
+         return True;
+      end loop;
+   end "=";
+
 end Rangee;

@@ -70,6 +70,9 @@ package Rangee is
   function RetirerChiffre
      (R : in Type_Rangee; I : in Integer) return Type_Rangee;
 
+  -- Teste l'égalité de deux rangées. Retourne True ou False.
+  function "=" (r1 : in Type_Rangee; r2 : in Type_Rangee) return Boolean;
+
 private
    TAILLE_MAX_GRILLE : constant Integer := 100;
    type Type_Tableau_Rangee is array (1 .. TAILLE_MAX_GRILLE) of Type_Chiffre;
