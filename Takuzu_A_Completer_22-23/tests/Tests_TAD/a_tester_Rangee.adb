@@ -370,6 +370,45 @@ package body A_Tester_Rangee is
 				obtenirChiffre(R,7) = INCONNU ;
    end Test_Rangee_P26;
    
+   -- verification TestChiffrePosable faux
+   function Test_Rangee_P27a return Boolean is
+      R : Type_Rangee;
+   begin
+      R := ConstruireRangee (TAILLE_GRILLE_TEST);
+      R := AjouterChiffre (R, 1, ZERO);
+      R := AjouterChiffre (R, 2, ZERO);
+      R := AjouterChiffre (R, 4, ZERO);
+      R := AjouterChiffre (R, 5, ZERO);
+      return not TestChiffrePosable(R,ZERO);
+   end Test_Rangee_P27a;
+         
+   -- verification TestChiffrePosable vrai
+   function Test_Rangee_P27b return Boolean is
+      R : Type_Rangee;
+   begin
+      R := ConstruireRangee (TAILLE_GRILLE_TEST);
+      R := AjouterChiffre (R, 1, ZERO);
+      R := AjouterChiffre (R, 2, ZERO);
+      R := AjouterChiffre (R, 5, ZERO);
+      return TestChiffrePosable(R,ZERO);
+   end Test_Rangee_P27b;
+   
+   -- verification surcharge egal
+   function Test_Rangee_P28 return Boolean is
+      R1 : Type_Rangee;
+      R2 : Type_Rangee;
+   begin
+      R1 := ConstruireRangee (TAILLE_GRILLE_TEST);
+      R2 := ConstruireRangee (TAILLE_GRILLE_TEST);
+      R1 := AjouterChiffre (R1, 1, ZERO);
+      R1 := AjouterChiffre (R1, 2, ZERO);
+      R1 := AjouterChiffre (R1, 5, UN);
+      R2 := AjouterChiffre (R2, 1, ZERO);
+      R2 := AjouterChiffre (R2, 2, ZERO);
+      R2 := AjouterChiffre (R2, 5, UN);
+      return R1 = R2;
+   end Test_Rangee_P28;
+   
    -------------------------
    -- Test des exceptions --
    -------------------------
