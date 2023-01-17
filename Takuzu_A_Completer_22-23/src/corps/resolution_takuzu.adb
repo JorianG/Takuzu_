@@ -63,26 +63,6 @@ package body Resolution_Takuzu is
    --------------------
 
    procedure ResoudreTakuzu (G : in out Type_Grille; Trouve : out Boolean) is
-
-      type Modif is record
-         C : Type_Coordonnee;
-         V : Type_Chiffre;
-      end record;
-
-      TAILLE_TAB_HISTORIQUE : constant Natural := 3;
-      type Historique_Modif is array (1 .. TAILLE_TAB_HISTORIQUE) of Modif;
-
-      type Historique is record
-         HM : Historique_Modif;
-         n  : Integer;
-      end record;
-
-      modification : Historique;
-
-      longueur : Integer := Taille (G => G);
-      R        : Type_Rangee;
-      C        : Type_Coordonnee;
-
       function ForceBrute (G : in Type_Grille) return Type_Grille is
          g      : Type_Grille := g;
          R      : Type_Rangee;
