@@ -40,7 +40,9 @@ package Grille is
 	function "=" (G1, G2 : in Type_Grille) return Boolean;
 
 	-- Retourne la coordonnée de la premiére case vide
-	function ObtenirCaseVide (G : in Type_Grille) return Type_Coordonnee
+	function ObtenirCaseVide (G : in Type_Grille) return Type_Coordonnee;
+
+	function TestPropOK (G : in Type_Grille; C : in Type_Coordonnee; x: Type_Chiffre) return Type_Grille;
 
    -- construit une rangee a partir de la ligne l de la grille g
    function extraireLigne
