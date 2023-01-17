@@ -187,4 +187,23 @@ package body Grille is
       return gr;
    end ViderCase;
 
+   -----------------
+   -- Grille Egal --
+   -----------------
+
+   -- cette fonction compare deux grilles en entrée et retourne un booléen
+   function "=" (G1, G2 : in Type_Grille) return Boolean is
+   begin
+      for y in 1 .. Taille (G1) loop
+         for x in 1 .. Taille (G1) loop
+
+            if G1.G (y, x) /= G2.G (y, x) then
+               return False;
+            end if;
+
+         end loop;
+      end loop;
+      return True;
+   end "=";
+
 end Grille;

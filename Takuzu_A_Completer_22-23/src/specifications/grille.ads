@@ -59,6 +59,8 @@ package Grille is
    function ViderCase
      (G : in Type_Grille; C : in Type_Coordonnee) return Type_Grille;
 
+   function "=" (G1, G2 : in Type_Grille) return Boolean;
+
 private
    TAILLE_MAX : constant Integer := 100;
    type Type_Tableau_Grille is

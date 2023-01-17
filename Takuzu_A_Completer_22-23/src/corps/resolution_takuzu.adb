@@ -152,31 +152,6 @@ package body Resolution_Takuzu is
          end if;
       end CompletionColonne;
 
-      -----------------
-      -- Grille Egal --
-      -----------------
-
-      -- cette fonction compare deux grilles en entrée et retourne un booléen
-      function "=" (G1, G2 : in Type_Grille) return Boolean is
-      begin
-         for y in 1 .. Taille (G1) loop
-            for x in 1 .. Taille (G1) loop
-
-               if ObtenirChiffre
-                   (G => G1,
-                    C => ConstruireCoordonnees (Ligne => y, Colonne => x)) /=
-                 ObtenirChiffre
-                   (G => G2,
-                    C => ConstruireCoordonnees (Ligne => y, Colonne => x))
-               then
-                  return False;
-               end if;
-
-            end loop;
-         end loop;
-         return True;
-      end "=";
-
       procedure naif (G : in out Type_Grille) is
          R      : Type_Rangee;
          trouve : Boolean := True;
