@@ -46,6 +46,7 @@ package body Resolution_Takuzu is
             R := AjouterChiffre (R => R, I => i, C => V);
          end if;
       end loop;
+
       for i in 1 .. Taille (G => G) loop
          C := ConstruireCoordonnees (Ligne => i, Colonne => Col);
          if estCaseVide (G => G, C => C) then
@@ -95,6 +96,7 @@ package body Resolution_Takuzu is
          C    : Type_Coordonnee;
          Gnew : Type_Grille := G;
       begin
+
          for i in 1 .. Taille (G => Gnew) loop
             C := ConstruireCoordonnees (Ligne => j, Colonne => i);
             if estCaseVide (G => Gnew, C => C) then
@@ -188,6 +190,7 @@ package body Resolution_Takuzu is
                   CompletionColonne (G => G, R => R, I => j);
                end if;
             end loop;
+
             if Gnew = G then
                trouve := False;
             end if;
@@ -228,6 +231,7 @@ package body Resolution_Takuzu is
       naif (G => G);
       AfficherGrille (G => G);
       backtracking (G => G, Trouve => Trouve);
+
       AfficherGrille (G => G);
    end ResoudreTakuzu;
 
