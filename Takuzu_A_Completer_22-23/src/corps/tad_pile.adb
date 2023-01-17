@@ -1,4 +1,3 @@
-pragma Ada_2012;
 package body TAD_Pile is
 
    --------------------
@@ -26,10 +25,10 @@ package body TAD_Pile is
 
    function dernier (pile : in Type_Pile) return T is
    begin
-      if estVide(pile) then
+      if estVide (pile) then
          raise PILE_VIDE;
       else
-         return pile.elements(pile.elements'Length);
+         return pile.elements (pile.nb_elements);
       end if;
    end dernier;
 
@@ -43,9 +42,9 @@ package body TAD_Pile is
       if pile.nb_elements = TAILLE_MAX then
          raise PILE_PLEINE;
       else
-         pileEmpilee := pile;
+         pileEmpilee                                    := pile;
          pileEmpilee.nb_elements := pileEmpilee.nb_elements + 1;
-         pileEmpilee.elements(pileEmpilee.nb_elements) := e;
+         pileEmpilee.elements (pileEmpilee.nb_elements) := e;
          return pileEmpilee;
       end if;
    end empiler;
@@ -57,10 +56,10 @@ package body TAD_Pile is
    function depiler (pile : in Type_Pile) return Type_Pile is
       pileDepilee : Type_Pile;
    begin
-      if estVide(pile) then
+      if estVide (pile) then
          raise PILE_VIDE;
       else
-         pileDepilee := pile;
+         pileDepilee             := pile;
          pileDepilee.nb_elements := pileDepilee.nb_elements - 1;
          return pileDepilee;
       end if;

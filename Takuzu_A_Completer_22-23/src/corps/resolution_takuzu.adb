@@ -64,6 +64,39 @@ package body Resolution_Takuzu is
 
    procedure ResoudreTakuzu (G : in out Type_Grille; Trouve : out Boolean) is
 
+      procedure test (R : in out Type_Rangee; I : in integer) is
+
+      begin
+         if SontDeuxChiffresDeGaucheEgaux (E => R, I => i) then
+            R :=
+              AjouterChiffre
+                (R => R, I => i,
+                 C =>
+                   Complement
+                     (C => chiffreDeGauche (E => R, I => i)));
+         elsif SontDeuxChiffresDeDroiteEgaux (E => R, I => i) then
+            R :=
+              AjouterChiffre
+                (R => R, I => i,
+                 C =>
+                   Complement
+                     (C => chiffreDeDroite (E => R, I => i)));
+         else
+            if chiffreDeDroite (E => R, I => i) =
+              chiffreDeGauche (E => R, I => i) and
+              chiffreDeDroite (E => R, I => i) /= INCONNU and
+              chiffreDeGauche (E => R, I => i) /= INCONNU
+            then
+               R :=
+                 AjouterChiffre
+                   (R => R, I => i,
+                    C =>
+                      Complement
+                        (C => chiffreDeDroite (E => R, I => i)));
+            end if;
+         end if;
+      end test;
+
       procedure fixage
         (G : in out Type_Grille; R : in Type_Rangee; j : in Integer)
       is
@@ -79,6 +112,20 @@ package body Resolution_Takuzu is
             end if;
          end loop;
       end fixage;
+
+      procedure completion(G : in out Type_Grille; R : in out Type_Rangee; I : in integer) is
+
+      begin
+         if nombreChiffresDeValeur (R => R, V => UN) = longueur / 2 then
+            CompleterColonne
+              (G => G, Col => j, V => Complement (C => UN));
+         end if;
+         if nombreChiffresDeValeur (R => R, V => ZERO) = longueur / 2
+         then
+            CompleterColonne
+              (G => G, Col => j, V => Complement (C => ZERO));
+         end if;
+      end completion;
 
       --  function ForceBrute (G : in Type_Grille) return Type_Grille is
       --     g      : Type_Grille := g;
@@ -96,7 +143,7 @@ package body Resolution_Takuzu is
       --              trouve := True
       --           end if;
       --        end loop;
-      --     end loop;
+   --     end loop;
 
       -- end ForceBrute;
 
@@ -113,48 +160,16 @@ package body Resolution_Takuzu is
             R := extraireLigne (G => G, L => j);
             if not EstRemplie (R => R) then
                for i in 1 .. longueur loop
-                  if SontDeuxChiffresDeGaucheEgaux (E => R, I => i) then
-                     R :=
-                       AjouterChiffre
-                         (R => R, I => i,
-                          C =>
-                            Complement
-                              (C => chiffreDeGauche (E => R, I => i)));
-                  elsif SontDeuxChiffresDeDroiteEgaux (E => R, I => i) then
-                     R :=
-                       AjouterChiffre
-                         (R => R, I => i,
-                          C =>
-                            Complement
-                              (C => chiffreDeDroite (E => R, I => i)));
-                     modif := True;
-                  else
-                     if chiffreDeDroite (E => R, I => i) =
-                       chiffreDeGauche (E => R, I => i) and
-                       chiffreDeDroite (E => R, I => i) /= INCONNU and
-                       chiffreDeGauche (E => R, I => i) /= INCONNU
-                     then
-                        R :=
-                          AjouterChiffre
-                            (R => R, I => i,
-                             C =>
-                               Complement
-                                 (C => chiffreDeDroite (E => R, I => i)));
-                     end if;
-                  end if;
+                  test(R => R, I => i);
                end loop;
                -- fixage
                fixage (G => G, R => R, j => j);
 
                -- completion
                R := extraireLigne (G => G, L => j);
-               if nombreChiffresDeValeur (R => R, V => UN) = longueur / 2 then
-                  CompleterLigne (G => G, L => j, V => Complement (C => UN));
-               end if;
-               if nombreChiffresDeValeur (R => R, V => ZERO) = longueur / 2
-               then
-                  CompleterLigne (G => G, L => j, V => Complement (C => ZERO));
-               end if;
+               completion(G => G,
+                          R => R,
+                          I => j);
             end if;
          end loop; -------------------------------------------------------------------
 
@@ -164,34 +179,7 @@ package body Resolution_Takuzu is
             R := extraireColonne (G => G, C => j);
             if not EstRemplie (R => R) then
                for i in 1 .. longueur loop
-                  if SontDeuxChiffresDeGaucheEgaux (E => R, I => i) then
-                     R :=
-                       AjouterChiffre
-                         (R => R, I => i,
-                          C =>
-                            Complement
-                              (C => chiffreDeGauche (E => R, I => i)));
-                  elsif SontDeuxChiffresDeDroiteEgaux (E => R, I => i) then
-                     R :=
-                       AjouterChiffre
-                         (R => R, I => i,
-                          C =>
-                            Complement
-                              (C => chiffreDeDroite (E => R, I => i)));
-                  else
-                     if chiffreDeDroite (E => R, I => i) =
-                       chiffreDeGauche (E => R, I => i) and
-                       chiffreDeDroite (E => R, I => i) /= INCONNU and
-                       chiffreDeGauche (E => R, I => i) /= INCONNU
-                     then
-                        R :=
-                          AjouterChiffre
-                            (R => R, I => i,
-                             C =>
-                               Complement
-                                 (C => chiffreDeDroite (E => R, I => i)));
-                     end if;
-                  end if;
+                  test(R => R, I => i)
                end loop;
 
                -- fixage
@@ -199,15 +187,9 @@ package body Resolution_Takuzu is
 
                -- completion
                R := extraireColonne (G => G, C => j);
-               if nombreChiffresDeValeur (R => R, V => UN) = longueur / 2 then
-                  CompleterColonne
-                    (G => G, Col => j, V => Complement (C => UN));
-               end if;
-               if nombreChiffresDeValeur (R => R, V => ZERO) = longueur / 2
-               then
-                  CompleterColonne
-                    (G => G, Col => j, V => Complement (C => ZERO));
-               end if;
+               completion(G => G,
+                          R => R,
+                          I => j);
             end if;
          end loop;
 
