@@ -169,38 +169,37 @@ package body Grille is
    ------------------
 
    function TestPropOK
-     (G : in Type_Grille; C : in Type_Coordonnee; x: Type_Chiffre) return Boolean;
+     (G : in Type_Grille; C : in Type_Coordonnee; x: Type_Chiffre) return Boolean
    is
    begin
 		if ObtenirLigne(C)>2 and ObtenirLigne(C)<Taille(G)-2 and
 		  ObtenirColonne(C)>2 and ObtenirColonne(C)<Taille(G)-2 then
-
+			-- test si la case est entourré d'au moins une inconnue
+			if not ( estCaseVide(G, Haut(C)) and estCaseVide(G, Haut( haut( C )) )) and
+			  not ( estCaseVide(G, Bas(C)) and estCaseVide(G, Bas( Bas( C )) )) and
+			  not ( estCaseVide(G,gauche(C)) and estCaseVide(G,gauche( gauche( (C) )) )) and
+			  not ( estCaseVide(G,droite(C)) and estCaseVide(G,droite( droite( (C) )) )) then
+				return False;
+			end if;
 		  -- test Haut bas gauche droite
-			if (x = ObtenirChiffre(Haut(C)) and x = ObtenirChiffre(Haut(Haut(C))) ) or
-			  (x = ObtenirChiffre(Bas(C)) and x = ObtenirChiffre(Bas(Bas(C))) ) or
-			  (x = ObtenirChiffre(droite(C)) and x = ObtenirChiffre(droite(droite(C))) ) or
-			  (x = ObtenirChiffre(gauche(C)) and x = ObtenirChiffre(gauche(gauche(C))) ) or
+			if (x = ObtenirChiffre(G, Haut(C)) and x = ObtenirChiffre(G,Haut(Haut(C))) ) or
+			  (x = ObtenirChiffre(G,Bas(C)) and x = ObtenirChiffre(G,Bas(Bas(C))) ) or
+			  (x = ObtenirChiffre(G,droite(C)) and x = ObtenirChiffre(G,droite(droite(C))) ) or
+			  (x = ObtenirChiffre(G,gauche(C)) and x = ObtenirChiffre(G,gauche(gauche(C))) )
 			then
 				return False;
 			end if;
-
-
-		end if;
-
+	   end if;
 		if ObtenirLigne(C)>1 and ObtenirLigne(C)<Taille(G)-1 and
 		  ObtenirColonne(C)>1 and ObtenirColonne(C)<Taille(G)-1 then
-
 			-- test sandwich
-			if (x = ObtenirChiffre(Haut(C)) and (x = ObtenirChiffre(Bas(C)) ) or
-			(x = ObtenirChiffre(droite(C)) and (x = ObtenirChiffre(gauche(C)) )
+			if (x = ObtenirChiffre(G,Haut(C)) and (x = ObtenirChiffre(G,Bas(C)) )) or (x = ObtenirChiffre(G,droite(C)) and (x = ObtenirChiffre(G,gauche(C)) ))
 			then
 				return False;
 			end if;
 	    end if;
-
 	 -- test rangée
-	 if TestChiffrePosable(extraireLigne(G => G,L => ObtenirLigne(C), x)) and
-		  TestChiffrePosable(extraireColonne(G => G,L => ObtenirColonne(C), x))
+	 if TestChiffrePosable(extraireLigne(G => G,L => ObtenirLigne(C)), x) and TestChiffrePosable(extraireColonne(G => G,C => ObtenirColonne(C)), x)
 	 then
 		 return True;
 	 end if;
@@ -248,8 +247,6 @@ package body Grille is
       return True;
    end "=";
 
-end Grille;
-
    --------------------
    --ObtenirCaseVide --
 	-------------------
@@ -269,4 +266,4 @@ end Grille;
          end loop;
          return C;
 end ObtenirCaseVide;
-
+end Grille;
