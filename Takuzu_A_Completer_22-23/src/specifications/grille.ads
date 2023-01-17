@@ -34,7 +34,13 @@ package Grille is
    function NombreChiffresConnus (G : in Type_Grille) return Integer;
 
    -- retourne VRAI si la grille est totalement remplie et FAUX sinon
-   function EstRemplie (G : in Type_Grille) return Boolean;
+	function EstRemplie (G : in Type_Grille) return Boolean;
+
+	-- Retourne vrai si la grille G1 est egal à la grille G2
+	function "=" (G1, G2 : in Type_Grille) return Boolean;
+
+	-- Retourne la coordonnée de la premiére case vide
+	function ObtenirCaseVide (G : in Type_Grille) return Type_Coordonnee
 
    -- construit une rangee a partir de la ligne l de la grille g
    function extraireLigne
@@ -59,7 +65,7 @@ package Grille is
    function ViderCase
      (G : in Type_Grille; C : in Type_Coordonnee) return Type_Grille;
 
-   function "=" (G1, G2 : in Type_Grille) return Boolean;
+
 
 private
    TAILLE_MAX : constant Integer := 100;
