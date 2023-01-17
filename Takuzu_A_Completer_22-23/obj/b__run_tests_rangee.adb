@@ -7,35 +7,34 @@ with Ada.Exceptions;
 
 package body ada_main is
 
-   E071 : Short_Integer; pragma Import (Ada, E071, "system__os_lib_E");
+   E074 : Short_Integer; pragma Import (Ada, E074, "system__os_lib_E");
    E010 : Short_Integer; pragma Import (Ada, E010, "ada__exceptions_E");
    E015 : Short_Integer; pragma Import (Ada, E015, "system__soft_links_E");
    E027 : Short_Integer; pragma Import (Ada, E027, "system__exception_table_E");
-   E040 : Short_Integer; pragma Import (Ada, E040, "ada__containers_E");
-   E067 : Short_Integer; pragma Import (Ada, E067, "ada__io_exceptions_E");
-   E052 : Short_Integer; pragma Import (Ada, E052, "ada__strings_E");
-   E054 : Short_Integer; pragma Import (Ada, E054, "ada__strings__maps_E");
-   E058 : Short_Integer; pragma Import (Ada, E058, "ada__strings__maps__constants_E");
-   E077 : Short_Integer; pragma Import (Ada, E077, "interfaces__c_E");
-   E028 : Short_Integer; pragma Import (Ada, E028, "system__exceptions_E");
-   E079 : Short_Integer; pragma Import (Ada, E079, "system__object_reader_E");
-   E047 : Short_Integer; pragma Import (Ada, E047, "system__dwarf_lines_E");
+   E042 : Short_Integer; pragma Import (Ada, E042, "ada__containers_E");
+   E070 : Short_Integer; pragma Import (Ada, E070, "ada__io_exceptions_E");
+   E054 : Short_Integer; pragma Import (Ada, E054, "ada__strings_E");
+   E056 : Short_Integer; pragma Import (Ada, E056, "ada__strings__maps_E");
+   E060 : Short_Integer; pragma Import (Ada, E060, "ada__strings__maps__constants_E");
+   E080 : Short_Integer; pragma Import (Ada, E080, "interfaces__c_E");
+   E029 : Short_Integer; pragma Import (Ada, E029, "system__exceptions_E");
+   E082 : Short_Integer; pragma Import (Ada, E082, "system__object_reader_E");
+   E049 : Short_Integer; pragma Import (Ada, E049, "system__dwarf_lines_E");
    E023 : Short_Integer; pragma Import (Ada, E023, "system__soft_links__initialize_E");
-   E039 : Short_Integer; pragma Import (Ada, E039, "system__traceback__symbolic_E");
-   E102 : Short_Integer; pragma Import (Ada, E102, "ada__strings__utf_encoding_E");
-   E108 : Short_Integer; pragma Import (Ada, E108, "ada__tags_E");
-   E100 : Short_Integer; pragma Import (Ada, E100, "ada__strings__text_buffers_E");
-   E098 : Short_Integer; pragma Import (Ada, E098, "ada__streams_E");
-   E124 : Short_Integer; pragma Import (Ada, E124, "system__file_control_block_E");
-   E123 : Short_Integer; pragma Import (Ada, E123, "system__finalization_root_E");
-   E121 : Short_Integer; pragma Import (Ada, E121, "ada__finalization_E");
-   E120 : Short_Integer; pragma Import (Ada, E120, "system__file_io_E");
-   E163 : Short_Integer; pragma Import (Ada, E163, "system__storage_pools_E");
-   E161 : Short_Integer; pragma Import (Ada, E161, "system__finalization_masters_E");
-   E142 : Short_Integer; pragma Import (Ada, E142, "ada__strings__unbounded_E");
-   E096 : Short_Integer; pragma Import (Ada, E096, "ada__text_io_E");
-   E140 : Short_Integer; pragma Import (Ada, E140, "chiffre_E");
-   E159 : Short_Integer; pragma Import (Ada, E159, "rangee_E");
+   E041 : Short_Integer; pragma Import (Ada, E041, "system__traceback__symbolic_E");
+   E105 : Short_Integer; pragma Import (Ada, E105, "ada__tags_E");
+   E103 : Short_Integer; pragma Import (Ada, E103, "ada__streams_E");
+   E117 : Short_Integer; pragma Import (Ada, E117, "system__file_control_block_E");
+   E116 : Short_Integer; pragma Import (Ada, E116, "system__finalization_root_E");
+   E114 : Short_Integer; pragma Import (Ada, E114, "ada__finalization_E");
+   E113 : Short_Integer; pragma Import (Ada, E113, "system__file_io_E");
+   E153 : Short_Integer; pragma Import (Ada, E153, "system__storage_pools_E");
+   E149 : Short_Integer; pragma Import (Ada, E149, "system__finalization_masters_E");
+   E147 : Short_Integer; pragma Import (Ada, E147, "system__storage_pools__subpools_E");
+   E139 : Short_Integer; pragma Import (Ada, E139, "ada__strings__unbounded_E");
+   E101 : Short_Integer; pragma Import (Ada, E101, "ada__text_io_E");
+   E137 : Short_Integer; pragma Import (Ada, E137, "chiffre_E");
+   E167 : Short_Integer; pragma Import (Ada, E167, "rangee_E");
    E005 : Short_Integer; pragma Import (Ada, E005, "a_tester_rangee_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
@@ -47,33 +46,47 @@ package body ada_main is
 
    procedure finalize_library is
    begin
-      E096 := E096 - 1;
+      E005 := E005 - 1;
       declare
          procedure F1;
-         pragma Import (Ada, F1, "ada__text_io__finalize_spec");
+         pragma Import (Ada, F1, "a_tester_rangee__finalize_spec");
       begin
          F1;
       end;
-      E142 := E142 - 1;
+      E101 := E101 - 1;
       declare
          procedure F2;
-         pragma Import (Ada, F2, "ada__strings__unbounded__finalize_spec");
+         pragma Import (Ada, F2, "ada__text_io__finalize_spec");
       begin
          F2;
       end;
-      E161 := E161 - 1;
+      E139 := E139 - 1;
       declare
          procedure F3;
-         pragma Import (Ada, F3, "system__finalization_masters__finalize_spec");
+         pragma Import (Ada, F3, "ada__strings__unbounded__finalize_spec");
       begin
          F3;
       end;
+      E147 := E147 - 1;
       declare
          procedure F4;
-         pragma Import (Ada, F4, "system__file_io__finalize_body");
+         pragma Import (Ada, F4, "system__storage_pools__subpools__finalize_spec");
       begin
-         E120 := E120 - 1;
          F4;
+      end;
+      E149 := E149 - 1;
+      declare
+         procedure F5;
+         pragma Import (Ada, F5, "system__finalization_masters__finalize_spec");
+      begin
+         F5;
+      end;
+      declare
+         procedure F6;
+         pragma Import (Ada, F6, "system__file_io__finalize_body");
+      begin
+         E113 := E113 - 1;
+         F6;
       end;
       declare
          procedure Reraise_Library_Exception_If_Any;
@@ -181,65 +194,60 @@ package body ada_main is
       System.Exception_Table'Elab_Body;
       E027 := E027 + 1;
       Ada.Containers'Elab_Spec;
-      E040 := E040 + 1;
+      E042 := E042 + 1;
       Ada.Io_Exceptions'Elab_Spec;
-      E067 := E067 + 1;
+      E070 := E070 + 1;
       Ada.Strings'Elab_Spec;
-      E052 := E052 + 1;
-      Ada.Strings.Maps'Elab_Spec;
       E054 := E054 + 1;
+      Ada.Strings.Maps'Elab_Spec;
+      E056 := E056 + 1;
       Ada.Strings.Maps.Constants'Elab_Spec;
-      E058 := E058 + 1;
+      E060 := E060 + 1;
       Interfaces.C'Elab_Spec;
-      E077 := E077 + 1;
+      E080 := E080 + 1;
       System.Exceptions'Elab_Spec;
-      E028 := E028 + 1;
+      E029 := E029 + 1;
       System.Object_Reader'Elab_Spec;
-      E079 := E079 + 1;
+      E082 := E082 + 1;
       System.Dwarf_Lines'Elab_Spec;
-      E047 := E047 + 1;
+      E049 := E049 + 1;
       System.Os_Lib'Elab_Body;
-      E071 := E071 + 1;
+      E074 := E074 + 1;
       System.Soft_Links.Initialize'Elab_Body;
       E023 := E023 + 1;
       E015 := E015 + 1;
       System.Traceback.Symbolic'Elab_Body;
-      E039 := E039 + 1;
+      E041 := E041 + 1;
       E010 := E010 + 1;
-      Ada.Strings.Utf_Encoding'Elab_Spec;
-      E102 := E102 + 1;
       Ada.Tags'Elab_Spec;
       Ada.Tags'Elab_Body;
-      E108 := E108 + 1;
-      Ada.Strings.Text_Buffers'Elab_Spec;
-      Ada.Strings.Text_Buffers'Elab_Body;
-      E100 := E100 + 1;
+      E105 := E105 + 1;
       Ada.Streams'Elab_Spec;
-      E098 := E098 + 1;
+      E103 := E103 + 1;
       System.File_Control_Block'Elab_Spec;
-      E124 := E124 + 1;
+      E117 := E117 + 1;
       System.Finalization_Root'Elab_Spec;
-      System.Finalization_Root'Elab_Body;
-      E123 := E123 + 1;
+      E116 := E116 + 1;
       Ada.Finalization'Elab_Spec;
-      E121 := E121 + 1;
+      E114 := E114 + 1;
       System.File_Io'Elab_Body;
-      E120 := E120 + 1;
+      E113 := E113 + 1;
       System.Storage_Pools'Elab_Spec;
-      E163 := E163 + 1;
+      E153 := E153 + 1;
       System.Finalization_Masters'Elab_Spec;
       System.Finalization_Masters'Elab_Body;
-      E161 := E161 + 1;
+      E149 := E149 + 1;
+      System.Storage_Pools.Subpools'Elab_Spec;
+      E147 := E147 + 1;
       Ada.Strings.Unbounded'Elab_Spec;
-      Ada.Strings.Unbounded'Elab_Body;
-      E142 := E142 + 1;
+      E139 := E139 + 1;
       Ada.Text_Io'Elab_Spec;
       Ada.Text_Io'Elab_Body;
-      E096 := E096 + 1;
+      E101 := E101 + 1;
       Chiffre'Elab_Spec;
-      E140 := E140 + 1;
+      E137 := E137 + 1;
       Rangee'Elab_Spec;
-      E159 := E159 + 1;
+      E167 := E167 + 1;
       A_Tester_Rangee'Elab_Spec;
       A_Tester_Rangee'Elab_Body;
       E005 := E005 + 1;
@@ -280,14 +288,14 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\obj\chiffre.o
-   --   C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\obj\rangee.o
-   --   C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\obj\types_tests.o
-   --   C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\obj\a_tester_Rangee.o
-   --   C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\obj\run_tests_rangee.o
-   --   -LC:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\obj\
-   --   -LC:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\obj\
-   --   -LC:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/
+   --   C:\Users\La Totrue\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\obj\chiffre.o
+   --   C:\Users\La Totrue\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\obj\rangee.o
+   --   C:\Users\La Totrue\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\obj\types_tests.o
+   --   C:\Users\La Totrue\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\obj\a_tester_Rangee.o
+   --   C:\Users\La Totrue\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\obj\run_tests_rangee.o
+   --   -LC:\Users\La Totrue\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\obj\
+   --   -LC:\Users\La Totrue\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\obj\
+   --   -LC:/gnat/2020/lib/gcc/x86_64-pc-mingw32/9.3.1/adalib/
    --   -static
    --   -lgnat
    --   -Wl,--stack=0x2000000
