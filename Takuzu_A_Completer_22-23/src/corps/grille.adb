@@ -199,7 +199,11 @@ package body Grille is
 	    end if;
 
 	 -- test rangée
-
+	 if TestChiffrePosable(extraireLigne(G => G,L => ObtenirLigne(C), x)) and
+		  TestChiffrePosable(extraireColonne(G => G,L => ObtenirColonne(C), x))
+	 then
+		 return True;
+	 end if;
 	end TestPropOK;
 
    ---------------
