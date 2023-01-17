@@ -39,8 +39,8 @@ package body Coordonnee is
 
    function Haut (C : in Type_Coordonnee) return Type_Coordonnee is
    begin
-      pragma Compile_Time_Warning (Standard.True, "Haut unimplemented");
-      return raise Program_Error with "Unimplemented function Haut";
+      if
+      return ConstruireCoordonnees(ObtenirLigne(c), ObtenirColonne(C)+1);
    end Haut;
 
    ---------
@@ -49,8 +49,7 @@ package body Coordonnee is
 
    function Bas (C : in Type_Coordonnee) return Type_Coordonnee is
    begin
-      pragma Compile_Time_Warning (Standard.True, "Bas unimplemented");
-      return raise Program_Error with "Unimplemented function Bas";
+      return ConstruireCoordonnees(ObtenirLigne(c)-1, ObtenirColonne(C));
    end Bas;
 
    ------------
@@ -59,8 +58,7 @@ package body Coordonnee is
 
    function droite (C : in Type_Coordonnee) return Type_Coordonnee is
    begin
-      pragma Compile_Time_Warning (Standard.True, "droite unimplemented");
-      return raise Program_Error with "Unimplemented function droite";
+      return ConstruireCoordonnees(ObtenirLigne(c), ObtenirColonne(C)+1);
    end droite;
 
    ------------
@@ -69,8 +67,7 @@ package body Coordonnee is
 
    function gauche (C : in Type_Coordonnee) return Type_Coordonnee is
    begin
-      pragma Compile_Time_Warning (Standard.True, "gauche unimplemented");
-      return raise Program_Error with "Unimplemented function gauche";
+      return ConstruireCoordonnees(ObtenirLigne(c)+1, ObtenirColonne(C));
    end gauche;
 
 end Coordonnee;
