@@ -6,10 +6,9 @@ package body TAD_Pile is
    --------------------
 
    function construirePile return Type_Pile is
+      pile : Type_Pile;
    begin
-      pragma Compile_Time_Warning
-        (Standard.True, "construirePile unimplemented");
-      return raise Program_Error with "Unimplemented function construirePile";
+      return pile;
    end construirePile;
 
    -------------
@@ -18,8 +17,7 @@ package body TAD_Pile is
 
    function estVide (pile : in Type_Pile) return Boolean is
    begin
-      pragma Compile_Time_Warning (Standard.True, "estVide unimplemented");
-      return raise Program_Error with "Unimplemented function estVide";
+      return pile.nb_elements = 0;
    end estVide;
 
    -------------
@@ -28,8 +26,11 @@ package body TAD_Pile is
 
    function dernier (pile : in Type_Pile) return T is
    begin
-      pragma Compile_Time_Warning (Standard.True, "dernier unimplemented");
-      return raise Program_Error with "Unimplemented function dernier";
+      if estVide(pile) then
+         raise PILE_VIDE;
+      else
+         return pile.elements(pile.elements'Length);
+      end if;
    end dernier;
 
    -------------
@@ -37,9 +38,16 @@ package body TAD_Pile is
    -------------
 
    function empiler (pile : in Type_Pile; e : in T) return Type_Pile is
+      pileEmpilee : Type_Pile;
    begin
-      pragma Compile_Time_Warning (Standard.True, "empiler unimplemented");
-      return raise Program_Error with "Unimplemented function empiler";
+      if pile.nb_elements = TAILLE_MAX then
+         raise PILE_PLEINE;
+      else
+         pileEmpilee := pile;
+         pileEmpilee.nb_elements := pileEmpilee.nb_elements + 1;
+         pileEmpilee.elements(pileEmpilee.nb_elements) := e;
+         return pileEmpilee;
+      end if;
    end empiler;
 
    -------------
@@ -47,9 +55,15 @@ package body TAD_Pile is
    -------------
 
    function depiler (pile : in Type_Pile) return Type_Pile is
+      pileDepilee : Type_Pile;
    begin
-      pragma Compile_Time_Warning (Standard.True, "depiler unimplemented");
-      return raise Program_Error with "Unimplemented function depiler";
+      if estVide(pile) then
+         raise PILE_VIDE;
+      else
+         pileDepilee := pile;
+         pileDepilee.nb_elements := pileDepilee.nb_elements - 1;
+         return pileDepilee;
+      end if;
    end depiler;
 
 end TAD_Pile;
