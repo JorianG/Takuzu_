@@ -63,9 +63,7 @@ package body Resolution_Takuzu is
    --------------------
 
    procedure ResoudreTakuzu (G : in out Type_Grille; Trouve : out Boolean) is
-
       procedure Test (R : in out Type_Rangee; I : in Integer) is
-
       begin
          if SontDeuxChiffresDeGaucheEgaux (E => R, I => I) then
             R :=
@@ -131,7 +129,6 @@ package body Resolution_Takuzu is
       procedure CompletionLigne
         (G : in out Type_Grille; R : in Type_Rangee; I : in Integer)
       is
-
       begin
          if nombreChiffresDeValeur (R => R, V => UN) = Taille (G => G) / 2 then
             CompleterLigne (G => G, L => I, V => Complement (C => UN));
@@ -145,7 +142,6 @@ package body Resolution_Takuzu is
       procedure CompletionColonne
         (G : in out Type_Grille; R : in Type_Rangee; I : in Integer)
       is
-
       begin
          if nombreChiffresDeValeur (R => R, V => UN) = Taille (G => G) / 2 then
             CompleterColonne (G => G, Col => I, V => Complement (C => UN));
@@ -156,69 +152,125 @@ package body Resolution_Takuzu is
          end if;
       end CompletionColonne;
 
-      --  function ForceBrute (G : in Type_Grille) return Type_Grille is
-      --     g      : Type_Grille := g;
-      --     R      : Type_Rangee;
-      --     trouve : Boolean     := False;
-      --  begin
-      --     for y in 1 .. Taille (G => g) loop
-      --        R := extraireLigne (G => g, L => y);
-      --        for x in 1 .. Taille (R => R) loop
-      --           if not trouve and
-      --             nombreChiffresConnus (R => R) >= Taille (G => g) - 3
-      --           then
-      --              -- tester les possibilité
-   --              -- transformer les tests de resolutions en sous programmes
-      --              trouve := True
-      --           end if;
-      --        end loop;
-      --     end loop;
+      -----------------
+      -- Grille Egal --
+      -----------------
 
-      -- end ForceBrute;
+      -- cette fonction compare deux grilles en entrée et retourne un booléen
+      function "=" (G1, G2 : in Type_Grille) return Boolean is
+      begin
+         for y in 1 .. Taille (G1) loop
+            for x in 1 .. Taille (G1) loop
 
-      R        : Type_Rangee;
-      longueur : Integer := Taille (G => G);
+               if ObtenirChiffre
+                   (G => G1,
+                    C => ConstruireCoordonnees (Ligne => y, Colonne => x)) /=
+                 ObtenirChiffre
+                   (G => G2,
+                    C => ConstruireCoordonnees (Ligne => y, Colonne => x))
+               then
+                  return False;
+               end if;
 
-   begin
-      Trouve := False;
-      -- la variable modif va permettre d'éviter d'avoir une boucle infini lorsque l'algorithme est bloqué et ne trouve plus de nouveau chiffre
-      while not Trouve loop
-         -- travail sur chaque ligne
-         R := ConstruireRangee (Taille (G => G));
-         for j in 1 .. longueur loop
-            R := extraireLigne (G => G, L => j);
-            if not EstRemplie (R => R) then
-               for i in 1 .. longueur loop
-                  Test (R => R, I => i);
-               end loop;
-               -- fixage
-               G := FixageLigne (G => G, R => R, j => j);
-               -- completion
+            end loop;
+         end loop;
+         return True;
+      end "=";
+
+      procedure naif (G : in out Type_Grille) is
+         R      : Type_Rangee;
+         trouve : Boolean := True;
+         Gnew   : Type_Grille;
+      begin
+         while not EstRemplie (G => G) and trouve loop
+            Gnew := G;
+            -- travail sur chaque ligne
+            R := ConstruireRangee (Taille (G => G));
+            for j in 1 .. Taille (G => G) loop
                R := extraireLigne (G => G, L => j);
-               CompletionLigne (G => G, R => R, I => j);
-            end if;
-         end loop; -------------------------------------------------------------------
-         -- travail sur chaque colonne
-         R := ConstruireRangee (Taille (G => G));
-         for j in 1 .. longueur loop
-            R := extraireColonne (G => G, C => j);
-            if not EstRemplie (R => R) then
-               for i in 1 .. longueur loop
-                  Test (R => R, I => i);
-               end loop;
-               -- fixage
-               G := FixageColonne (G => G, R => R, j => j);
-
-               -- completion
+               if not EstRemplie (R => R) then
+                  for i in 1 .. Taille (G => G) loop
+                     Test (R => R, I => i);
+                  end loop;
+                  -- fixage
+                  G := FixageLigne (G => G, R => R, j => j);
+                  -- completion
+                  R := extraireLigne (G => G, L => j);
+                  CompletionLigne (G => G, R => R, I => j);
+               end if;
+            end loop;
+            -- travail sur chaque colonne
+            R := ConstruireRangee (Taille (G => G));
+            for j in 1 .. Taille (G => G) loop
                R := extraireColonne (G => G, C => j);
-               CompletionColonne (G => G, R => R, I => j);
+               if not EstRemplie (R => R) then
+                  for i in 1 .. Taille (G => G) loop
+                     Test (R => R, I => i);
+                  end loop;
+                  -- fixage
+                  G := FixageColonne (G => G, R => R, j => j);
+
+                  -- completion
+                  R := extraireColonne (G => G, C => j);
+                  CompletionColonne (G => G, R => R, I => j);
+               end if;
+            end loop;
+
+            if Gnew = G then
+               trouve := False;
             end if;
          end loop;
+      end naif;
+
+      function ResolutionCaseVide (G : in Type_Grille) return Type_Coordonnee
+      is
+         C : Type_Coordonnee;
+      begin
+         for y in 1 .. Taille (G => G) loop
+            for x in 1 .. Taille (G => G) loop
+               if ObtenirChiffre
+                   (G => G,
+                    C => ConstruireCoordonnees (Ligne => y, Colonne => x)) =
+                 INCONNU
+               then
+                  C := ConstruireCoordonnees (Ligne => y, Colonne => x);
+                  return C;
+               end if;
+            end loop;
+         end loop;
+         return C;
+      end ResolutionCaseVide;
+
+      procedure backtracking (G : in out Type_Grille; Trouve : in out Boolean)
+      is
+         C : Type_Coordonnee;
+      begin
 
          if EstRemplie (G => G) then
             Trouve := True;
          end if;
-      end loop;
+         if not Trouve then
+            C := ResolutionCaseVide (G => G);
+            G := FixerChiffre (G => G, C => C, V => ZERO);
+            backtracking (G => G, Trouve => Trouve);
+            if not Trouve then
+               G := ViderCase (G => G, C => C);
+               G := FixerChiffre (G => G, C => C, V => UN);
+               backtracking (G => G, Trouve => Trouve);
+               if not Trouve then
+                  G      := ViderCase (G => G, C => C);
+                  Trouve := False;
+               end if;
+            end if;
+         end if;
+      end backtracking;
+
+   begin
+      Trouve := False;
+      -- la variable modif va permettre d'éviter d'avoir une boucle infini lorsque l'algorithme est bloqué et ne trouve plus de nouveau chiffre
+      naif (G => G);
+      backtracking (G => G, Trouve => Trouve);
+
    end ResoudreTakuzu;
 
 end Resolution_Takuzu;

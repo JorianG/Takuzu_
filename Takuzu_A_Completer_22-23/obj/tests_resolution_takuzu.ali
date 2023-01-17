@@ -39,7 +39,7 @@ D interfac.ads		20210520051132 edec285f interfaces%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
 D rangee.ads		20230117072924 6de136fc rangee%s
 D remplir_grille_takuzu.ads  20230117072924 8b6fa799 remplir_grille_takuzu%s
-D resolution_takuzu.ads	20230117090302 db491d87 resolution_takuzu%s
+D resolution_takuzu.ads	20230117123812 db491d87 resolution_takuzu%s
 D system.ads		20210520051136 2ffa5114 system%s
 D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
 D s-exctab.ads		20210520051132 54135002 system.exception_table%s
