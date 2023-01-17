@@ -32,8 +32,8 @@ Z system.standard_library%s  s-stalib.adb	s-stalib.ali
 Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
 W types_tests%s		types_tests.ads		types_tests.ali
 
-D a_tester_chiffre.ads	20221208142906 3ec3c789 a_tester_chiffre%s
-D a_tester_chiffre.adb	20221208142922 4be7be76 a_tester_chiffre%b
+D a_tester_chiffre.ads	20230117073722 3ec3c789 a_tester_chiffre%s
+D a_tester_chiffre.adb	20230117073722 4be7be76 a_tester_chiffre%b
 D ada.ads		20210520051132 76789da1 ada%s
 D a-charac.ads		20210520051128 2d3ec45b ada.characters%s
 D a-chlat1.ads		20210520051128 66457d31 ada.characters.latin_1%s
@@ -47,7 +47,7 @@ D a-strunb.ads		20210520051130 03325227 ada.strings.unbounded%s
 D a-stuten.ads		20210520051130 808c40ad ada.strings.utf_encoding%s
 D a-tags.ads		20210520051130 9eaa38c6 ada.tags%s
 D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
-D chiffre.ads		20221208140530 37e88090 chiffre%s
+D chiffre.ads		20230117073722 37e88090 chiffre%s
 D interfac.ads		20210520051132 edec285f interfaces%s
 D system.ads		20210520051136 2ffa5114 system%s
 D s-atocou.ads		20210520051132 b45c2d8d system.atomic_counters%s
@@ -68,7 +68,7 @@ D s-stopoo.ads		20210520051134 e9fa2dd8 system.storage_pools%s
 D s-stratt.ads		20210520051134 7bdda3fa system.stream_attributes%s
 D s-traent.ads		20210520051134 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20210520051134 2b077493 system.unsigned_types%s
-D types_tests.ads	20221201173420 b0a51c25 types_tests%s
+D types_tests.ads	20230117073722 b0a51c25 types_tests%s
 D unchconv.ads		20210520051136 ca2f9e18 unchecked_conversion%s
 G a e
 G c Z s b [test_chiffre_p1 a_tester_chiffre 10 13 none]
