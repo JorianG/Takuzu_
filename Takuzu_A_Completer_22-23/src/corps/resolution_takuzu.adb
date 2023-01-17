@@ -58,21 +58,21 @@ package body Resolution_Takuzu is
 
    end CompleterColonne;
 
-   procedure fixage (G : in out Type_Grille; R : in Type_Rangee; j : in Integer ) is
+   procedure fixage
+     (G : in out Type_Grille; R : in Type_Rangee; j : in Integer)
+   is
       C : Type_Coordonnee;
    begin
 
-   for i in 1 .. Taille (G => G) loop
-                  C := ConstruireCoordonnees (Ligne => j, Colonne => i);
-                  if estCaseVide (G => G, C => C) then
-                     G :=
-                       FixerChiffre
-                         (G => G, C => C,
-                          V => ObtenirChiffre (R => R, I => i));
-                  end if;
+      for i in 1 .. Taille (G => G) loop
+         C := ConstruireCoordonnees (Ligne => j, Colonne => i);
+         if estCaseVide (G => G, C => C) then
+            G :=
+              FixerChiffre
+                (G => G, C => C, V => ObtenirChiffre (R => R, I => i));
+         end if;
       end loop;
    end fixage;
-
 
    --------------------
    -- ResoudreTakuzu --
