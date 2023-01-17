@@ -58,45 +58,51 @@ package body Resolution_Takuzu is
 
    end CompleterColonne;
 
-   procedure fixage
-     (G : in out Type_Grille; R : in Type_Rangee; j : in Integer)
-   is
-      C : Type_Coordonnee;
-   begin
-
-      for i in 1 .. Taille (G => G) loop
-         C := ConstruireCoordonnees (Ligne => j, Colonne => i);
-         if estCaseVide (G => G, C => C) then
-            G :=
-              FixerChiffre
-                (G => G, C => C, V => ObtenirChiffre (R => R, I => i));
-         end if;
-      end loop;
-   end fixage;
-
    --------------------
    -- ResoudreTakuzu --
    --------------------
 
    procedure ResoudreTakuzu (G : in out Type_Grille; Trouve : out Boolean) is
-      function ForceBrute (G : in Type_Grille) return Type_Grille is
-         g      : Type_Grille := g;
-         R      : Type_Rangee;
-         trouve : Boolean     := False;
+
+      procedure fixage
+        (G : in out Type_Grille; R : in Type_Rangee; j : in Integer)
+      is
+         C : Type_Coordonnee;
       begin
-         for y in 1 .. Taille (G => g) loop
-            R := extraireLigne (G => g, L => y);
-            for x in 1 .. Taille (R => R) loop
-               if not trouve and NombreChiffresConnus >= Taille (G => g) - 3
-               then
-               -- tester les possibilité
-               -- transformer les tests de resolutions en sous programmes
 
-               end if;
-            end loop;
+         for i in 1 .. Taille (G => G) loop
+            C := ConstruireCoordonnees (Ligne => j, Colonne => i);
+            if estCaseVide (G => G, C => C) then
+               G :=
+                 FixerChiffre
+                   (G => G, C => C, V => ObtenirChiffre (R => R, I => i));
+            end if;
          end loop;
+      end fixage;
 
-      end ForceBrute;
+      --  function ForceBrute (G : in Type_Grille) return Type_Grille is
+      --     g      : Type_Grille := g;
+      --     R      : Type_Rangee;
+      --     trouve : Boolean     := False;
+      --  begin
+      --     for y in 1 .. Taille (G => g) loop
+      --        R := extraireLigne (G => g, L => y);
+      --        for x in 1 .. Taille (R => R) loop
+      --           if not trouve and
+      --             nombreChiffresConnus (R => R) >= Taille (G => g) - 3
+      --           then
+      --              -- tester les possibilité
+   --              -- transformer les tests de resolutions en sous programmes
+      --              trouve := True
+      --           end if;
+      --        end loop;
+      --     end loop;
+
+      -- end ForceBrute;
+
+      R        : Type_Rangee;
+      modif    : Boolean;
+      longueur : Integer := Taille (G => G);
 
    begin
       -- la variable modif va permettre d'éviter d'avoir une boucle infini lorsque l'algorithme est bloqué et ne trouve plus de nouveau chiffre
@@ -114,7 +120,6 @@ package body Resolution_Takuzu is
                           C =>
                             Complement
                               (C => chiffreDeGauche (E => R, I => i)));
-                     modif := True;
                   elsif SontDeuxChiffresDeDroiteEgaux (E => R, I => i) then
                      R :=
                        AjouterChiffre
@@ -139,9 +144,7 @@ package body Resolution_Takuzu is
                   end if;
                end loop;
                -- fixage
-               fixage(G => G,
-                      R => R,
-                      j => j);
+               fixage (G => G, R => R, j => j);
 
                -- completion
                R := extraireLigne (G => G, L => j);
@@ -192,9 +195,7 @@ package body Resolution_Takuzu is
                end loop;
 
                -- fixage
-               fixage(G => G,
-                      R => R,
-                      j => j);
+               fixage (G => G, R => R, j => j);
 
                -- completion
                R := extraireColonne (G => G, C => j);
@@ -211,7 +212,6 @@ package body Resolution_Takuzu is
          end loop;
 
          if EstRemplie (G => G) then
-            AfficherGrille (G => G);
             Trouve := True;
          end if;
       end loop;
