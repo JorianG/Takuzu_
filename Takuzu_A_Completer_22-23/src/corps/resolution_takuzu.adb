@@ -159,15 +159,9 @@ package body Resolution_Takuzu is
                   end if;
                end loop;
                -- fixage
-               for i in 1 .. Taille (G => G) loop
-                  C := ConstruireCoordonnees (Ligne => j, Colonne => i);
-                  if estCaseVide (G => G, C => C) then
-                     G :=
-                       FixerChiffre
-                         (G => G, C => C,
-                          V => ObtenirChiffre (R => R, I => i));
-                  end if;
-               end loop;
+               fixage(G => G,
+                      R => R,
+                      j => j);
 
                -- completion
                R := extraireLigne (G => G, L => j);
@@ -218,15 +212,9 @@ package body Resolution_Takuzu is
                end loop;
 
                -- fixage
-               for i in 1 .. Taille (G => G) loop
-                  C := ConstruireCoordonnees (Ligne => i, Colonne => j);
-                  if estCaseVide (G => G, C => C) then
-                     G :=
-                       FixerChiffre
-                         (G => G, C => C,
-                          V => ObtenirChiffre (R => R, I => i));
-                  end if;
-               end loop;
+               fixage(G => G,
+                      R => R,
+                      j => j);
 
                -- completion
                R := extraireColonne (G => G, C => j);

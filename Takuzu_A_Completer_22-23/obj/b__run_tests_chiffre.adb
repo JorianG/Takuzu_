@@ -276,12 +276,12 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\obj\chiffre.o
-   --   C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\obj\types_tests.o
-   --   C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\obj\a_tester_chiffre.o
-   --   C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\obj\run_tests_chiffre.o
-   --   -LC:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\obj\
-   --   -LC:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\obj\
+   --   C:\Users\manon\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\obj\chiffre.o
+   --   C:\Users\manon\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\obj\types_tests.o
+   --   C:\Users\manon\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\obj\a_tester_chiffre.o
+   --   C:\Users\manon\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\obj\run_tests_chiffre.o
+   --   -LC:\Users\manon\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\obj\
+   --   -LC:\Users\manon\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\obj\
    --   -LC:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/
    --   -static
    --   -lgnat
