@@ -1,26 +1,53 @@
 <?xml version="1.0"?>
 <Locations >
   <Project>
-    <vfs_file>C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\takuzu.gpr</vfs_file>
-    <file_marker column=" 51" line=" 41" >
-      <vfs_project>C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\takuzu.gpr</vfs_project>
-      <vfs_file>C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\tests\tests_resolution\remplir_grille_takuzu.adb</vfs_file>
+    <vfs_file />
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\lugag\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\takuzu.gpr</vfs_project>
+      <vfs_file>C:\Users\lugag\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\src\corps\resolution_takuzu.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\takuzu.gpr</vfs_project>
-      <vfs_file>C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\tests\tests_resolution\affichage.adb</vfs_file>
+      <vfs_project>C:\Users\lugag\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\takuzu.gpr</vfs_project>
+      <vfs_file>C:\Users\lugag\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\src\specifications\coordonnee.ads</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\takuzu.gpr</vfs_project>
-      <vfs_file>C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\tests\tests_resolution\affichages_tests.adb</vfs_file>
+      <vfs_project>C:\Users\lugag\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\takuzu.gpr</vfs_project>
+      <vfs_file>C:\Users\lugag\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\src\specifications\TAD_Pile.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 43" line=" 77" >
-      <vfs_project>C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\takuzu.gpr</vfs_project>
-      <vfs_file>C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\src\corps\rangee.adb</vfs_file>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\lugag\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\takuzu.gpr</vfs_project>
+      <vfs_file>C:\Users\lugag\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\src\specifications\coordonnee.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\lugag\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\takuzu.gpr</vfs_project>
+      <vfs_file>C:\Users\lugag\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\src\specifications\pile_entier.ads</vfs_file>
     </file_marker>
     <file_marker current="true" column=" 1" line=" 1" >
-      <vfs_project>C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\takuzu.gpr</vfs_project>
-      <vfs_file>C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\src\corps\resolution_takuzu.adb</vfs_file>
+      <vfs_project>C:\Users\lugag\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\takuzu.gpr</vfs_project>
+      <vfs_file>C:\Users\lugag\Documents\GitHub\Takuzu_\Takuzu_A_Completer_22-23\src\specifications\TAD_Pile.ads</vfs_file>
+    </file_marker>
+  </Project>
+  <Project >
+    <vfs_file >C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\takuzu.gpr</vfs_file>
+    <file_marker column=" 51" line=" 41">
+      <vfs_project >C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\takuzu.gpr</vfs_project>
+      <vfs_file >C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\tests\tests_resolution\remplir_grille_takuzu.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\takuzu.gpr</vfs_project>
+      <vfs_file >C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\tests\tests_resolution\affichage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\takuzu.gpr</vfs_project>
+      <vfs_file >C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\tests\tests_resolution\affichages_tests.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 43" line=" 77">
+      <vfs_project >C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\takuzu.gpr</vfs_project>
+      <vfs_file >C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\src\corps\rangee.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1">
+      <vfs_project >C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\takuzu.gpr</vfs_project>
+      <vfs_file >C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\src\corps\resolution_takuzu.adb</vfs_file>
     </file_marker>
   </Project>
 </Locations>

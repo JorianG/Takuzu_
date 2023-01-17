@@ -70,32 +70,32 @@ package body Resolution_Takuzu is
       end record;
 
       TAILLE_TAB_HISTORIQUE : constant Natural := 3;
-      type Historique_Modif is array(1..TAILLE_TAB_HISTORIQUE) of Modif;
+      type Historique_Modif is array (1 .. TAILLE_TAB_HISTORIQUE) of Modif;
 
       type Historique is record
          HM : Historique_Modif;
-         n : Integer;
+         n  : Integer;
       end record;
 
-      modification    : Historique;
-
+      modification : Historique;
 
       longueur : Integer := Taille (G => G);
       R        : Type_Rangee;
       C        : Type_Coordonnee;
 
       function ForceBrute (G : in Type_Grille) return Type_Grille is
-         g : Type_Grille := G;
-         R : Type_Rangee;
-         trouve : Boolean := False;
+         g      : Type_Grille := g;
+         R      : Type_Rangee;
+         trouve : Boolean     := False;
       begin
-         for y in range(1..Taille(G => g)) loop
-            R := extraireLigne(G => g,
-                               L => y);
-            for x in range(1..Taille(R => R)) loop
-               if not trouve and NombreChiffresConnus >= Taille(G => g) - 3 then
-                  -- tester les possibilité
-                  -- transformer les tests de resolutions en sous programmes
+         for y in 1 .. Taille (G => g) loop
+            R := extraireLigne (G => g, L => y);
+            for x in 1 .. Taille (R => R) loop
+               if not trouve and NombreChiffresConnus >= Taille (G => g) - 3
+               then
+               -- tester les possibilité
+               -- transformer les tests de resolutions en sous programmes
+
                end if;
             end loop;
          end loop;
