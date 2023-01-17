@@ -208,4 +208,23 @@ package body Rangee is
       end if;
    end RetirerChiffre;
 
+   -- Teste l'égalité de deux rangées. Retourne True ou False.
+   function "=" (r1 : in Type_Rangee; r2 : in Type_Rangee) return Boolean is
+      compteurTest : Integer;
+   begin
+      for compteurTest in 1..r1.Taille loop
+         if r1.R(compteurTest) /= r2.R(compteurTest) then
+            return False;
+         end if;
+         return True;
+      end loop;
+   end "=";
+
+   -- Test si une rangée r peut accueillir le chiffre C.
+   -- Retourne un booléen.
+   function TestChiffrePosable (r : in Type_Rangee; C : in Type_Chiffre) return Boolean is
+   begin
+      return nombreChiffresDeValeur(r,C) <= r.Taille/2;
+   end TestChiffrePosable;
+
 end Rangee;

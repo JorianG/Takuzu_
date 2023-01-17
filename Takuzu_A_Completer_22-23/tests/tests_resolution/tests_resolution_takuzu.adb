@@ -52,9 +52,9 @@ begin
    test (G2, "***    Takuzu grille très facile : grille 2   ***");
    test (G3, "***    Takuzu grille très facile : grille 3   ***");
    test (G4, "***      Takuzu grille moyenne : grille 4     ***");
-   --  test (g5, "***     Takuzu grille difficile : grille 5    ***");
-   --  test (g6, "***  Takuzu grille très difficile : grille 6  ***");
-   --  test (g7, "***     Takuzu grille taille 10 : grille 7    ***");
-   --  test (g8, "***     Takuzu grille taille 12 : grille 8    ***");
+   test (G5, "***     Takuzu grille difficile : grille 5    ***");
+   test (G6, "***  Takuzu grille très difficile : grille 6  ***");
+   test (G7, "***     Takuzu grille taille 10 : grille 7    ***");
+   test (G8, "***     Takuzu grille taille 12 : grille 8    ***");
 
 end tests_Resolution_Takuzu;
