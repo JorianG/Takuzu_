@@ -206,25 +206,22 @@ package body Grille is
       return True;
    end "=";
 
-end Grille;
-
    -----------------
    -- Grille Egal --
-	-----------------
+   -----------------
 
-   function ObtenirCaseVide (G : in Type_Grille) return Type_Coordonnee
-      is
-         C : Type_Coordonnee;
-      begin
-         for y in 1 .. Taille (G => G) loop
-            for x in 1 .. Taille (G => G) loop
-               if G.G(y,x) = INCONNU
-               then
-                  C := ConstruireCoordonnees (Ligne => y, Colonne => x);
-                  return C;
-               end if;
-            end loop;
+   function ObtenirCaseVide (G : in Type_Grille) return Type_Coordonnee is
+      C : Type_Coordonnee;
+   begin
+      for y in 1 .. Taille (G => G) loop
+         for x in 1 .. Taille (G => G) loop
+            if G.G (y, x) = INCONNU then
+               C := ConstruireCoordonnees (Ligne => y, Colonne => x);
+               return C;
+            end if;
          end loop;
-         return C;
-end ObtenirCaseVide;
+      end loop;
+      return C;
+   end ObtenirCaseVide;
 
+end Grille;

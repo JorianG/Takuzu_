@@ -197,25 +197,6 @@ package body Resolution_Takuzu is
          end loop;
       end naif;
 
-      function ResolutionCaseVide (G : in Type_Grille) return Type_Coordonnee
-      is
-         C : Type_Coordonnee;
-      begin
-         for y in 1 .. Taille (G => G) loop
-            for x in 1 .. Taille (G => G) loop
-               if ObtenirChiffre
-                   (G => G,
-                    C => ConstruireCoordonnees (Ligne => y, Colonne => x)) =
-                 INCONNU
-               then
-                  C := ConstruireCoordonnees (Ligne => y, Colonne => x);
-                  return C;
-               end if;
-            end loop;
-         end loop;
-         return C;
-      end ResolutionCaseVide;
-
       procedure backtracking (G : in out Type_Grille; Trouve : in out Boolean)
       is
          C : Type_Coordonnee;
@@ -225,7 +206,7 @@ package body Resolution_Takuzu is
             Trouve := True;
          end if;
          if not Trouve then
-            C := ResolutionCaseVide (G => G);
+            C := ObtenirCaseVide (G => G);
             G := FixerChiffre (G => G, C => C, V => ZERO);
             backtracking (G => G, Trouve => Trouve);
             if not Trouve then
@@ -244,8 +225,10 @@ package body Resolution_Takuzu is
       Trouve := False;
       -- la variable modif va permettre d'éviter d'avoir une boucle infini lorsque l'algorithme est bloqué et ne trouve plus de nouveau chiffre
       naif (G => G);
+      AfficherGrille (G => G);
       backtracking (G => G, Trouve => Trouve);
 
+      AfficherGrille (G => G);
    end ResoudreTakuzu;
 
 end Resolution_Takuzu;
