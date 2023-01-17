@@ -73,6 +73,10 @@ package Rangee is
   -- Teste l'égalité de deux rangées. Retourne True ou False.
   function "=" (r1 : in Type_Rangee; r2 : in Type_Rangee) return Boolean;
 
+  -- Test si une rangée r peut accueillir le chiffre C.
+  -- Retourne un booléen.
+  function TestChiffrePosable (r : in Type_Rangee; C : in Type_Chiffre) return Boolean;
+
 private
    TAILLE_MAX_GRILLE : constant Integer := 100;
    type Type_Tableau_Rangee is array (1 .. TAILLE_MAX_GRILLE) of Type_Chiffre;

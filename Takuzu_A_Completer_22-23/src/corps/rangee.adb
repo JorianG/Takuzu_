@@ -220,4 +220,11 @@ package body Rangee is
       end loop;
    end "=";
 
+   -- Test si une rangée r peut accueillir le chiffre C.
+   -- Retourne un booléen.
+   function TestChiffrePosable (r : in Type_Rangee; C : in Type_Chiffre) return Boolean is
+   begin
+      return nombreChiffresDeValeur(r,C) <= r.Taille/2;
+   end TestChiffrePosable;
+
 end Rangee;
