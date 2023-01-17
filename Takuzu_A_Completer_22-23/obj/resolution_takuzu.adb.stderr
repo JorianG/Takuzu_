@@ -1,0 +1,6 @@
+resolution_takuzu.adb:92:18: error: missing operand
+resolution_takuzu.adb:95:21: error: missing operand
+resolution_takuzu.adb:100:06: error: statement expected
+resolution_takuzu.adb:100:06: error: missing "end if;" for "if" at line 96
+resolution_takuzu.adb:100:06: error: missing "end loop;" for "loop" at line 95
+resolution_takuzu.adb:100:06: error: missing "end loop;" for "loop" at line 92

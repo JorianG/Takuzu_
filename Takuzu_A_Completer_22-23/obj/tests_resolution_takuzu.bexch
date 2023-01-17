@@ -1,0 +1,26 @@
+[GENERATED OBJECT FILE]
+b__tests_resolution_takuzu.o
+[PROJECT FILES]
+C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\takuzu.gpr
+20221221112700 73047b7e2f27c5674570f9efb2f282ec
+[BOUND OBJECT FILES]
+C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\obj\chiffre.o
+C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\obj\coordonnee.o
+C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\obj\rangee.o
+C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\obj\affichage.o
+C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\obj\grille.o
+C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\obj\remplir_grille_takuzu.o
+C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\obj\resolution_takuzu.o
+C:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\obj\tests_resolution_takuzu.o
+[GENERATED SOURCE FILES]
+b__tests_resolution_takuzu.ads
+b__tests_resolution_takuzu.adb
+b__tests_resolution_takuzu.ali
+[RESULTING OPTIONS]
+-LC:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\obj\
+-LC:\Users\lugag\Documents\IUT\Nouveau dossier\Takuzu_A_Completer_22-23\obj\
+-LC:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/
+-static
+-static-libgcc
+C:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/libgnat.a
+-Wl,--stack=0x2000000

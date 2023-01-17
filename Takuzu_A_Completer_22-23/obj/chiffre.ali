@@ -1,0 +1,54 @@
+V "GNAT Lib v2021"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U chiffre%b		chiffre.adb		c9e4e69b NE OO PK
+Z ada.exceptions%s	a-except.adb		a-except.ali
+
+U chiffre%s		chiffre.ads		37e88090 EE OO PK
+Z system%s		system.ads		system.ali
+Z system.exception_table%s  s-exctab.adb	s-exctab.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+D ada.ads		20210520051132 76789da1 ada%s
+D a-except.ads		20210520051128 946f3014 ada.exceptions%s
+D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
+D chiffre.ads		20221208140530 37e88090 chiffre%s
+D chiffre.adb		20230112152324 fe0c660b chiffre%b
+D system.ads		20210520051136 2ffa5114 system%s
+D s-exctab.ads		20210520051132 54135002 system.exception_table%s
+D s-parame.ads		20210520051134 4752c4cb system.parameters%s
+D s-stalib.ads		20210520051134 472fbca8 system.standard_library%s
+D s-traent.ads		20210520051134 26a8d361 system.traceback_entries%s
+G a e
+G c Z s b [valeurchiffre chiffre 17 13 none]
+G c Z s b [estinconnue chiffre 20 13 none]
+G c Z s b [complement chiffre 25 13 none]
+G c Z s b [Oeq chiffre 28 13 none]
+X 4 chiffre.ads
+1K9*Chiffre 31E9 35l5 35e12 5|1b14 46l5 46t12
+3I9*Type_Chiffre<short_short_integer> 8r18 11r20 14r23 17r35 20r33 25r32
+. 25r53 28r26 28r47 31c9 32r23 33r23 34r23 5|7r35 16r33 25r32 25r53 41r26
+. 41r48
+5X4*VALEUR_INCONNUE 5|28r16
+8i4*UN{3I9} 32c4 5|30r14 33r17
+11i4*ZERO{3I9} 33c4 5|31r17
+14i4*INCONNU{3I9} 34c4 5|18r18
+17V13*ValeurChiffre{integer} 17>28 5|7b13 10l8 10t21 43s14 43s35
+17i28 C{3I9} 5|7b28 9r23
+20V13*EstInconnue{boolean} 20>26 5|16b13 19l8 19t19 27s10
+20i26 C{3I9} 5|16b26 18r14
+25V13*Complement{3I9} 25>25 5|25b13 35l8 35t18
+25i25 C{3I9} 5|25b25 27r23 30r10
+28V14*"="{boolean} 28>18 28>40 5|18s16 30s12 41b14 44l9 44t11
+28i18 c1{3I9} 5|41b18 43r29
+28i40 c2{3I9} 5|41b40 43r50
+

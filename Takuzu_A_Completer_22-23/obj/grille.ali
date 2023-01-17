@@ -1,0 +1,207 @@
+V "GNAT Lib v2021"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P SS ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U grille%b		grille.adb		1a607649 NE OO PK
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.strings%s		a-string.ads		a-string.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+W ada.strings.unbounded.text_io%s  a-suteio.adb	a-suteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W affichage%s		affichage.adb		affichage.ali
+
+U grille%s		grille.ads		22837e68 EE OO PK
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W chiffre%s		chiffre.adb		chiffre.ali
+W coordonnee%s		coordonnee.adb		coordonnee.ali
+W rangee%s		rangee.adb		rangee.ali
+Z system%s		system.ads		system.ali
+Z system.exception_table%s  s-exctab.adb	s-exctab.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+D ada.ads		20210520051132 76789da1 ada%s
+D a-charac.ads		20210520051128 2d3ec45b ada.characters%s
+D a-chlat1.ads		20210520051128 66457d31 ada.characters.latin_1%s
+D a-except.ads		20210520051128 946f3014 ada.exceptions%s
+D a-finali.ads		20210520051128 bf4f806b ada.finalization%s
+D a-inteio.ads		20210520051128 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20210520051128 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210520051130 119b8fb3 ada.streams%s
+D a-string.ads		20210520051130 90ac6797 ada.strings%s
+D a-strmap.ads		20210520051130 5a88892a ada.strings.maps%s
+D a-sttebu.ads		20210520051130 18209c64 ada.strings.text_buffers%s
+D a-strunb.ads		20210520051130 03325227 ada.strings.unbounded%s
+D a-suteio.ads		20210520051130 26d8e9aa ada.strings.unbounded.text_io%s
+D a-stuten.ads		20210520051130 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210520051130 9eaa38c6 ada.tags%s
+D a-textio.ads		20210520051130 aef4d56d ada.text_io%s
+D a-tiinio.ads		20210520051130 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
+D affichage.ads		20221201173420 c65c41a0 affichage%s
+D chiffre.ads		20221208140530 37e88090 chiffre%s
+D coordonnee.ads	20221201173420 b1b28967 coordonnee%s
+D grille.ads		20221209105446 c9384163 grille%s
+D grille.adb		20230112192044 685191ce grille%b
+D interfac.ads		20210520051132 edec285f interfaces%s
+D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
+D rangee.ads		20221208152158 6de136fc rangee%s
+D system.ads		20210520051136 2ffa5114 system%s
+D s-atocou.ads		20210520051132 b45c2d8d system.atomic_counters%s
+D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210520051132 54135002 system.exception_table%s
+D s-ficobl.ads		20210520051132 078245e4 system.file_control_block%s
+D s-finroo.ads		20210520051132 4ff27390 system.finalization_root%s
+D s-parame.ads		20210520051134 4752c4cb system.parameters%s
+D s-putima.ads		20210520051134 4e095881 system.put_images%s
+D s-secsta.ads		20210520051134 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20210520051134 a7318a92 system.soft_links%s
+D s-stache.ads		20210520051134 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210520051134 472fbca8 system.standard_library%s
+D s-stoele.ads		20210520051134 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210520051134 ed88f8fb system.storage_elements%b
+D s-stratt.ads		20210520051134 7bdda3fa system.stream_attributes%s
+D s-traent.ads		20210520051134 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210520051134 2b077493 system.unsigned_types%s
+D s-wchcon.ads		20210520051136 1b7d22d2 system.wch_con%s
+D unchconv.ads		20210520051136 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z s b [construiregrille grille 17 13 none]
+G c Z s b [taille grille 20 13 none]
+G c Z s b [estcasevide grille 24 13 none]
+G c Z s b [obtenirchiffre grille 30 13 none]
+G c Z s b [nombrechiffresconnus grille 34 13 none]
+G c Z s b [estremplie grille 37 13 none]
+G c Z s b [extraireligne grille 40 13 none]
+G c Z s b [extrairecolonne grille 44 13 none]
+G c Z s b [fixerchiffre grille 51 13 none]
+G c Z s b [vidercase grille 59 13 none]
+G c Z s s [Ttype_tableau_grilleBIP grille 64 4 none]
+G c Z s s [type_grilleIP grille 66 9 none]
+G r c none [estcasevide grille 24 13 none] [obtenirligne coordonnee 10 13 none]
+G r c none [estcasevide grille 24 13 none] [obtenircolonne coordonnee 13 13 none]
+G r c none [estcasevide grille 24 13 none] [estinconnue chiffre 20 13 none]
+G r c none [obtenirchiffre grille 30 13 none] [obtenirligne coordonnee 10 13 none]
+G r c none [obtenirchiffre grille 30 13 none] [obtenircolonne coordonnee 13 13 none]
+G r c none [obtenirchiffre grille 30 13 none] [estinconnue chiffre 20 13 none]
+G r c none [nombrechiffresconnus grille 34 13 none] [construirecoordonnees coordonnee 6 13 none]
+G r c none [nombrechiffresconnus grille 34 13 none] [obtenirligne coordonnee 10 13 none]
+G r c none [nombrechiffresconnus grille 34 13 none] [obtenircolonne coordonnee 13 13 none]
+G r c none [nombrechiffresconnus grille 34 13 none] [estinconnue chiffre 20 13 none]
+G r c none [estremplie grille 37 13 none] [construirecoordonnees coordonnee 6 13 none]
+G r c none [estremplie grille 37 13 none] [obtenirligne coordonnee 10 13 none]
+G r c none [estremplie grille 37 13 none] [obtenircolonne coordonnee 13 13 none]
+G r c none [estremplie grille 37 13 none] [estinconnue chiffre 20 13 none]
+G r c none [extraireligne grille 40 13 none] [construirerangee rangee 10 13 none]
+G r c none [extraireligne grille 40 13 none] [ajouterchiffre rangee 63 13 none]
+G r c none [extrairecolonne grille 44 13 none] [construirerangee rangee 10 13 none]
+G r c none [extrairecolonne grille 44 13 none] [ajouterchiffre rangee 63 13 none]
+G r c none [fixerchiffre grille 51 13 none] [obtenirligne coordonnee 10 13 none]
+G r c none [fixerchiffre grille 51 13 none] [obtenircolonne coordonnee 13 13 none]
+G r c none [fixerchiffre grille 51 13 none] [estinconnue chiffre 20 13 none]
+G r c none [vidercase grille 59 13 none] [obtenirligne coordonnee 10 13 none]
+G r c none [vidercase grille 59 13 none] [obtenircolonne coordonnee 13 13 none]
+G r c none [vidercase grille 59 13 none] [estinconnue chiffre 20 13 none]
+X 1 ada.ads
+16K9*Ada 20e8 23|4r6 4r41 5r6 5r41 6r6 6r41 7r6 7r41
+X 6 a-inteio.ads
+18K13*Integer_Text_IO[17|46] 23|7w10 7r45
+X 9 a-string.ads
+16K13*Strings 35e16 23|4r10 4r45 5r10 5r45
+X 12 a-strunb.ads
+83K21*Unbounded 765e26 23|4w18 4r53 5r18 5r53
+X 13 a-suteio.ads
+39K31*Text_IO 61e34 23|5w28 5r63
+X 16 a-textio.ads
+58K13*Text_IO 725e16 23|6w10 6r45
+X 19 affichage.ads
+6K9*Affichage 36e14 23|2w6 2r21
+X 20 chiffre.ads
+1K9*Chiffre 35e12 22|2w6 2r22
+3I9*Type_Chiffre<short_short_integer> 22|31r58 52r58 65r50 23|60r58 149r58
+14i4*INCONNU{3I9} 23|25r32 186r54
+20V13*EstInconnue{boolean} 23|48s10
+X 21 coordonnee.ads
+1K9*Coordonnee 21e15 22|1w6 1r22
+3R9*Type_Coordonnee 19e14 22|25r34 31r34 52r34 60r34 23|45r34 60r34 149r34
+. 172r34
+6V13*ConstruireCoordonnees{3R9} 23|80s36 99s32
+10V13*ObtenirLigne{integer} 23|48s28 67s19 163s13 186s33
+13V13*ObtenirColonne{integer} 23|48s46 67s37 163s31 186s13
+X 22 grille.ads
+5K9*Grille 63E4 71l5 71e11 23|9b14 190l5 190t11
+7R9*Type_Grille 17r51 20r28 25r14 31r14 34r42 37r32 41r14 45r14 52r14 53r14
+. 60r14 60r58 66c9 69e14 23|15r51 16r16 35r28 45r14 60r14 74r42 93r32 115r14
+. 131r14 149r14 150r14 152r12 172r14 172r58 174r12
+9X4*TAILLE_GRILLE_INVALIDE 23|20r16
+10X4*CASE_VIDE 23|64r16
+11X4*VIDER_CASE_VIDE 23|177r16
+12X4*FIXER_CHIFFRE_NON_NUL 23|155r16
+17V13*ConstruireGrille{7R9} 17>31 23|15b13 29l8 29t24
+17i31 T{integer} 23|15b31 19r14 19r19 19r37 22r24 23r21 24r24
+20V13*Taille{integer} 20>21 23|35b13 38l8 38t14
+20r21 G{7R9} 23|35b21 37r14
+24V13*estCaseVide{boolean} 25>7 25>27 23|44b13 53l8 53t19 63s10 80s20 99s16
+. 154s14 176s10
+25r7 G{7R9} 23|45b7 48r23
+25r27 C{21|3R9} 23|45b27 48r42 48r62
+30V13*ObtenirChiffre{20|3I9} 31>7 31>27 23|59b13 68l8 68t22
+31r7 G{7R9} 23|60b7 63r23 67r14
+31r27 C{21|3R9} 23|60b27 63r26 67r33 67r53
+34V13*NombreChiffresConnus{integer} 34>35 23|74b13 87l8 87t28
+34r35 G{7R9} 23|74b35 78r21 79r24 80r33
+37V13*EstRemplie{boolean} 37>25 23|93b13 108l8 108t18
+37r25 G{7R9} 23|93b25 96r21 97r24 99r29
+40V13*extraireLigne{26|5R9} 41>7 41>27 23|114b13 124l8 124t21
+41r7 G{7R9} 23|115b7 119r30 120r21 121r37
+41i27 L{integer} 23|115b27 121r42
+44V13*extraireColonne{26|5R9} 45>7 45>27 23|130b13 142l8 142t23
+45r7 G{7R9} 23|131b7 135r30 137r21 138r37
+45i27 C{integer} 23|131b27 138r45
+51V13*FixerChiffre{7R9} 52>7 52>27 52>51 23|148b13 165l8 165t20
+52r7 G{7R9} 23|149b7 154r27 157r13
+52r27 C{21|3R9} 23|149b27 154r30 163r27 163r47
+52i51 V{20|3I9} 23|149b51 163r54
+59V13*ViderCase{7R9} 60>7 60>27 23|171b13 188l8 188t17
+60r7 G{7R9} 23|172b7 176r23 180r21 181r24 182r28
+60r27 C{21|3R9} 23|172b27 176r26 186r29 186r47
+63i4 TAILLE_MAX{integer} 65r18 65r35 23|19r23
+64A9 Type_Tableau_Grille(20|3I9)<integer><integer> 67r16
+67a7*G{64A9} 23|25m20 48r25 67r16 121r39 138r39 163m10 182m16 182r30 186m10
+68i7*Taille{integer} 23|22m14 37r16 78r23 79r26 96r23 97r26 119r32 120r23
+. 135r32 137r23 180r23 181r26
+X 23 grille.adb
+16r7 grille{22|7R9} 22m7 25m13 28r14
+23i11 y{integer} 25r23
+24i14 x{integer} 25r26
+75i7 c{integer} 77m7 81m16 81r21 86r14
+78i11 y{integer} 80r62
+79i14 x{integer} 80r59
+96i11 y{integer} 99r58
+97i14 x{integer} 99r55
+117r7 r{26|5R9} 119m7 121m10 121r31 123r14
+120i11 y{integer} 121r34 121r45
+133r7 r{26|5R9} 135m7 138m10 138r31 141r14
+137i11 x{integer} 138r34 138r42
+152r7 gr{22|7R9} 157m7 163m7 164r14
+174r7 gr{22|7R9} 182m13 186m7 187r14
+180i11 y{integer} 182r19 182r33
+181i14 x{integer} 182r22 182r36
+X 26 rangee.ads
+3K9*Rangee 22|3w6 3r22 26|81e11
+5R9*Type_Rangee 22|41r50 45r50 23|115r50 117r11 131r50 133r11 26|79e14
+10V13*ConstruireRangee{5R9} 23|119s12 135s12
+63V13*AjouterChiffre{5R9} 23|121s15 138s15
+

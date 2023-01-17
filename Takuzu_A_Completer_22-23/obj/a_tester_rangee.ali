@@ -1,0 +1,449 @@
+V "GNAT Lib v2021"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P SS ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+RV NO_ELABORATION_CODE
+
+U a_tester_rangee%b	a_tester_rangee.adb	c624d0a2 OO PK
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W chiffre%s		chiffre.adb		chiffre.ali
+
+U a_tester_rangee%s	a_tester_rangee.ads	c50771dc EE OO PK
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.strings%s		a-string.ads		a-string.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W rangee%s		rangee.adb		rangee.ali
+Z system%s		system.ads		system.ali
+Z system.finalization_masters%s  s-finmas.adb	s-finmas.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W types_tests%s		types_tests.ads		types_tests.ali
+
+D a_tester_rangee.ads	20221220205246 43ce55eb a_tester_rangee%s
+D a_tester_rangee.adb	20221221094300 eabd5910 a_tester_rangee%b
+D ada.ads		20210520051132 76789da1 ada%s
+D a-charac.ads		20210520051128 2d3ec45b ada.characters%s
+D a-chlat1.ads		20210520051128 66457d31 ada.characters.latin_1%s
+D a-except.ads		20210520051128 946f3014 ada.exceptions%s
+D a-finali.ads		20210520051128 bf4f806b ada.finalization%s
+D a-inteio.ads		20210520051128 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20210520051128 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210520051130 119b8fb3 ada.streams%s
+D a-string.ads		20210520051130 90ac6797 ada.strings%s
+D a-strmap.ads		20210520051130 5a88892a ada.strings.maps%s
+D a-sttebu.ads		20210520051130 18209c64 ada.strings.text_buffers%s
+D a-strunb.ads		20210520051130 03325227 ada.strings.unbounded%s
+D a-stuten.ads		20210520051130 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210520051130 9eaa38c6 ada.tags%s
+D a-textio.ads		20210520051130 aef4d56d ada.text_io%s
+D a-tiinio.ads		20210520051130 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
+D chiffre.ads		20221208140530 37e88090 chiffre%s
+D interfac.ads		20210520051132 edec285f interfaces%s
+D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
+D rangee.ads		20221208152158 6de136fc rangee%s
+D system.ads		20210520051136 2ffa5114 system%s
+D s-atocou.ads		20210520051132 b45c2d8d system.atomic_counters%s
+D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210520051132 54135002 system.exception_table%s
+D s-ficobl.ads		20210520051132 078245e4 system.file_control_block%s
+D s-finmas.ads		20210520051132 1ab4dba8 system.finalization_masters%s
+D s-finroo.ads		20210520051132 4ff27390 system.finalization_root%s
+D s-memory.ads		20210520051134 597d6634 system.memory%s
+D s-parame.ads		20210520051134 4752c4cb system.parameters%s
+D s-putima.ads		20210520051134 4e095881 system.put_images%s
+D s-secsta.ads		20210520051134 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20210520051134 a7318a92 system.soft_links%s
+D s-stache.ads		20210520051134 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210520051134 472fbca8 system.standard_library%s
+D s-stalib.adb		20210520051134 977290bf system.standard_library%b
+D s-stoele.ads		20210520051134 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210520051134 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20210520051134 e9fa2dd8 system.storage_pools%s
+D s-stratt.ads		20210520051134 7bdda3fa system.stream_attributes%s
+D s-traent.ads		20210520051134 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210520051134 2b077493 system.unsigned_types%s
+D s-wchcon.ads		20210520051136 1b7d22d2 system.wch_con%s
+D types_tests.ads	20221201173420 b0a51c25 types_tests%s
+D unchconv.ads		20210520051136 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z s b [test_rangee_p1 a_tester_rangee 17 13 none]
+G c Z s b [test_rangee_p2 a_tester_rangee 18 13 none]
+G c Z s b [test_rangee_p3 a_tester_rangee 19 13 none]
+G c Z s b [test_rangee_p4 a_tester_rangee 20 13 none]
+G c Z s b [test_rangee_p5 a_tester_rangee 21 13 none]
+G c Z s b [test_rangee_p6 a_tester_rangee 22 13 none]
+G c Z s b [test_rangee_p7 a_tester_rangee 23 13 none]
+G c Z s b [test_rangee_p8 a_tester_rangee 24 13 none]
+G c Z s b [test_rangee_p13 a_tester_rangee 25 13 none]
+G c Z s b [test_rangee_p14 a_tester_rangee 26 13 none]
+G c Z s b [test_rangee_p15 a_tester_rangee 27 13 none]
+G c Z s b [test_rangee_p16 a_tester_rangee 28 13 none]
+G c Z s b [test_rangee_p17a a_tester_rangee 29 13 none]
+G c Z s b [test_rangee_p17b a_tester_rangee 30 13 none]
+G c Z s b [test_rangee_p18 a_tester_rangee 31 13 none]
+G c Z s b [test_rangee_p19 a_tester_rangee 32 13 none]
+G c Z s b [test_rangee_p20 a_tester_rangee 33 13 none]
+G c Z s b [test_rangee_p21 a_tester_rangee 34 13 none]
+G c Z s b [test_rangee_p22a a_tester_rangee 35 13 none]
+G c Z s b [test_rangee_p22b a_tester_rangee 36 14 none]
+G c Z s b [test_rangee_p23a a_tester_rangee 37 12 none]
+G c Z s b [test_rangee_p23b a_tester_rangee 38 12 none]
+G c Z s b [test_rangee_p24 a_tester_rangee 39 13 none]
+G c Z s b [test_rangee_p25 a_tester_rangee 40 13 none]
+G c Z s b [test_rangee_p26 a_tester_rangee 41 13 none]
+G c Z s b [test_rangee_exception_1a a_tester_rangee 42 13 none]
+G c Z s b [test_rangee_exception_1b a_tester_rangee 43 13 none]
+G c Z s b [test_rangee_exception_2a a_tester_rangee 44 13 none]
+G c Z s b [test_rangee_exception_2b a_tester_rangee 45 13 none]
+G c Z s b [test_rangee_exception_3a a_tester_rangee 46 13 none]
+G c Z s b [test_rangee_exception_3b a_tester_rangee 47 13 none]
+G c Z s b [test_rangee_exception_4a a_tester_rangee 48 13 none]
+G c Z s b [test_rangee_exception_4b a_tester_rangee 49 13 none]
+G c Z s b [test_rangee_exception_5a a_tester_rangee 50 13 none]
+G c Z s b [test_rangee_exception_5b a_tester_rangee 51 13 none]
+G c Z s b [test_rangee_exception_6a a_tester_rangee 52 13 none]
+G c Z s b [test_rangee_exception_6b a_tester_rangee 53 13 none]
+G c Z s b [test_rangee_exception_7a a_tester_rangee 54 13 none]
+G c Z s b [test_rangee_exception_7b a_tester_rangee 55 13 none]
+G c Z s s [Tles_testsT1sDI a_tester_rangee 57 4 none]
+G c Z s s [Tles_testsT1sDF a_tester_rangee 57 4 none]
+G c Z s s [TresultatsBIP a_tester_rangee 140 4 none]
+G c Z b b [test_rangee_p9 a_tester_rangee 90 13 none]
+G c Z b b [test_rangee_p10 a_tester_rangee 104 13 none]
+G c Z b b [test_rangee_p11 a_tester_rangee 118 13 none]
+G c Z b b [test_rangee_p12 a_tester_rangee 132 13 none]
+G r c none [test_rangee_p1 a_tester_rangee 17 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_p1 a_tester_rangee 17 13 none] [estvide rangee 13 13 none]
+G r c none [test_rangee_p2 a_tester_rangee 18 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_p2 a_tester_rangee 18 13 none] [estremplie rangee 16 13 none]
+G r c none [test_rangee_p3 a_tester_rangee 19 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_p3 a_tester_rangee 19 13 none] [taille rangee 19 13 none]
+G r c none [test_rangee_p4 a_tester_rangee 20 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_p4 a_tester_rangee 20 13 none] [obtenirchiffre rangee 24 13 none]
+G r c none [test_rangee_p4 a_tester_rangee 20 13 none] [Oeq chiffre 28 13 none]
+G r c none [test_rangee_p5 a_tester_rangee 21 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_p5 a_tester_rangee 21 13 none] [nombrechiffresconnus rangee 28 13 none]
+G r c none [test_rangee_p6 a_tester_rangee 22 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_p6 a_tester_rangee 22 13 none] [nombrechiffresdevaleur rangee 31 13 none]
+G r c none [test_rangee_p7 a_tester_rangee 23 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_p7 a_tester_rangee 23 13 none] [nombrechiffresdevaleur rangee 31 13 none]
+G r c none [test_rangee_p8 a_tester_rangee 24 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_p8 a_tester_rangee 24 13 none] [nombrechiffresdevaleur rangee 31 13 none]
+G r c none [test_rangee_p13 a_tester_rangee 25 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_p13 a_tester_rangee 25 13 none] [retirerchiffre rangee 70 12 none]
+G r c none [test_rangee_p14 a_tester_rangee 26 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_p14 a_tester_rangee 26 13 none] [ajouterchiffre rangee 63 13 none]
+G r c none [test_rangee_p14 a_tester_rangee 26 13 none] [estvide rangee 13 13 none]
+G r c none [test_rangee_p15 a_tester_rangee 27 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_p15 a_tester_rangee 27 13 none] [ajouterchiffre rangee 63 13 none]
+G r c none [test_rangee_p15 a_tester_rangee 27 13 none] [estvide rangee 13 13 none]
+G r c none [test_rangee_p16 a_tester_rangee 28 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_p16 a_tester_rangee 28 13 none] [ajouterchiffre rangee 63 13 none]
+G r c none [test_rangee_p16 a_tester_rangee 28 13 none] [estvide rangee 13 13 none]
+G r c none [test_rangee_p17a a_tester_rangee 29 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_p17a a_tester_rangee 29 13 none] [ajouterchiffre rangee 63 13 none]
+G r c none [test_rangee_p17a a_tester_rangee 29 13 none] [estremplie rangee 16 13 none]
+G r c none [test_rangee_p17b a_tester_rangee 30 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_p17b a_tester_rangee 30 13 none] [ajouterchiffre rangee 63 13 none]
+G r c none [test_rangee_p17b a_tester_rangee 30 13 none] [estremplie rangee 16 13 none]
+G r c none [test_rangee_p18 a_tester_rangee 31 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_p18 a_tester_rangee 31 13 none] [taille rangee 19 13 none]
+G r c none [test_rangee_p18 a_tester_rangee 31 13 none] [ajouterchiffre rangee 63 13 none]
+G r c none [test_rangee_p19 a_tester_rangee 32 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_p19 a_tester_rangee 32 13 none] [ajouterchiffre rangee 63 13 none]
+G r c none [test_rangee_p19 a_tester_rangee 32 13 none] [taille rangee 19 13 none]
+G r c none [test_rangee_p19 a_tester_rangee 32 13 none] [obtenirchiffre rangee 24 13 none]
+G r c none [test_rangee_p19 a_tester_rangee 32 13 none] [Oeq chiffre 28 13 none]
+G r c none [test_rangee_p20 a_tester_rangee 33 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_p20 a_tester_rangee 33 13 none] [ajouterchiffre rangee 63 13 none]
+G r c none [test_rangee_p20 a_tester_rangee 33 13 none] [taille rangee 19 13 none]
+G r c none [test_rangee_p20 a_tester_rangee 33 13 none] [nombrechiffresconnus rangee 28 13 none]
+G r c none [test_rangee_p21 a_tester_rangee 34 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_p21 a_tester_rangee 34 13 none] [ajouterchiffre rangee 63 13 none]
+G r c none [test_rangee_p21 a_tester_rangee 34 13 none] [taille rangee 19 13 none]
+G r c none [test_rangee_p21 a_tester_rangee 34 13 none] [nombrechiffresdevaleur rangee 31 13 none]
+G r c none [test_rangee_p22a a_tester_rangee 35 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_p22a a_tester_rangee 35 13 none] [ajouterchiffre rangee 63 13 none]
+G r c none [test_rangee_p22a a_tester_rangee 35 13 none] [taille rangee 19 13 none]
+G r c none [test_rangee_p22a a_tester_rangee 35 13 none] [chiffrededroite rangee 37 13 none]
+G r c none [test_rangee_p22a a_tester_rangee 35 13 none] [Oeq chiffre 28 13 none]
+G r c none [test_rangee_p22b a_tester_rangee 36 14 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_p22b a_tester_rangee 36 14 none] [ajouterchiffre rangee 63 13 none]
+G r c none [test_rangee_p22b a_tester_rangee 36 14 none] [chiffrededroite rangee 37 13 none]
+G r c none [test_rangee_p22b a_tester_rangee 36 14 none] [Oeq chiffre 28 13 none]
+G r c none [test_rangee_p23a a_tester_rangee 37 12 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_p23a a_tester_rangee 37 12 none] [ajouterchiffre rangee 63 13 none]
+G r c none [test_rangee_p23a a_tester_rangee 37 12 none] [chiffredegauche rangee 43 13 none]
+G r c none [test_rangee_p23a a_tester_rangee 37 12 none] [Oeq chiffre 28 13 none]
+G r c none [test_rangee_p23b a_tester_rangee 38 12 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_p23b a_tester_rangee 38 12 none] [ajouterchiffre rangee 63 13 none]
+G r c none [test_rangee_p23b a_tester_rangee 38 12 none] [chiffredegauche rangee 43 13 none]
+G r c none [test_rangee_p23b a_tester_rangee 38 12 none] [Oeq chiffre 28 13 none]
+G r c none [test_rangee_p24 a_tester_rangee 39 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_p24 a_tester_rangee 39 13 none] [ajouterchiffre rangee 63 13 none]
+G r c none [test_rangee_p24 a_tester_rangee 39 13 none] [sontdeuxchiffresdedroiteegaux rangee 50 12 none]
+G r c none [test_rangee_p25 a_tester_rangee 40 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_p25 a_tester_rangee 40 13 none] [ajouterchiffre rangee 63 13 none]
+G r c none [test_rangee_p25 a_tester_rangee 40 13 none] [sontdeuxchiffresdegaucheegaux rangee 57 13 none]
+G r c none [test_rangee_p26 a_tester_rangee 41 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_p26 a_tester_rangee 41 13 none] [ajouterchiffre rangee 63 13 none]
+G r c none [test_rangee_p26 a_tester_rangee 41 13 none] [retirerchiffre rangee 70 12 none]
+G r c none [test_rangee_p26 a_tester_rangee 41 13 none] [obtenirchiffre rangee 24 13 none]
+G r c none [test_rangee_p26 a_tester_rangee 41 13 none] [Oeq chiffre 28 13 none]
+G r c none [test_rangee_exception_1a a_tester_rangee 42 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_exception_1a a_tester_rangee 42 13 none] [obtenirchiffre rangee 24 13 none]
+G r c none [test_rangee_exception_1b a_tester_rangee 43 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_exception_1b a_tester_rangee 43 13 none] [obtenirchiffre rangee 24 13 none]
+G r c none [test_rangee_exception_2a a_tester_rangee 44 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_exception_2a a_tester_rangee 44 13 none] [chiffrededroite rangee 37 13 none]
+G r c none [test_rangee_exception_2b a_tester_rangee 45 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_exception_2b a_tester_rangee 45 13 none] [chiffrededroite rangee 37 13 none]
+G r c none [test_rangee_exception_3a a_tester_rangee 46 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_exception_3a a_tester_rangee 46 13 none] [chiffredegauche rangee 43 13 none]
+G r c none [test_rangee_exception_3b a_tester_rangee 47 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_exception_3b a_tester_rangee 47 13 none] [chiffredegauche rangee 43 13 none]
+G r c none [test_rangee_exception_4a a_tester_rangee 48 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_exception_4a a_tester_rangee 48 13 none] [sontdeuxchiffresdedroiteegaux rangee 50 12 none]
+G r c none [test_rangee_exception_4b a_tester_rangee 49 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_exception_4b a_tester_rangee 49 13 none] [sontdeuxchiffresdedroiteegaux rangee 50 12 none]
+G r c none [test_rangee_exception_5a a_tester_rangee 50 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_exception_5a a_tester_rangee 50 13 none] [sontdeuxchiffresdegaucheegaux rangee 57 13 none]
+G r c none [test_rangee_exception_5b a_tester_rangee 51 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_exception_5b a_tester_rangee 51 13 none] [sontdeuxchiffresdegaucheegaux rangee 57 13 none]
+G r c none [test_rangee_exception_6a a_tester_rangee 52 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_exception_6a a_tester_rangee 52 13 none] [ajouterchiffre rangee 63 13 none]
+G r c none [test_rangee_exception_6b a_tester_rangee 53 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_exception_6b a_tester_rangee 53 13 none] [ajouterchiffre rangee 63 13 none]
+G r c none [test_rangee_exception_7a a_tester_rangee 54 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_exception_7a a_tester_rangee 54 13 none] [retirerchiffre rangee 70 12 none]
+G r c none [test_rangee_exception_7b a_tester_rangee 55 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_exception_7b a_tester_rangee 55 13 none] [retirerchiffre rangee 70 12 none]
+G r l test_unitaire [Tles_testsT1sDI a_tester_rangee 57 4 none] [test_unitaireDI types_tests 7 9 none]
+G r k test_unitaire [Tles_testsT1sDI a_tester_rangee 57 4 none] [test_unitaireDF types_tests 7 9 none]
+G r k test_unitaire [Tles_testsT1sDF a_tester_rangee 57 4 none] [test_unitaireDF types_tests 7 9 none]
+G r c none [test_rangee_p9 a_tester_rangee 90 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_p9 a_tester_rangee 90 13 none] [chiffrededroite rangee 37 13 none]
+G r c none [test_rangee_p9 a_tester_rangee 90 13 none] [Oeq chiffre 28 13 none]
+G r c none [test_rangee_p10 a_tester_rangee 104 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_p10 a_tester_rangee 104 13 none] [chiffredegauche rangee 43 13 none]
+G r c none [test_rangee_p10 a_tester_rangee 104 13 none] [Oeq chiffre 28 13 none]
+G r c none [test_rangee_p11 a_tester_rangee 118 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_p11 a_tester_rangee 118 13 none] [sontdeuxchiffresdedroiteegaux rangee 50 12 none]
+G r c none [test_rangee_p12 a_tester_rangee 132 13 none] [construirerangee rangee 10 13 none]
+G r c none [test_rangee_p12 a_tester_rangee 132 13 none] [sontdeuxchiffresdegaucheegaux rangee 57 13 none]
+X 1 a_tester_rangee.ads
+11K9*A_Tester_Rangee 142l5 142e20 2|7b14 577l5 577t20
+17V13*Test_Rangee_P1{boolean} 60r8 2|13b13 18l8 18t22
+18V13*Test_Rangee_P2{boolean} 62r8 2|22b13 27l8 27t22
+19V13*Test_Rangee_P3{boolean} 64r8 2|31b13 36l8 36t22
+20V13*Test_Rangee_P4{boolean} 66r8 2|40b13 50l8 50t22
+21V13*Test_Rangee_P5{boolean} 68r8 2|54b13 59l8 59t22
+22V13*Test_Rangee_P6{boolean} 70r8 2|63b13 68l8 68t22
+23V13*Test_Rangee_P7{boolean} 72r8 2|72b13 77l8 77t22
+24V13*Test_Rangee_P8{boolean} 74r8 2|81b13 86l8 86t22
+25V13*Test_Rangee_P13{boolean} 76r8 2|146b13 156l8 156t23
+26V13*Test_Rangee_P14{boolean} 78r8 2|163b13 169l8 169t23
+27V13*Test_Rangee_P15{boolean} 80r8 2|172b13 178l8 178t23
+28V13*Test_Rangee_P16{boolean} 82r8 2|181b13 187l8 187t23
+29V13*Test_Rangee_P17a{boolean} 84r8 2|191b13 197l8 197t24
+30V13*Test_Rangee_P17b{boolean} 86r8 2|201b12 214l8 214t24
+31V13*Test_Rangee_P18{boolean} 88r8 2|217b13 224l8 224t23
+32V13*Test_Rangee_P19{boolean} 90r8 2|227b13 236l8 236t23
+33V13*Test_Rangee_P20{boolean} 92r7 2|241b13 249l8 249t23
+34V13*Test_Rangee_P21{boolean} 94r7 2|253b12 266l8 266t23
+35V13*Test_Rangee_P22a{boolean} 96r7 2|270b12 278l8 278t24
+36V14*Test_Rangee_P22b{boolean} 98r7 2|282b12 290l8 290t24
+37V12*Test_Rangee_P23a{boolean} 100r7 2|294b12 302l8 302t24
+38V12*Test_Rangee_P23b{boolean} 102r7 2|306b12 314l8 314t24
+39V13*Test_Rangee_P24{boolean} 104r7 2|317b13 336l8 336t23
+40V13*Test_Rangee_P25{boolean} 106r7 2|339b13 358l8 358t23
+41V13*Test_Rangee_P26{boolean} 108r7 2|361b13 371l8 371t23
+42V13*Test_Rangee_Exception_1a{boolean} 110r7 2|378b13 390l8 390t32
+43V13*Test_Rangee_Exception_1b{boolean} 112r7 2|393b13 405l8 405t32
+44V13*Test_Rangee_Exception_2a{boolean} 114r7 2|408b13 420l8 420t32
+45V13*Test_Rangee_Exception_2b{boolean} 116r7 2|423b13 435l8 435t32
+46V13*Test_Rangee_Exception_3a{boolean} 118r7 2|438b13 450l8 450t32
+47V13*Test_Rangee_Exception_3b{boolean} 120r7 2|453b13 465l8 465t32
+48V13*Test_Rangee_Exception_4a{boolean} 122r7 2|468b13 478l8 478t32
+49V13*Test_Rangee_Exception_4b{boolean} 124r7 2|481b13 491l8 491t32
+50V13*Test_Rangee_Exception_5a{boolean} 126r7 2|494b13 504l8 504t32
+51V13*Test_Rangee_Exception_5b{boolean} 128r7 2|507b13 517l8 517t32
+52V13*Test_Rangee_Exception_6a{boolean} 130r7 2|520b13 531l8 531t32
+53V13*Test_Rangee_Exception_6b{boolean} 132r7 2|534b13 545l8 545t32
+54V13*Test_Rangee_Exception_7a{boolean} 134r7 2|548b13 559l8 559t32
+55V13*Test_Rangee_Exception_7b{boolean} 136r7 2|562b13 573l8 573t32
+57a4*Les_Tests(46|7R9) 140r23
+140a4*Resultats(boolean)
+X 2 a_tester_rangee.adb
+9i4 TAILLE_GRILLE_TEST{integer} 16r30 25r30 34r30 35r26 43r30 44r23 57r30
+. 66r30 67r52 75r30 84r30 93r30 94r23 107r30 108r23 121r30 122r23 135r30
+. 136r23 150r31 151r31 152r23 166r30 175r30 184r30 194r30 204r30 220r30 223r21
+. 230r30 244r30 256r30 273r30 285r30 297r30 309r30 320r30 342r30 364r30 382r30
+. 397r30 398r30 412r30 427r30 428r31 442r30 457r30 458r31 471r30 484r30 485r47
+. 497r30 510r30 511r47 523r30 537r30 538r30 551r30 565r30 566r30
+14r7 R{23|5R9} 16m7 17r23
+23r7 R{23|5R9} 25m7 26r29
+32r7 R{23|5R9} 34m7 35r21
+41r7 R{23|5R9} 43m7 45r35
+44i15 i{integer} 45r37
+55r7 R{23|5R9} 57m7 58r36
+64r7 R{23|5R9} 66m7 67r38
+73r7 R{23|5R9} 75m7 76r38
+82r7 R{23|5R9} 84m7 85r38
+90V13 Test_Rangee_P9{boolean} 90b13 100l8 100t22
+91r7 R{23|5R9} 93m7 95r36
+94i15 i{integer} 95r38
+104V13 Test_Rangee_P10{boolean} 104b13 114l8 114t23
+105r7 R{23|5R9} 107m7 109r36
+108i15 i{integer} 109r38
+118V13 Test_Rangee_P11{boolean} 118b13 128l8 128t23
+119r7 R{23|5R9} 121m7 123r50
+122i15 i{integer} 123r52
+132V13 Test_Rangee_P12{boolean} 132b13 142l8 142t23
+133r7 R{23|5R9} 135m7 137r50
+136i15 i{integer} 137r52
+147r7 R1{23|5R9} 150m7 155r14
+148r11 R2{23|5R9} 151m7 153m17 153r38 155r19
+152i15 i{integer} 153r41
+164r7 R{23|5R9} 166m7 167m7 167r28 168r27
+173r7 R{23|5R9} 175m7 176m7 176r28 177r27
+182r7 R{23|5R9} 184m7 185m7 185r28 186r23
+192r7 R{23|5R9} 194m7 195m7 195r28 196r30
+202r7 R{23|5R9} 204m7 205m7 205r28 206m7 206r28 207m7 207r28 208m7 208r28
+. 209m7 209r28 210m7 210r28 211m7 211r28 212m7 212r28 213r26
+218r7 R{23|5R9} 220m7 221m8 221r29 221r40 223r16
+228r7 R{23|5R9} 230m7 231m7 231r28 232m7 232r28 232r39 234r25 234r56 235r25
+. 235r36
+242r7 R{23|5R9} 244m7 245m7 245r28 246m7 246r28 246r39 247m11 247r32 248r36
+254r7 R{23|5R9} 256m7 257m7 257r28 258m7 258r28 259m7 259r28 260m11 260r32
+. 261m7 261r28 261r39 263r33 264r33 265r33
+271r7 R{23|5R9} 273m7 274m7 274r28 275m7 275r28 275r39 277r26 277r36
+283r7 R{23|5R9} 285m7 286m7 286r28 287m7 287r28 289r26
+295r7 R{23|5R9} 297m7 298m7 298r28 299m7 299r28 301r26
+307r7 R{23|5R9} 309m7 310m7 310r28 311m7 311r28 313r26
+318r7 R{23|5R9} 320m7 321m7 321r28 322m7 322r28 323m7 323r28 324m7 324r28
+. 325m7 325r28 326m7 326r28 327m7 327r28 328m7 328r28 329r44 330r56 331r56
+. 332r60 333r60 334r60 335r60
+340r7 R{23|5R9} 342m7 343m7 343r28 344m7 344r28 345m7 345r28 346m7 346r28
+. 347m7 347r28 348m7 348r28 349m7 349r28 350m7 350r28 351r44 352r56 353r56
+. 354r60 355r60 356r60 357r60
+362r7 R{23|5R9} 364m7 365m7 365r28 366m7 366r28 367m11 367r32 368m11 368r32
+. 369r32 370r48
+379r7 R{23|5R9} 382m7 383r27
+380i7 C{20|3I9} 383m7
+394r7 R{23|5R9} 397m7 398r27
+395i7 C{20|3I9} 398m7
+409r6 R{23|5R9} 412m7 413r28
+410i7 C{20|3I9} 413m7
+424r6 R{23|5R9} 427m7 428r28
+425i7 C{20|3I9} 428m7
+439r6 R{23|5R9} 442m7 443r28
+440i7 C{20|3I9} 443m7
+454r6 R{23|5R9} 457m7 458r28
+455i7 C{20|3I9} 458m7
+469r6 R{23|5R9} 471m7 472r44
+482r6 R{23|5R9} 484m7 485r44
+495r6 R{23|5R9} 497m7 498r44
+508r6 R{23|5R9} 510m7 511r44
+521r6 R{23|5R9} 523m7 524m7 524r27
+535r6 R{23|5R9} 537m7 538m7 538r27
+549r6 R{23|5R9} 551m7 552m7 552r27
+563r6 R{23|5R9} 565m7 566m7 566r27
+X 3 ada.ads
+16K9*Ada 1|6r6 6r33 8r6 8r31 9r6 9r31 2|2r6 2r31 3r6 3r31 3|20e8
+X 8 a-inteio.ads
+18K13*Integer_Text_IO[18|46] 1|9w10 9r35 2|3w10 3r35
+X 11 a-string.ads
+16K13*Strings 1|6r10 6r37 11|35e16
+X 14 a-strunb.ads
+83K21*Unbounded 1|6w18 6r45 14|765e26
+104V13*To_Unbounded_String{88R9} 1|61s7 63s8 65s8 67s8 69s8 71s8 73s8 75s8
+. 77s8 79s8 81s8 83s8 85s8 87s8 89s8 91s8 93s8 95s8 97s8 99s8 101s8 103s8
+. 105s8 107s8 109s8 111s8 113s8 115s8 117s8 119s8 121s8 123s8 125s8 127s8
+. 129s8 131s8 133s8 135s8 137s8
+X 17 a-textio.ads
+58K13*Text_IO 1|8w10 8r35 2|2w10 2r35 17|725e16
+X 20 chiffre.ads
+1K9*Chiffre 2|5w6 5r19 20|35e12
+3I9*Type_Chiffre<short_short_integer> 2|380r11 395r11 410r11 425r11 440r11
+. 455r11
+8i4*UN{3I9} 2|76r41 167r34 207r34 208r34 211r34 212r34 231r34 234r33 245r34
+. 257r34 258r34 259r34 263r36 274r34 286r34 298r34 310r34 323r34 324r34 327r34
+. 328r34 345r34 346r34 349r34 350r34 366r34 524r33
+11i4*ZERO{3I9} 2|85r41 176r34 195r34 205r34 206r34 209r34 210r34 221r44 232r43
+. 235r42 246r43 261r43 264r36 275r43 287r34 289r34 299r34 311r34 313r34 321r34
+. 322r34 325r34 326r34 343r34 344r34 347r34 348r34 365r34 538r54
+14i4*INCONNU{3I9} 2|45r43 67r41 95r44 109r44 185r34 234r64 247r38 260r38
+. 265r36 277r42 301r34 369r39 370r55
+28V14*"="{boolean} 2|45s40 95s41 109s41 234s31 234s62 235s40 277s40 289s32
+. 301s32 313s32 369s37 370s53
+X 23 rangee.ads
+3K9*Rangee 1|2w6 2r18 23|81e11
+5R9*Type_Rangee 2|14r11 23r11 32r11 41r11 55r11 64r11 73r11 82r11 91r11 105r11
+. 119r11 133r11 147r12 148r16 164r11 173r11 182r11 192r11 202r11 218r11 228r11
+. 242r11 254r11 271r11 283r11 295r11 307r11 318r11 340r11 362r11 379r11 394r11
+. 409r10 424r10 439r10 454r10 469r10 482r10 495r10 508r10 521r10 535r10 549r10
+. 563r10 23|79e14
+7X4*TRANCHE_INVALIDE 2|386r12 401r12 416r12 431r12 446r12 461r12 474r12 487r12
+. 500r12 513r12 527r12 541r12 555r12 569r12
+10V13*ConstruireRangee{5R9} 2|16s12 25s12 34s12 43s12 57s12 66s12 75s12 84s12
+. 93s12 107s12 121s12 135s12 150s13 151s13 166s12 175s12 184s12 194s12 204s12
+. 220s12 230s12 244s12 256s12 273s12 285s12 297s12 309s12 320s12 342s12 364s12
+. 382s12 397s12 412s12 427s12 442s12 457s12 471s12 484s12 497s12 510s12 523s12
+. 537s12 551s12 565s12
+13V13*EstVide{boolean} 2|17s14 168s18 177s18 186s14
+16V13*EstRemplie{boolean} 2|26s18 196s18 213s14
+19V13*Taille{integer} 2|35s14 221s32 223s9 232s31 235s28 246s31 261s31 275s31
+. 277s29
+24V13*ObtenirChiffre{20|3I9} 2|45s20 234s9 234s40 235s9 369s17 370s33 383s12
+. 398s12
+28V13*nombreChiffresConnus{integer} 2|58s14 248s14
+31V13*nombreChiffresDeValeur{integer} 2|67s14 76s14 85s14 263s9 264s9 265s9
+37V13*chiffreDeDroite{20|3I9} 2|95s20 277s9 289s9 413s12 428s12
+43V13*chiffreDeGauche{20|3I9} 2|109s20 301s9 313s9 443s12 458s12
+50V12*SontDeuxChiffresDeDroiteEgaux{boolean} 2|123s20 329s14 330s26 331s26
+. 332s30 333s30 334s30 335s30 472s14 485s14
+57V13*SontDeuxChiffresDeGaucheEgaux{boolean} 2|137s20 351s14 352s26 353s26
+. 354s30 355s30 356s30 357s30 498s14 511s14
+63V13*AjouterChiffre{5R9} 2|167s12 176s12 185s12 195s12 205s12 206s12 207s12
+. 208s12 209s12 210s12 211s12 212s12 221s13 231s12 232s12 245s12 246s12 247s16
+. 257s12 258s12 259s12 260s16 261s12 274s12 275s12 286s12 287s12 298s12 299s12
+. 310s12 311s12 321s12 322s12 323s12 324s12 325s12 326s12 327s12 328s12 343s12
+. 344s12 345s12 346s12 347s12 348s12 349s12 350s12 365s12 366s12 524s12 538s12
+70V12*RetirerChiffre{5R9} 2|153s23 367s16 368s16 552s12 566s12
+X 24 system.ads
+67M9*Address
+X 31 s-memory.ads
+53V13*Alloc{24|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{24|67M9} 105i<c,__gnat_realloc>22
+X 38 s-stalib.adb
+89U14 Break_Start 90i<c,__gnat_break_start>22
+X 46 types_tests.ads
+3K9*Types_Tests 1|4w6 4r23 46|12e16
+7R9*Test_Unitaire 1|57r54 46|10e14
+

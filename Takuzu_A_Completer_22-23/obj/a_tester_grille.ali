@@ -1,0 +1,419 @@
+V "GNAT Lib v2021"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P SS ZX
+
+RN
+RV NO_ACCESS_SUBPROGRAMS
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U a_tester_grille%b	a_tester_grille.adb	7a65470b OO PK
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W affichage%s		affichage.adb		affichage.ali
+W chiffre%s		chiffre.adb		chiffre.ali
+W coordonnee%s		coordonnee.adb		coordonnee.ali
+W grille%s		grille.adb		grille.ali
+W rangee%s		rangee.adb		rangee.ali
+
+U a_tester_grille%s	a_tester_grille.ads	3bb48dac EE OO PK
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.strings%s		a-string.ads		a-string.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+Z system%s		system.ads		system.ali
+Z system.finalization_masters%s  s-finmas.adb	s-finmas.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+
+D a_tester_grille.ads	20221221120408 3886df8b a_tester_grille%s
+D a_tester_grille.adb	20221221120030 4f3172e6 a_tester_grille%b
+D ada.ads		20210520051132 76789da1 ada%s
+D a-charac.ads		20210520051128 2d3ec45b ada.characters%s
+D a-chlat1.ads		20210520051128 66457d31 ada.characters.latin_1%s
+D a-except.ads		20210520051128 946f3014 ada.exceptions%s
+D a-finali.ads		20210520051128 bf4f806b ada.finalization%s
+D a-inteio.ads		20210520051128 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20210520051128 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210520051130 119b8fb3 ada.streams%s
+D a-string.ads		20210520051130 90ac6797 ada.strings%s
+D a-strmap.ads		20210520051130 5a88892a ada.strings.maps%s
+D a-sttebu.ads		20210520051130 18209c64 ada.strings.text_buffers%s
+D a-strunb.ads		20210520051130 03325227 ada.strings.unbounded%s
+D a-stuten.ads		20210520051130 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210520051130 9eaa38c6 ada.tags%s
+D a-textio.ads		20210520051130 aef4d56d ada.text_io%s
+D a-tiinio.ads		20210520051130 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
+D affichage.ads		20221201173420 c65c41a0 affichage%s
+D chiffre.ads		20221208140530 37e88090 chiffre%s
+D coordonnee.ads	20221201173420 b1b28967 coordonnee%s
+D grille.ads		20221209105446 c9384163 grille%s
+D interfac.ads		20210520051132 edec285f interfaces%s
+D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
+D rangee.ads		20221208152158 6de136fc rangee%s
+D system.ads		20210520051136 2ffa5114 system%s
+D s-atocou.ads		20210520051132 b45c2d8d system.atomic_counters%s
+D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210520051132 54135002 system.exception_table%s
+D s-ficobl.ads		20210520051132 078245e4 system.file_control_block%s
+D s-finmas.ads		20210520051132 1ab4dba8 system.finalization_masters%s
+D s-finroo.ads		20210520051132 4ff27390 system.finalization_root%s
+D s-memory.ads		20210520051134 597d6634 system.memory%s
+D s-parame.ads		20210520051134 4752c4cb system.parameters%s
+D s-putima.ads		20210520051134 4e095881 system.put_images%s
+D s-secsta.ads		20210520051134 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20210520051134 a7318a92 system.soft_links%s
+D s-stache.ads		20210520051134 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210520051134 472fbca8 system.standard_library%s
+D s-stalib.adb		20210520051134 977290bf system.standard_library%b
+D s-stoele.ads		20210520051134 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210520051134 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20210520051134 e9fa2dd8 system.storage_pools%s
+D s-stratt.ads		20210520051134 7bdda3fa system.stream_attributes%s
+D s-traent.ads		20210520051134 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210520051134 2b077493 system.unsigned_types%s
+D s-wchcon.ads		20210520051136 1b7d22d2 system.wch_con%s
+D unchconv.ads		20210520051136 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z s b [test_grille_p1 a_tester_grille 13 13 none]
+G c Z s b [test_grille_p2 a_tester_grille 14 13 none]
+G c Z s b [test_grille_p3 a_tester_grille 15 13 none]
+G c Z s b [test_grille_p4 a_tester_grille 16 13 none]
+G c Z s b [test_grille_p5 a_tester_grille 17 13 none]
+G c Z s b [test_grille_p6 a_tester_grille 18 13 none]
+G c Z s b [test_grille_p7 a_tester_grille 19 13 none]
+G c Z s b [test_grille_p8 a_tester_grille 20 13 none]
+G c Z s b [test_grille_p9 a_tester_grille 21 13 none]
+G c Z s b [test_grille_p10 a_tester_grille 22 13 none]
+G c Z s b [test_grille_p11 a_tester_grille 23 13 none]
+G c Z s b [test_grille_p12 a_tester_grille 24 13 none]
+G c Z s b [test_grille_p13 a_tester_grille 25 13 none]
+G c Z s b [test_grille_p14a a_tester_grille 26 13 none]
+G c Z s b [test_grille_p14b a_tester_grille 27 13 none]
+G c Z s b [test_grille_p15 a_tester_grille 28 13 none]
+G c Z s b [test_grille_p16 a_tester_grille 29 13 none]
+G c Z s b [test_grille_p17 a_tester_grille 30 13 none]
+G c Z s b [test_grille_exception1 a_tester_grille 31 13 none]
+G c Z s b [test_grille_exception2 a_tester_grille 32 13 none]
+G c Z s b [test_grille_exception3 a_tester_grille 33 13 none]
+G c Z s b [test_remplir_ligne a_tester_grille 34 13 none]
+G c Z s b [test_remplir_colonne a_tester_grille 35 13 none]
+G c Z s s [test_unitaireDI a_tester_grille 7 9 none]
+G c Z s s [test_unitaireDF a_tester_grille 7 9 none]
+G c Z s s [test_unitaireIP a_tester_grille 7 9 none]
+G c Z s s [Tles_testsT2sDI a_tester_grille 37 4 none]
+G c Z s s [Tles_testsT2sDF a_tester_grille 37 4 none]
+G c Z s s [TresultatsBIP a_tester_grille 71 4 none]
+G r c none [test_grille_p1 a_tester_grille 13 13 none] [construiregrille grille 17 13 none]
+G r c none [test_grille_p1 a_tester_grille 13 13 none] [taille grille 20 13 none]
+G r c none [test_grille_p2 a_tester_grille 14 13 none] [construiregrille grille 17 13 none]
+G r c none [test_grille_p2 a_tester_grille 14 13 none] [taille grille 20 13 none]
+G r c none [test_grille_p2 a_tester_grille 14 13 none] [construirecoordonnees coordonnee 6 13 none]
+G r c none [test_grille_p2 a_tester_grille 14 13 none] [estcasevide grille 24 13 none]
+G r c none [test_grille_p3 a_tester_grille 15 13 none] [construiregrille grille 17 13 none]
+G r c none [test_grille_p3 a_tester_grille 15 13 none] [taille grille 20 13 none]
+G r c none [test_grille_p3 a_tester_grille 15 13 none] [construirecoordonnees coordonnee 6 13 none]
+G r c none [test_grille_p3 a_tester_grille 15 13 none] [estcasevide grille 24 13 none]
+G r c none [test_grille_p4 a_tester_grille 16 13 none] [construiregrille grille 17 13 none]
+G r c none [test_grille_p4 a_tester_grille 16 13 none] [nombrechiffresconnus grille 34 13 none]
+G r c none [test_grille_p5 a_tester_grille 17 13 none] [construiregrille grille 17 13 none]
+G r c none [test_grille_p5 a_tester_grille 17 13 none] [estremplie grille 37 13 none]
+G r c none [test_grille_p6 a_tester_grille 18 13 none] [construiregrille grille 17 13 none]
+G r c none [test_grille_p6 a_tester_grille 18 13 none] [taille grille 20 13 none]
+G r c none [test_grille_p6 a_tester_grille 18 13 none] [extraireligne grille 40 13 none]
+G r c none [test_grille_p6 a_tester_grille 18 13 none] [taille rangee 19 13 none]
+G r c none [test_grille_p7 a_tester_grille 19 13 none] [construiregrille grille 17 13 none]
+G r c none [test_grille_p7 a_tester_grille 19 13 none] [extraireligne grille 40 13 none]
+G r c none [test_grille_p7 a_tester_grille 19 13 none] [estvide rangee 13 13 none]
+G r c none [test_grille_p8 a_tester_grille 20 13 none] [construiregrille grille 17 13 none]
+G r c none [test_grille_p8 a_tester_grille 20 13 none] [taille grille 20 13 none]
+G r c none [test_grille_p8 a_tester_grille 20 13 none] [extraireligne grille 40 13 none]
+G r c none [test_grille_p8 a_tester_grille 20 13 none] [taille rangee 19 13 none]
+G r c none [test_grille_p9 a_tester_grille 21 13 none] [construiregrille grille 17 13 none]
+G r c none [test_grille_p9 a_tester_grille 21 13 none] [extrairecolonne grille 44 13 none]
+G r c none [test_grille_p9 a_tester_grille 21 13 none] [estvide rangee 13 13 none]
+G r c none [test_grille_p10 a_tester_grille 22 13 none] [construiregrille grille 17 13 none]
+G r c none [test_grille_p10 a_tester_grille 22 13 none] [taille grille 20 13 none]
+G r c none [test_grille_p10 a_tester_grille 22 13 none] [construirecoordonnees coordonnee 6 13 none]
+G r c none [test_grille_p10 a_tester_grille 22 13 none] [fixerchiffre grille 51 13 none]
+G r c none [test_grille_p11 a_tester_grille 23 13 none] [construiregrille grille 17 13 none]
+G r c none [test_grille_p11 a_tester_grille 23 13 none] [taille grille 20 13 none]
+G r c none [test_grille_p11 a_tester_grille 23 13 none] [construirecoordonnees coordonnee 6 13 none]
+G r c none [test_grille_p11 a_tester_grille 23 13 none] [fixerchiffre grille 51 13 none]
+G r c none [test_grille_p11 a_tester_grille 23 13 none] [estcasevide grille 24 13 none]
+G r c none [test_grille_p12 a_tester_grille 24 13 none] [construiregrille grille 17 13 none]
+G r c none [test_grille_p12 a_tester_grille 24 13 none] [taille grille 20 13 none]
+G r c none [test_grille_p12 a_tester_grille 24 13 none] [construirecoordonnees coordonnee 6 13 none]
+G r c none [test_grille_p12 a_tester_grille 24 13 none] [fixerchiffre grille 51 13 none]
+G r c none [test_grille_p12 a_tester_grille 24 13 none] [obtenirchiffre grille 30 13 none]
+G r c none [test_grille_p12 a_tester_grille 24 13 none] [Oeq chiffre 28 13 none]
+G r c none [test_grille_p12 a_tester_grille 24 13 none] [estcasevide grille 24 13 none]
+G r c none [test_grille_p13 a_tester_grille 25 13 none] [construiregrille grille 17 13 none]
+G r c none [test_grille_p13 a_tester_grille 25 13 none] [nombrechiffresconnus grille 34 13 none]
+G r c none [test_grille_p13 a_tester_grille 25 13 none] [taille grille 20 13 none]
+G r c none [test_grille_p13 a_tester_grille 25 13 none] [construirecoordonnees coordonnee 6 13 none]
+G r c none [test_grille_p13 a_tester_grille 25 13 none] [fixerchiffre grille 51 13 none]
+G r c none [test_grille_p14a a_tester_grille 26 13 none] [construiregrille grille 17 13 none]
+G r c none [test_grille_p14a a_tester_grille 26 13 none] [taille grille 20 13 none]
+G r c none [test_grille_p14a a_tester_grille 26 13 none] [construirecoordonnees coordonnee 6 13 none]
+G r c none [test_grille_p14a a_tester_grille 26 13 none] [fixerchiffre grille 51 13 none]
+G r c none [test_grille_p14a a_tester_grille 26 13 none] [estremplie grille 37 13 none]
+G r c none [test_grille_p14b a_tester_grille 27 13 none] [construiregrille grille 17 13 none]
+G r c none [test_grille_p14b a_tester_grille 27 13 none] [taille grille 20 13 none]
+G r c none [test_grille_p14b a_tester_grille 27 13 none] [construirecoordonnees coordonnee 6 13 none]
+G r c none [test_grille_p14b a_tester_grille 27 13 none] [fixerchiffre grille 51 13 none]
+G r c none [test_grille_p14b a_tester_grille 27 13 none] [estremplie grille 37 13 none]
+G r c none [test_grille_p15 a_tester_grille 28 13 none] [construiregrille grille 17 13 none]
+G r c none [test_grille_p15 a_tester_grille 28 13 none] [taille grille 20 13 none]
+G r c none [test_grille_p15 a_tester_grille 28 13 none] [construirecoordonnees coordonnee 6 13 none]
+G r c none [test_grille_p15 a_tester_grille 28 13 none] [fixerchiffre grille 51 13 none]
+G r c none [test_grille_p15 a_tester_grille 28 13 none] [extraireligne grille 40 13 none]
+G r c none [test_grille_p15 a_tester_grille 28 13 none] [obtenirchiffre rangee 24 13 none]
+G r c none [test_grille_p15 a_tester_grille 28 13 none] [Oeq chiffre 28 13 none]
+G r c none [test_grille_p16 a_tester_grille 29 13 none] [construiregrille grille 17 13 none]
+G r c none [test_grille_p16 a_tester_grille 29 13 none] [taille grille 20 13 none]
+G r c none [test_grille_p16 a_tester_grille 29 13 none] [construirecoordonnees coordonnee 6 13 none]
+G r c none [test_grille_p16 a_tester_grille 29 13 none] [fixerchiffre grille 51 13 none]
+G r c none [test_grille_p16 a_tester_grille 29 13 none] [extrairecolonne grille 44 13 none]
+G r c none [test_grille_p16 a_tester_grille 29 13 none] [obtenirchiffre rangee 24 13 none]
+G r c none [test_grille_p16 a_tester_grille 29 13 none] [Oeq chiffre 28 13 none]
+G r c none [test_grille_p17 a_tester_grille 30 13 none] [construiregrille grille 17 13 none]
+G r c none [test_grille_p17 a_tester_grille 30 13 none] [taille grille 20 13 none]
+G r c none [test_grille_p17 a_tester_grille 30 13 none] [construirecoordonnees coordonnee 6 13 none]
+G r c none [test_grille_p17 a_tester_grille 30 13 none] [fixerchiffre grille 51 13 none]
+G r c none [test_grille_p17 a_tester_grille 30 13 none] [vidercase grille 59 13 none]
+G r c none [test_grille_p17 a_tester_grille 30 13 none] [estcasevide grille 24 13 none]
+G r c none [test_grille_exception1 a_tester_grille 31 13 none] [construiregrille grille 17 13 none]
+G r c none [test_grille_exception1 a_tester_grille 31 13 none] [taille grille 20 13 none]
+G r c none [test_grille_exception1 a_tester_grille 31 13 none] [construirecoordonnees coordonnee 6 13 none]
+G r c none [test_grille_exception1 a_tester_grille 31 13 none] [obtenirchiffre grille 30 13 none]
+G r c none [test_grille_exception1 a_tester_grille 31 13 none] [Oeq chiffre 28 13 none]
+G r c none [test_grille_exception2 a_tester_grille 32 13 none] [construiregrille grille 17 13 none]
+G r c none [test_grille_exception2 a_tester_grille 32 13 none] [taille grille 20 13 none]
+G r c none [test_grille_exception2 a_tester_grille 32 13 none] [construirecoordonnees coordonnee 6 13 none]
+G r c none [test_grille_exception2 a_tester_grille 32 13 none] [fixerchiffre grille 51 13 none]
+G r c none [test_grille_exception3 a_tester_grille 33 13 none] [construiregrille grille 17 13 none]
+G r c none [test_grille_exception3 a_tester_grille 33 13 none] [taille grille 20 13 none]
+G r c none [test_grille_exception3 a_tester_grille 33 13 none] [construirecoordonnees coordonnee 6 13 none]
+G r c none [test_grille_exception3 a_tester_grille 33 13 none] [vidercase grille 59 13 none]
+G r c none [test_remplir_ligne a_tester_grille 34 13 none] [construiregrille grille 17 13 none]
+G r c none [test_remplir_ligne a_tester_grille 34 13 none] [construirecoordonnees coordonnee 6 13 none]
+G r c none [test_remplir_ligne a_tester_grille 34 13 none] [fixerchiffre grille 51 13 none]
+G r c none [test_remplir_ligne a_tester_grille 34 13 none] [extraireligne grille 40 13 none]
+G r c none [test_remplir_ligne a_tester_grille 34 13 none] [nombrechiffresconnus rangee 28 13 none]
+G r c none [test_remplir_ligne a_tester_grille 34 13 none] [nombrechiffresdevaleur rangee 31 13 none]
+G r c none [test_remplir_ligne a_tester_grille 34 13 none] [taille rangee 19 13 none]
+G r c none [test_remplir_colonne a_tester_grille 35 13 none] [construiregrille grille 17 13 none]
+G r c none [test_remplir_colonne a_tester_grille 35 13 none] [construirecoordonnees coordonnee 6 13 none]
+G r c none [test_remplir_colonne a_tester_grille 35 13 none] [fixerchiffre grille 51 13 none]
+G r c none [test_remplir_colonne a_tester_grille 35 13 none] [extrairecolonne grille 44 13 none]
+G r c none [test_remplir_colonne a_tester_grille 35 13 none] [nombrechiffresconnus rangee 28 13 none]
+G r c none [test_remplir_colonne a_tester_grille 35 13 none] [nombrechiffresdevaleur rangee 31 13 none]
+G r c none [test_remplir_colonne a_tester_grille 35 13 none] [taille rangee 19 13 none]
+X 1 a_tester_grille.ads
+3K9*A_Tester_Grille 73l5 73e20 2|12b14 407l5 407t20
+5P9*Pt_Fonction(boolean) 8r26
+7R9*Test_Unitaire 10e14 37r54
+8p7*Function_Of_Test{5P9}
+9r7*Error_Test{14|88R9}
+13V13*Test_Grille_P1{boolean} 40r8 2|22b13 27l8 27t22
+14V13*Test_Grille_P2{boolean} 41r8 2|31b13 45l8 45t22
+15V13*Test_Grille_P3{boolean} 42r8 2|49b13 63l8 63t22
+16V13*Test_Grille_P4{boolean} 43r8 2|67b13 72l8 72t22
+17V13*Test_Grille_P5{boolean} 44r8 2|76b13 81l8 81t22
+18V13*Test_Grille_P6{boolean} 45r8 2|85b13 92l8 92t22
+19V13*Test_Grille_P7{boolean} 46r8 2|96b13 108l8 108t22
+20V13*Test_Grille_P8{boolean} 47r8 2|112b13 119l8 119t22
+21V13*Test_Grille_P9{boolean} 48r8 2|123b13 135l8 135t22
+22V13*Test_Grille_P10{boolean} 49r8 2|143b13 151l8 151t23
+23V13*Test_Grille_P11{boolean} 50r8 2|155b13 170l8 170t23
+24V13*Test_Grille_P12{boolean} 51r8 2|174b13 189l8 189t23
+25V13*Test_Grille_P13{boolean} 52r8 2|192b13 208l8 208t23
+26V13*Test_Grille_P14a{boolean} 53r8 2|212b13 220l8 220t24
+27V13*Test_Grille_P14b{boolean} 55r8 2|223b13 235l8 235t24
+28V13*Test_Grille_P15{boolean} 57r8 2|240b13 261l8 261t23
+29V13*Test_Grille_P16{boolean} 58r8 2|266b13 287l8 287t23
+30V13*Test_Grille_P17{boolean} 59r8 2|291b13 303l8 303t23
+31V13*Test_Grille_Exception1{boolean} 60r8 2|310b13 322l8 322t30
+32V13*Test_Grille_Exception2{boolean} 62r8 2|324b13 338l8 338t30
+33V13*Test_Grille_Exception3{boolean} 64r8 2|340b13 353l8 353t30
+34V13*Test_Remplir_Ligne{boolean} 66r8 2|360b13 380l8 380t26
+35V13*Test_Remplir_Colonne{boolean} 68r8 2|383b13 403l8 403t28
+37a4*Les_Tests(7R9) 71r23
+71a4*Resultats(boolean)
+X 2 a_tester_grille.adb
+14i4 TAILLE_GRILLE_TEST{integer} 25r30 26r27 35r30 53r30 70r30 79r30 89r30
+. 100r30 101r21 116r30 127r30 128r21 147r30 150r27 161r31 180r31 199r42 216r30
+. 227r30 245r30 271r30 296r31 314r30 328r30 344r30 366r30 389r30
+23r7 G{23|7R9} 25m7 26r22
+32r7 G{23|7R9} 35m7 36r29 37r32 39r34
+33r7 C{22|3R9} 38m13 39r37
+36i11 I{integer} 38r41
+37i14 J{integer} 38r44
+50r7 G{23|7R9} 53m7 54r29 55r32 57r33
+51r7 C{22|3R9} 56m13 57r36
+54i11 I{integer} 56r41
+55i14 J{integer} 56r44
+68r7 G{23|7R9} 70m7 71r36
+77r7 G{23|7R9} 79m7 80r26
+86r7 G{23|7R9} 89m7 90r27 90r38 91r35
+87r7 R{26|5R9} 90m7 91r22
+97r7 G{23|7R9} 100m7 102r30
+98r7 R{26|5R9} 102m10 103r26
+101i11 i{integer} 102r33
+113r7 G{23|7R9} 116m7 117r27 117r38 118r35
+114r7 R{26|5R9} 117m7 118r22
+124r7 G{23|7R9} 127m7 129r32
+125r7 R{26|5R9} 129m10 130r26
+128i11 i{integer} 129r35
+144r7 G{23|7R9} 147m7 148r43 148r55 149m7 149r26 150r22
+145r7 C{22|3R9} 148m7 149r29
+156r7 G{23|7R9} 161m7 162r44 162r56 163m7 163r27 165m7 165r27 168r26 168r54
+. 169r22
+157r7 CI{22|3R9} 166m7 169r25
+158r7 C0{22|3R9} 164m7 165r30 168r57
+159r7 C1{22|3R9} 162m7 163r30 168r29
+175r7 G{23|7R9} 180m7 181r44 181r56 182m7 182r27 184m7 184r27 187r25 187r57
+. 188r22
+176r7 CI{22|3R9} 185m7 188r25
+177r7 C0{22|3R9} 183m7 184r30 187r60
+178r7 C1{22|3R9} 181m7 182r30 187r28
+193r7 G{23|7R9} 199m7 200r46 201r55 201r67 202m7 202r38 204m7 204r38 206m7
+. 206r38 207r36
+194r7 C1{22|3R9} 201m7 202r41
+195r7 C0{22|3R9} 203m7 204r41
+196r7 CI{22|3R9} 205m7 206r41
+197i7 CardinalAvant{integer} 200m7 207r41
+213r7 G{23|7R9} 216m7 217r43 217r55 218m7 218r26 219r30
+214r7 C{22|3R9} 217m7 218r29
+224r7 G{23|7R9} 227m7 228r29 229r32 231m13 231r32 234r26
+225r7 C{22|3R9} 230m13 231r35
+228i11 I{integer} 230r41
+229i14 J{integer} 230r44
+241r7 G{23|7R9} 245m7 246r29 247r32 249m13 249r32 252r29 253r30 254r32
+242r7 C{22|3R9} 248m13 249r35
+243r7 R{26|5R9} 253m10 255r32
+246i11 I{integer} 248r41
+247i14 J{integer} 248r44
+252i11 i{integer} 253r33
+254i14 j{integer} 255r35
+267r7 G{23|7R9} 271m7 272r29 273r32 275m13 275r32 278r29 279r32 280r32
+268r7 C{22|3R9} 274m13 275r35
+269r7 R{26|5R9} 279m10 281r32
+272i11 I{integer} 274r41
+273i14 J{integer} 274r44
+278i11 i{integer} 279r35
+280i14 j{integer} 281r35
+292r7 G{23|7R9} 296m7 297r44 297r56 298m7 298r27 299m7 299r24 301m7 301r27
+. 302r27 302r55
+293r7 C1{22|3R9} 297m7 298r30 299r27 302r30
+294r7 C0{22|3R9} 300m7 301r30 302r58
+311r7 G{23|7R9} 314m7 315r43 315r55 316r30
+312r7 C{22|3R9} 315m7 316r33
+325r7 G{23|7R9} 328m7 329r43 329r55 330m7 330r26 331m7 331r26
+326r7 C{22|3R9} 329m7 330r29 331r29
+341r7 G{23|7R9} 344m7 345r43 345r55 346m7 346r23
+342r7 C{22|3R9} 345m7 346r26
+361r7 G{23|7R9} 366m7 368m7 368r26 370m7 370r26 372m7 372r26 374m7 374r26
+. 375r27
+362r7 C{22|3R9} 367m7 368r29 369m7 370r29 371m7 372r29 373m7 374r29
+363i7 Ligne{integer} 367r35 369r35 371r35 373r35 375r30
+364r7 E{26|5R9} 375m7 377r31 377r66 378r33 379r33 379r55
+384r7 G{23|7R9} 389m7 391m7 391r26 393m7 393r26 395m7 395r26 397m7 397r26
+. 398r29
+385r7 C{22|3R9} 390m7 391r29 392m7 393r29 394m7 395r29 396m7 397r29
+386i7 Colonne{integer} 390r38 392r38 394r38 396r38
+387r7 E{26|5R9} 398m7 400r31 400r66 401r33 402r33 402r55
+X 3 ada.ads
+16K9*Ada 1|1r6 1r33 2|2r6 2r31 3r6 3r31 3|20e8
+X 8 a-inteio.ads
+18K13*Integer_Text_IO[18|46] 2|3w10 3r35
+X 11 a-string.ads
+16K13*Strings 1|1r10 1r37 11|35e16
+X 14 a-strunb.ads
+83K21*Unbounded 1|1w18 1r45 14|765e26
+88R9*Unbounded_String<7|43R9> 1|9r26 14|744e15
+104V13*To_Unbounded_String{88R9} 1|40s31 41s31 42s31 43s31 44s31 45s31 46s31
+. 47s31 48s31 49s32 50s32 51s32 52s32 54s8 56s8 57s32 58s32 59s32 61s8 63s8
+. 65s8 67s8 69s8
+X 17 a-textio.ads
+58K13*Text_IO 2|2w10 2r35 17|725e16
+X 20 affichage.ads
+6K9*Affichage 2|7w6 7r22 20|36e14
+X 21 chiffre.ads
+1K9*Chiffre 2|9w6 9r22 21|35e12
+3I9*Type_Chiffre<short_short_integer>
+8i4*UN{3I9} 2|149r32 163r34 182r34 187r34 202r45 218r32 231r38 249r38 255r41
+. 275r38 281r41 298r34 330r32 377r69 400r69
+11i4*ZERO{3I9} 2|165r34 184r34 187r66 204r45 301r34 331r32 368r32 370r32
+. 372r32 374r32 378r36 391r32 393r32 395r32 397r32 401r36
+14i4*INCONNU{3I9} 2|206r45 316r38 379r36 402r36
+28V14*"="{boolean} 2|187s32 187s64 255s38 281s38 316s36
+X 22 coordonnee.ads
+1K9*Coordonnee 2|5w6 5r22 8w6 8r22 22|21e15
+3R9*Type_Coordonnee 2|33r11 51r11 145r11 157r12 158r12 159r12 176r12 177r12
+. 178r12 194r23 195r23 196r23 214r11 225r11 242r11 268r11 293r12 294r12 312r11
+. 326r11 342r11 362r15 385r17 22|19e14
+6V13*ConstruireCoordonnees{3R9} 2|38s18 56s18 148s12 162s13 164s13 166s13
+. 181s13 183s13 185s13 201s24 203s24 205s24 217s12 230s18 248s18 274s18 297s13
+. 300s13 315s12 329s12 345s12 367s12 369s12 371s12 373s12 390s12 392s12 394s12
+. 396s12
+X 23 grille.ads
+5K9*Grille 2|6w6 6r22 23|71e11
+7R9*Type_Grille 2|23r11 32r11 50r11 68r11 77r11 86r11 97r11 113r11 124r11
+. 144r11 156r12 175r12 193r23 213r11 224r11 241r11 267r11 292r12 311r11 325r11
+. 341r11 361r15 384r17 23|69e14
+10X4*CASE_VIDE 2|318r12
+11X4*VIDER_CASE_VIDE 2|349r12
+12X4*FIXER_CHIFFRE_NON_NUL 2|334r12
+17V13*ConstruireGrille{7R9} 2|25s12 35s12 53s12 70s12 79s12 89s12 100s12
+. 116s12 127s12 147s12 161s13 180s13 199s24 216s12 227s12 245s12 271s12 296s13
+. 314s12 328s12 344s12 366s12 389s12
+20V13*Taille{integer} 2|26s14 36s21 37s24 54s21 55s24 90s30 91s27 117s30
+. 118s27 148s35 148s47 150s14 162s36 162s48 181s36 181s48 201s47 201s59 217s35
+. 217s47 228s21 229s24 246s21 247s24 252s21 254s24 272s21 273s24 278s21 280s24
+. 297s36 297s48 315s35 315s47 329s35 329s47 345s35 345s47
+24V13*estCaseVide{boolean} 2|39s21 57s20 168s13 168s41 169s9 188s9 302s14
+. 302s42
+30V13*ObtenirChiffre{21|3I9} 2|187s9 187s41 316s14
+34V13*NombreChiffresConnus{integer} 2|71s14 200s24 207s14
+37V13*EstRemplie{boolean} 2|80s14 219s18 234s14
+40V13*extraireLigne{26|5R9} 2|90s12 102s15 117s12 253s15 375s12
+44V13*extraireColonne{26|5R9} 2|129s15 279s15 398s12
+51V13*FixerChiffre{7R9} 2|149s12 163s13 165s13 182s13 184s13 202s24 204s24
+. 206s24 218s12 231s18 249s18 275s18 298s13 301s13 330s12 331s12 368s12 370s12
+. 372s12 374s12 391s12 393s12 395s12 397s12
+59V13*ViderCase{7R9} 2|299s13 346s12
+X 26 rangee.ads
+3K9*Rangee 2|10w6 10r22 26|81e11
+5R9*Type_Rangee 2|87r11 98r11 114r11 125r11 243r11 269r11 364r15 387r17 26|79e14
+13V13*EstVide{boolean} 2|103s17 130s17
+19V13*Taille{integer} 2|91s14 118s14 379s47 402s47
+24V13*ObtenirChiffre{21|3I9} 2|255s16 281s16
+28V13*nombreChiffresConnus{integer} 2|377s9 400s9
+31V13*nombreChiffresDeValeur{integer} 2|377s42 378s9 379s9 400s42 401s9 402s9
+X 27 system.ads
+67M9*Address
+X 34 s-memory.ads
+53V13*Alloc{27|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{27|67M9} 105i<c,__gnat_realloc>22
+X 41 s-stalib.adb
+89U14 Break_Start 90i<c,__gnat_break_start>22
+

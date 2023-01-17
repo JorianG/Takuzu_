@@ -1,0 +1,224 @@
+V "GNAT Lib v2021"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_IO
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U resolution_takuzu%b	resolution_takuzu.adb	7daa9ccd NE OO PK
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+
+U resolution_takuzu%s	resolution_takuzu.ads	f82a08f1 EE NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W affichage%s		affichage.adb		affichage.ali
+W chiffre%s		chiffre.adb		chiffre.ali
+W coordonnee%s		coordonnee.adb		coordonnee.ali
+W grille%s		grille.adb		grille.ali
+W rangee%s		rangee.adb		rangee.ali
+
+D ada.ads		20210520051132 76789da1 ada%s
+D a-except.ads		20210520051128 946f3014 ada.exceptions%s
+D a-inteio.ads		20210520051128 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20210520051128 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210520051130 119b8fb3 ada.streams%s
+D a-string.ads		20210520051130 90ac6797 ada.strings%s
+D a-sttebu.ads		20210520051130 18209c64 ada.strings.text_buffers%s
+D a-stuten.ads		20210520051130 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210520051130 9eaa38c6 ada.tags%s
+D a-textio.ads		20210520051130 aef4d56d ada.text_io%s
+D a-tiinio.ads		20210520051130 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
+D affichage.ads		20221201173420 c65c41a0 affichage%s
+D chiffre.ads		20221208140530 37e88090 chiffre%s
+D coordonnee.ads	20221201173420 b1b28967 coordonnee%s
+D grille.ads		20221209105446 c9384163 grille%s
+D interfac.ads		20210520051132 edec285f interfaces%s
+D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
+D rangee.ads		20221208152158 6de136fc rangee%s
+D resolution_takuzu.ads	20230114164252 444a6bf0 resolution_takuzu%s
+D resolution_takuzu.adb	20230114173836 39e0f73d resolution_takuzu%b
+D system.ads		20210520051136 2ffa5114 system%s
+D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210520051132 54135002 system.exception_table%s
+D s-ficobl.ads		20210520051132 078245e4 system.file_control_block%s
+D s-parame.ads		20210520051134 4752c4cb system.parameters%s
+D s-putima.ads		20210520051134 4e095881 system.put_images%s
+D s-secsta.ads		20210520051134 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20210520051134 a7318a92 system.soft_links%s
+D s-stache.ads		20210520051134 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210520051134 472fbca8 system.standard_library%s
+D s-stoele.ads		20210520051134 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210520051134 ed88f8fb system.storage_elements%b
+D s-traent.ads		20210520051134 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210520051134 2b077493 system.unsigned_types%s
+D s-wchcon.ads		20210520051136 1b7d22d2 system.wch_con%s
+D unchconv.ads		20210520051136 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z s b [completerligne resolution_takuzu 12 14 none]
+G c Z s b [completercolonne resolution_takuzu 16 14 none]
+G c Z s b [resoudretakuzu resolution_takuzu 22 14 none]
+G r c none [completerligne resolution_takuzu 12 14 none] [taille grille 20 13 none]
+G r c none [completerligne resolution_takuzu 12 14 none] [construirerangee rangee 10 13 none]
+G r c none [completerligne resolution_takuzu 12 14 none] [extraireligne grille 40 13 none]
+G r c none [completerligne resolution_takuzu 12 14 none] [obtenirchiffre rangee 24 13 none]
+G r c none [completerligne resolution_takuzu 12 14 none] [Oeq chiffre 28 13 none]
+G r c none [completerligne resolution_takuzu 12 14 none] [ajouterchiffre rangee 63 13 none]
+G r c none [completerligne resolution_takuzu 12 14 none] [construirecoordonnees coordonnee 6 13 none]
+G r c none [completerligne resolution_takuzu 12 14 none] [estcasevide grille 24 13 none]
+G r c none [completerligne resolution_takuzu 12 14 none] [fixerchiffre grille 51 13 none]
+G r c none [completercolonne resolution_takuzu 16 14 none] [taille grille 20 13 none]
+G r c none [completercolonne resolution_takuzu 16 14 none] [construirerangee rangee 10 13 none]
+G r c none [completercolonne resolution_takuzu 16 14 none] [extrairecolonne grille 44 13 none]
+G r c none [completercolonne resolution_takuzu 16 14 none] [obtenirchiffre rangee 24 13 none]
+G r c none [completercolonne resolution_takuzu 16 14 none] [Oeq chiffre 28 13 none]
+G r c none [completercolonne resolution_takuzu 16 14 none] [ajouterchiffre rangee 63 13 none]
+G r c none [completercolonne resolution_takuzu 16 14 none] [construirecoordonnees coordonnee 6 13 none]
+G r c none [completercolonne resolution_takuzu 16 14 none] [estcasevide grille 24 13 none]
+G r c none [completercolonne resolution_takuzu 16 14 none] [fixerchiffre grille 51 13 none]
+G r c none [resoudretakuzu resolution_takuzu 22 14 none] [taille grille 20 13 none]
+G r c none [resoudretakuzu resolution_takuzu 22 14 none] [estremplie grille 37 13 none]
+G r c none [resoudretakuzu resolution_takuzu 22 14 none] [construirerangee rangee 10 13 none]
+G r c none [resoudretakuzu resolution_takuzu 22 14 none] [extraireligne grille 40 13 none]
+G r c none [resoudretakuzu resolution_takuzu 22 14 none] [estremplie rangee 16 13 none]
+G r c none [resoudretakuzu resolution_takuzu 22 14 none] [sontdeuxchiffresdegaucheegaux rangee 57 13 none]
+G r c none [resoudretakuzu resolution_takuzu 22 14 none] [chiffredegauche rangee 43 13 none]
+G r c none [resoudretakuzu resolution_takuzu 22 14 none] [complement chiffre 25 13 none]
+G r c none [resoudretakuzu resolution_takuzu 22 14 none] [ajouterchiffre rangee 63 13 none]
+G r c none [resoudretakuzu resolution_takuzu 22 14 none] [sontdeuxchiffresdedroiteegaux rangee 50 12 none]
+G r c none [resoudretakuzu resolution_takuzu 22 14 none] [chiffrededroite rangee 37 13 none]
+G r c none [resoudretakuzu resolution_takuzu 22 14 none] [Oeq chiffre 28 13 none]
+G r c none [resoudretakuzu resolution_takuzu 22 14 none] [construirecoordonnees coordonnee 6 13 none]
+G r c none [resoudretakuzu resolution_takuzu 22 14 none] [estcasevide grille 24 13 none]
+G r c none [resoudretakuzu resolution_takuzu 22 14 none] [obtenirchiffre rangee 24 13 none]
+G r c none [resoudretakuzu resolution_takuzu 22 14 none] [fixerchiffre grille 51 13 none]
+G r c none [resoudretakuzu resolution_takuzu 22 14 none] [nombrechiffresdevaleur rangee 31 13 none]
+G r c none [resoudretakuzu resolution_takuzu 22 14 none] [extrairecolonne grille 44 13 none]
+G r c none [resoudretakuzu resolution_takuzu 22 14 none] [affichergrille affichage 18 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 20|5r6 5r31 6r6 6r31
+X 3 a-inteio.ads
+18K13*Integer_Text_IO[11|46] 20|6w10 6r35
+X 10 a-textio.ads
+58K13*Text_IO 725e16 20|5w10 5r35
+X 13 affichage.ads
+6K9*Affichage 36e14 20|7w6 7r31
+18U14*AfficherGrille 21|195s13
+18r30 G{16|7R9} 21|195r29
+X 14 chiffre.ads
+1K9*Chiffre 35e12 20|3w6 3r31
+3I9*Type_Chiffre<short_short_integer> 20|13r54 17r56 21|9r54 36r56
+8i4*UN{3I9} 21|123r56 124r73 182r56 184r62
+11i4*ZERO{3I9} 21|126r56 128r73 186r56 189r62
+14i4*INCONNU{3I9} 21|17r47 45r47 98r60 99r60 156r60 157r60
+25V13*Complement{3I9} 21|84s29 92s29 105s32 124s56 128s56 144s29 151s29 163s32
+. 184s45 189s45
+25i25 C{3I9} 21|85r32 93r32 106r35 124r68 128r68 145r32 152r32 164r35 184r57
+. 189r57
+28V14*"="{boolean} 21|17s45 45s45 96s58 98s57 99s57 154s58 156s57 157s57
+X 15 coordonnee.ads
+1K9*Coordonnee 21e15 20|2w6 2r31
+3R9*Type_Coordonnee 19e14 21|11r11 38r11 69r18
+6V13*ConstruireCoordonnees{3R9} 21|22s15 51s15 112s24 171s24
+7i7 Ligne{integer} 21|22r38 51r38 112r47 171r47
+7i14 Colonne{integer} 21|22r50 51r50 112r59 171r59
+X 16 grille.ads
+5K9*Grille 71e11 20|1w6 1r31
+7R9*Type_Grille 69e14 20|13r18 17r18 22r41 21|9r18 36r18 65r41
+20V13*Taille{integer} 21|14s35 16s21 21s21 41s35 44s21 50s21 67s29 74s33
+. 111s30 134s33 170s30
+20r21 G{7R9} 21|14r43 16r29 21r29 41r43 44r29 50r29 67r37 74r41 111r38 134r41
+. 170r38
+24V13*estCaseVide{boolean} 21|23s13 52s13 113s22 172s22
+25r7 G{7R9} 21|23r26 52r26 113r35 172r35
+25r27 C{15|3R9} 21|23r34 52r34 113r43 172r43
+37V13*EstRemplie{boolean} 21|72s17 194s13
+37r25 G{7R9} 21|72r29 194r25
+40V13*extraireLigne{19|5R9} 21|15s12 76s18 122s21
+41r7 G{7R9} 21|15r27 76r33 122r36
+41i27 L{integer} 21|15r35 76r41 122r44
+44V13*extraireColonne{19|5R9} 21|42s12 136s18 181s21
+45r7 G{7R9} 21|42r29 136r35 181r38
+45i27 C{integer} 21|42r37 136r43 181r46
+51V13*FixerChiffre{7R9} 21|25s15 54s15 115s24 174s24
+52r7 G{7R9} 21|26r18 55r18 116r27 175r27
+52r27 C{15|3R9} 21|26r26 55r26 116r35 175r35
+52i51 V{14|3I9} 21|26r34 55r34 117r27 176r27
+X 19 rangee.ads
+3K9*Rangee 81e11 20|4w6 4r31
+5R9*Type_Rangee 79e14 21|12r11 39r11 68r18
+10V13*ConstruireRangee{5R9} 21|14s12 41s12 74s15 134s15
+10i31 T{integer} 21|14r30 41r30
+16V13*EstRemplie{boolean} 21|77s20 137s20
+16r25 R{5R9} 21|77r32 137r32
+24V13*ObtenirChiffre{14|3I9} 21|17s13 26s39 45s13 55s39 117s32 176s32
+25r7 R{5R9} 21|17r29 26r55 45r29 55r55 117r48 176r48
+25i27 I{integer} 21|17r37 26r63 45r37 55r63 117r56 176r56
+31V13*nombreChiffresDeValeur{integer} 21|123s19 126s19 182s19 186s19
+32r7 R{5R9} 21|123r43 126r43 182r43 186r43
+32i27 V{14|3I9} 21|123r51 126r51 182r51 186r51
+37V13*chiffreDeDroite{14|3I9} 21|93s37 96s25 98s24 106s40 152s37 154s25 156s24
+. 164s40
+38r7 E{5R9} 21|93r54 96r42 98r41 106r57 152r54 154r42 156r41 164r57
+38i27 I{integer} 21|93r62 96r50 98r49 106r65 152r62 154r50 156r49 164r65
+43V13*chiffreDeGauche{14|3I9} 21|85s37 97s24 99s24 145s37 155s24 157s24
+44r7 E{5R9} 21|85r54 97r41 99r41 145r54 155r41 157r41
+44i27 I{integer} 21|85r62 97r49 99r49 145r62 155r49 157r49
+50V12*SontDeuxChiffresDeDroiteEgaux{boolean} 21|87s25 146s25
+51r7 E{5R9} 21|87r56 146r56
+51i27 I{integer} 21|87r64 146r64
+57V13*SontDeuxChiffresDeGaucheEgaux{boolean} 21|79s22 139s22
+58r7 E{5R9} 21|79r53 139r53
+58i27 I{integer} 21|79r61 139r61
+63V13*AjouterChiffre{5R9} 21|18s18 46s18 81s24 89s24 102s27 141s24 148s24
+. 160s27
+64r7 R{5R9} 21|18r34 46r34 82r27 90r27 103r30 142r27 149r27 161r30
+64i27 I{integer} 21|18r42 46r42 82r35 90r35 103r38 142r35 149r35 161r38
+64i43 C{14|3I9} 21|18r50 46r50 83r27 91r27 104r30 143r27 150r27 162r30
+X 20 resolution_takuzu.ads
+9K9*Resolution_Takuzu 24l5 24e22 21|2b14 201l5 201t22
+12U14*CompleterLigne 13=7 13>31 13>47 21|8b14 29l8 29t22 124s19 128s19
+13r7 G{16|7R9} 21|9b7 14r48 15r32 16r34 21r34 23r31 24m13 26r23 124r35 128r35
+13i31 L{integer} 21|9b31 15r40 22r47 124r43 128r43
+13i47 V{14|3I9} 21|9b47 18r55 124r51 128r51
+16U14*CompleterColonne 17=7 17>31 17>49 21|35b14 59l8 59t24 183s19 188s19
+17r7 G{16|7R9} 21|36b7 41r48 42r34 44r34 50r34 52r31 53m13 55r23 184r22 189r22
+17i31 Col{integer} 21|36b31 42r42 51r61 184r30 189r30
+17i49 V{14|3I9} 21|36b49 46r55 184r40 189r40
+22U14*ResoudreTakuzu 22=30 22<54 21|65b14 199l8 199t22
+22r30 G{16|7R9} 21|65b30 67r42 72r34 74r46 76r38 111r43 113r40 114m22 116r32
+. 122r41 124m40 128m40 134r46 136r40 170r43 172r40 173m22 175r32 181r43 184m27
+. 189m27 194r30 195r34
+22b54 Trouve{boolean} 21|65b54 196m13
+X 21 resolution_takuzu.adb
+11r7 C{15|3R9} 22m10 23r39 26r31
+12r7 R{19|5R9} 14m7 15m7 17r34 18m13 18r39 26r60
+16i11 i{integer} 17r42 18r47
+21i11 i{integer} 22r61 26r68
+38r7 C{15|3R9} 51m10 52r39 55r31
+39r7 R{19|5R9} 41m7 42m7 45r34 46m13 46r39 55r60
+44i11 i{integer} 45r42 46r47
+50i11 i{integer} 51r47 55r68
+66b7 modif{boolean} 86m22 94m22
+67i7 longueur{integer} 75r24 78r30 123r62 126r64 135r24 138r30 182r62 186r64
+68r7 R{19|5R9} 74m10 76m13 77r37 79r58 80m22 82r32 85r59 87r61 88m22 90r32
+. 93r59 96r47 97r46 98r46 99r46 101m25 103r35 106r62 117r53 122m16 123r48
+. 126r48 134m10 136m13 137r37 139r58 140m22 142r32 145r59 146r61 147m22 149r32
+. 152r59 154r47 155r46 156r46 157r46 159m25 161r35 164r62 176r53 181m16 182r48
+. 186r48
+69r7 C{15|3R9} 112m19 113r48 116r40 171m19 172r48 175r40
+75i14 j{integer} 76r46 112r56 122r49 124r48 128r48
+78i20 i{integer} 79r66 82r40 85r67 87r69 90r40 93r67 96r55 97r54 98r54 99r54
+. 103r43 106r70
+111i20 i{integer} 112r70 117r61
+135i14 j{integer} 136r48 171r70 181r51 184r37 189r37
+138i20 i{integer} 139r66 142r40 145r67 146r69 149r40 152r67 154r55 155r54
+. 156r54 157r54 161r43 164r70
+170i20 i{integer} 171r56 176r61
+

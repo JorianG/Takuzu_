@@ -1,0 +1,124 @@
+V "GNAT Lib v2021"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTIONS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U rangee%b		rangee.adb		6dd732f3 NE OO PK
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W chiffre%s		chiffre.adb		chiffre.ali
+
+U rangee%s		rangee.ads		5a09b66c EE OO PK
+W chiffre%s		chiffre.adb		chiffre.ali
+Z system%s		system.ads		system.ali
+Z system.exception_table%s  s-exctab.adb	s-exctab.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+D ada.ads		20210520051132 76789da1 ada%s
+D a-except.ads		20210520051128 946f3014 ada.exceptions%s
+D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
+D chiffre.ads		20221208140530 37e88090 chiffre%s
+D rangee.ads		20221208152158 6de136fc rangee%s
+D rangee.adb		20230104165928 37de849f rangee%b
+D system.ads		20210520051136 2ffa5114 system%s
+D s-exctab.ads		20210520051132 54135002 system.exception_table%s
+D s-parame.ads		20210520051134 4752c4cb system.parameters%s
+D s-stalib.ads		20210520051134 472fbca8 system.standard_library%s
+D s-traent.ads		20210520051134 26a8d361 system.traceback_entries%s
+G a e
+G c Z s b [construirerangee rangee 10 13 none]
+G c Z s b [estvide rangee 13 13 none]
+G c Z s b [estremplie rangee 16 13 none]
+G c Z s b [taille rangee 19 13 none]
+G c Z s b [obtenirchiffre rangee 24 13 none]
+G c Z s b [nombrechiffresconnus rangee 28 13 none]
+G c Z s b [nombrechiffresdevaleur rangee 31 13 none]
+G c Z s b [chiffrededroite rangee 37 13 none]
+G c Z s b [chiffredegauche rangee 43 13 none]
+G c Z s b [sontdeuxchiffresdedroiteegaux rangee 50 12 none]
+G c Z s b [sontdeuxchiffresdegaucheegaux rangee 57 13 none]
+G c Z s b [ajouterchiffre rangee 63 13 none]
+G c Z s b [retirerchiffre rangee 70 12 none]
+G c Z s s [Ttype_tableau_rangeeBIP rangee 75 4 none]
+G c Z s s [type_rangeeIP rangee 76 9 none]
+G r c none [estvide rangee 13 13 none] [Oeq chiffre 28 13 none]
+G r c none [estremplie rangee 16 13 none] [Oeq chiffre 28 13 none]
+G r c none [nombrechiffresconnus rangee 28 13 none] [Oeq chiffre 28 13 none]
+G r c none [nombrechiffresdevaleur rangee 31 13 none] [Oeq chiffre 28 13 none]
+G r c none [sontdeuxchiffresdedroiteegaux rangee 50 12 none] [Oeq chiffre 28 13 none]
+G r c none [sontdeuxchiffresdegaucheegaux rangee 57 13 none] [Oeq chiffre 28 13 none]
+X 4 chiffre.ads
+1K9*Chiffre 35e12 5|1w6 1r19 6|1w6 1r19
+3I9*Type_Chiffre<short_short_integer> 5|25r50 32r34 38r50 44r50 64r50 75r66
+. 6|59r50 88r34 108r50 124r50 180r50
+14i4*INCONNU{3I9} 6|13r33 25r31 40r30 77r31 115r17 131r17 149r55 149r79 169r55
+. 169r79 206r24
+28V14*"="{boolean} 6|25s28 40s28 77s28 96s28 149s25 149s52 149s76 169s25
+. 169s52 169s76
+X 5 rangee.ads
+3K9*Rangee 74E4 81l5 81e11 6|3b14 211l5 211t11
+5R9*Type_Rangee 10r54 13r29 16r32 19r28 25r14 28r42 32r14 38r14 44r14 51r14
+. 58r14 64r14 65r14 71r14 71r50 76c9 79e14 6|6r54 7r18 20r29 35r32 50r28
+. 59r14 70r42 88r14 108r14 124r14 141r14 161r14 180r14 181r14 183r14 198r14
+. 198r50 200r14
+7X4*TRANCHE_INVALIDE 6|63r16 112r16 128r16 145r16 165r16 186r16 203r16
+10V13*ConstruireRangee{5R9} 10>31 6|6b13 17l8 17t24
+10i31 T{integer} 6|6b31 10r24
+13V13*EstVide{boolean} 13>22 6|20b13 32l8 32t15
+13r22 R{5R9} 6|20b22 24r25 25r13
+16V13*EstRemplie{boolean} 16>25 6|35b13 47l8 47t18
+16r25 R{5R9} 6|35b25 39r25 40r13
+19V13*Taille{integer} 19>21 6|50b13 53l8 53t14
+19r21 R{5R9} 6|50b21 52r14
+24V13*ObtenirChiffre{4|3I9} 25>7 25>27 6|58b13 67l8 67t22
+25r7 R{5R9} 6|59b7 62r23 65r17
+25i27 I{integer} 6|59b27 62r10 62r19 65r22
+28V13*nombreChiffresConnus{integer} 28>35 6|70b13 84l8 84t28
+28r35 R{5R9} 6|70b35 76r25 77r13
+31V13*nombreChiffresDeValeur{integer} 32>7 32>27 6|87b13 102l8 102t30
+32r7 R{5R9} 6|88b7 95r25 96r13
+32i27 V{4|3I9} 6|88b27 96r30
+37V13*chiffreDeDroite{4|3I9} 38>7 38>27 6|107b13 118l8 118t23
+38r7 E{5R9} 6|108b7 111r23 114r14 117r14
+38i27 I{integer} 6|108b27 111r10 111r19 114r10 117r19
+43V13*chiffreDeGauche{4|3I9} 44>7 44>27 6|123b13 134l8 134t23
+44r7 E{5R9} 6|124b7 127r23 133r14
+44i27 I{integer} 6|124b27 127r10 127r19 130r10 133r19
+50V12*SontDeuxChiffresDeDroiteEgaux{boolean} 51>7 51>27 6|140b13 154l8 154t37
+51r7 E{5R9} 6|141b7 144r23 147r15 149r13 149r27 149r43 149r67
+51i27 I{integer} 6|141b27 144r10 144r19 147r10 149r18 149r32 149r47 149r71
+57V13*SontDeuxChiffresDeGaucheEgaux{boolean} 58>7 58>27 6|160b13 174l8 174t37
+58r7 E{5R9} 6|161b7 164r23 169r13 169r27 169r43 169r67
+58i27 I{integer} 6|161b27 164r10 164r19 167r10 169r18 169r32 169r47 169r71
+63V13*AjouterChiffre{5R9} 64>7 64>27 64>43 6|179b13 192l8 192t22
+64r7 R{5R9} 6|180b7 185r23 188r24
+64i27 I{integer} 6|180b27 185r10 185r19 189r18
+64i43 C{4|3I9} 6|180b43 189r24
+70V12*RetirerChiffre{5R9} 71>7 71>27 6|197b13 209l8 209t22
+71r7 R{5R9} 6|198b7 202r23 205r24
+71i27 I{integer} 6|198b27 202r10 202r19 206r18
+74i4 TAILLE_MAX_GRILLE{integer} 75r44
+75A9 Type_Tableau_Rangee(4|3I9)<integer> 77r16
+77a7*R{75A9} 6|13m17 25r15 40r15 65r19 77r15 96r15 117r16 133r16 149r15 149r29
+. 149r45 149r69 169r15 169r29 169r45 169r69 189m15 206m15
+78i7*Taille{integer} 6|10m14 12r32 24r27 39r27 52r16 62r25 76r27 95r27 111r25
+. 114r16 127r25 144r25 147r17 164r25 185r25 202r25
+X 6 rangee.adb
+7r7 rangee{5|5R9} 10m7 12r25 13m10 16r14
+8i7 compteur{integer} 11m7 12r13 13r20 14m10 14r33
+21i7 compteur{integer} 23m7 24r13 25r18 28m13 28r25
+36i7 compteur{integer} 38m7 39r13 40r18 43m13 43r25
+71i7 nbConnus{integer} 74m7 78m13 78r25 82r14
+72i7 compteur{integer} 75m7 76r13 77r18 80m10 80r22
+90i7 nbChiffreValeur{integer} 93m7 97m13 97r32 101r14
+91i7 compteur{integer} 94m7 95r13 96r18 99m10 99r22
+183r7 rang{5|5R9} 188m10 189m10 190r17
+200r7 rang{5|5R9} 205m10 206m10 207r17
+
