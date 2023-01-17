@@ -21,7 +21,7 @@ package body Coordonnee is
 
    function ObtenirLigne (C : in Type_Coordonnee) return Integer is
    begin
-      return C.Ligne;
+      return Integer (C.Ligne);
    end ObtenirLigne;
 
    --------------------
@@ -30,7 +30,7 @@ package body Coordonnee is
 
    function ObtenirColonne (C : in Type_Coordonnee) return Integer is
    begin
-      return C.Colonne;
+      return Integer (C.Colonne);
    end ObtenirColonne;
 
    ----------
@@ -39,8 +39,7 @@ package body Coordonnee is
 
    function Haut (C : in Type_Coordonnee) return Type_Coordonnee is
    begin
-      if
-      return ConstruireCoordonnees(ObtenirLigne(c), ObtenirColonne(C)+1);
+      return ConstruireCoordonnees(ObtenirLigne(c)-1, ObtenirColonne(C));
    end Haut;
 
    ---------
@@ -49,7 +48,7 @@ package body Coordonnee is
 
    function Bas (C : in Type_Coordonnee) return Type_Coordonnee is
    begin
-      return ConstruireCoordonnees(ObtenirLigne(c)-1, ObtenirColonne(C));
+      return ConstruireCoordonnees(ObtenirLigne(c)+1, ObtenirColonne(C));
    end Bas;
 
    ------------
@@ -67,7 +66,7 @@ package body Coordonnee is
 
    function gauche (C : in Type_Coordonnee) return Type_Coordonnee is
    begin
-      return ConstruireCoordonnees(ObtenirLigne(c)+1, ObtenirColonne(C));
+      return ConstruireCoordonnees(ObtenirLigne(c), ObtenirColonne(C)-1);
    end gauche;
 
 end Coordonnee;
