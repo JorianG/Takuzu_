@@ -41,8 +41,8 @@ Z system.soft_links%s	s-soflin.adb		s-soflin.ali
 Z system.standard_library%s  s-stalib.adb	s-stalib.ali
 Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
 
-D a_tester_grille.ads	20221221120408 3886df8b a_tester_grille%s
-D a_tester_grille.adb	20221221120030 4f3172e6 a_tester_grille%b
+D a_tester_grille.ads	20230117072924 3886df8b a_tester_grille%s
+D a_tester_grille.adb	20230117072924 4f3172e6 a_tester_grille%b
 D ada.ads		20210520051132 76789da1 ada%s
 D a-charac.ads		20210520051128 2d3ec45b ada.characters%s
 D a-chlat1.ads		20210520051128 66457d31 ada.characters.latin_1%s
@@ -60,13 +60,13 @@ D a-tags.ads		20210520051130 9eaa38c6 ada.tags%s
 D a-textio.ads		20210520051130 aef4d56d ada.text_io%s
 D a-tiinio.ads		20210520051130 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
-D affichage.ads		20221201173420 c65c41a0 affichage%s
-D chiffre.ads		20221208140530 37e88090 chiffre%s
-D coordonnee.ads	20221201173420 b1b28967 coordonnee%s
-D grille.ads		20221209105446 c9384163 grille%s
+D affichage.ads		20230117072924 c65c41a0 affichage%s
+D chiffre.ads		20230117072924 37e88090 chiffre%s
+D coordonnee.ads	20230117072924 002d049f coordonnee%s
+D grille.ads		20230117072924 c9384163 grille%s
 D interfac.ads		20210520051132 edec285f interfaces%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
-D rangee.ads		20221208152158 6de136fc rangee%s
+D rangee.ads		20230117072924 6de136fc rangee%s
 D system.ads		20210520051136 2ffa5114 system%s
 D s-atocou.ads		20210520051132 b45c2d8d system.atomic_counters%s
 D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
@@ -366,10 +366,10 @@ X 21 chiffre.ads
 14i4*INCONNU{3I9} 2|206r45 316r38 379r36 402r36
 28V14*"="{boolean} 2|187s32 187s64 255s38 281s38 316s36
 X 22 coordonnee.ads
-1K9*Coordonnee 2|5w6 5r22 8w6 8r22 22|21e15
+1K9*Coordonnee 2|5w6 5r22 8w6 8r22 22|33e15
 3R9*Type_Coordonnee 2|33r11 51r11 145r11 157r12 158r12 159r12 176r12 177r12
 . 178r12 194r23 195r23 196r23 214r11 225r11 242r11 268r11 293r12 294r12 312r11
-. 326r11 342r11 362r15 385r17 22|19e14
+. 326r11 342r11 362r15 385r17 22|31e14
 6V13*ConstruireCoordonnees{3R9} 2|38s18 56s18 148s12 162s13 164s13 166s13
 . 181s13 183s13 185s13 201s24 203s24 205s24 217s12 230s18 248s18 274s18 297s13
 . 300s13 315s12 329s12 345s12 367s12 369s12 371s12 373s12 390s12 392s12 394s12

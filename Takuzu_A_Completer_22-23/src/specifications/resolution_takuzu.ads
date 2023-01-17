@@ -1,17 +1,18 @@
-with Grille;     use Grille;
-with Coordonnee; use Coordonnee;
-with Chiffre;    use Chiffre;
-with Rangee;     use Rangee;
-with Affichage;
-with Affichage;
+with Grille;              use Grille;
+with Coordonnee;          use Coordonnee;
+with Chiffre;             use Chiffre;
+with Rangee;              use Rangee;
+with Affichage;           use Affichage;
+with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
+with Ada.Text_IO;         use Ada.Text_IO;
 
 package Resolution_Takuzu is
 
-   -- Règle 1 : complète la lignes l qui ont déj�  4 UN ou 4 ZERO
+   -- RÃ¨gle 1 : complÃ¨te la lignes l qui ont dÃ©jÃ  4 UN ou 4 ZERO
    procedure CompleterLigne
      (G : in out Type_Grille; L : in Integer; V : in Type_Chiffre);
 
-   -- Règle 1 : complète les colonnes qui ont déj�  4 UN ou 4 ZERO
+   -- RÃ¨gle 1 : complÃ¨te les colonnes qui ont dÃ©jÃ  4 UN ou 4 ZERO
    procedure CompleterColonne
      (G : in out Type_Grille; Col : in Integer; V : in Type_Chiffre);
 

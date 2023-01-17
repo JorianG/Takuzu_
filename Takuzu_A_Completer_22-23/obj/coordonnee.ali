@@ -7,30 +7,46 @@ P ZX
 RN
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U coordonnee%b		coordonnee.adb		bbde65ef NE OO PK
+U coordonnee%b		coordonnee.adb		61961c47 NE OO PK
 
-U coordonnee%s		coordonnee.ads		b1b28967 EE NE OO PK
+U coordonnee%s		coordonnee.ads		002d049f EE NE OO PK
 
-D coordonnee.ads	20221201173420 b1b28967 coordonnee%s
-D coordonnee.adb	20230112151922 0a6cec88 coordonnee%b
+D coordonnee.ads	20230117072924 002d049f coordonnee%s
+D coordonnee.adb	20230117082128 61bb18d8 coordonnee%b
 D system.ads		20210520051136 2ffa5114 system%s
 G a e
 G c Z s b [construirecoordonnees coordonnee 6 13 none]
 G c Z s b [obtenirligne coordonnee 10 13 none]
 G c Z s b [obtenircolonne coordonnee 13 13 none]
-G c Z s s [type_coordonneeIP coordonnee 16 9 none]
+G c Z s b [haut coordonnee 16 13 none]
+G c Z s b [bas coordonnee 19 13 none]
+G c Z s b [droite coordonnee 22 13 none]
+G c Z s b [gauche coordonnee 25 13 none]
+G c Z s s [type_coordonneeIP coordonnee 28 9 none]
 X 1 coordonnee.ads
-1K9*Coordonnee 16E9 21l5 21e15 2|1b14 35l5 35t15
-3R9*Type_Coordonnee 7r43 10r34 13r36 16c9 19e14 2|8r56 10r11 21r34 30r36
-6V13*ConstruireCoordonnees{3R9} 7>7 7>14 2|7b13 15l8 15t29
-7i7 Ligne{integer} 2|8b7 12r20
-7i14 Colonne{integer} 2|8b27 13r20
-10V13*ObtenirLigne{integer} 10>27 2|21b13 24l8 24t20
-10r27 C{3R9} 2|21b27 23r14
-13V13*ObtenirColonne{integer} 13>29 2|30b13 33l8 33t22
-13r29 C{3R9} 2|30b29 32r14
-17i7*Ligne{integer} 2|12m9 23r16
-18i7*Colonne{integer} 2|13m9 32r16
+1K9*Coordonnee 28E9 33l5 33e15 2|2b14 72l5 72t15
+3R9*Type_Coordonnee 7r43 10r34 13r36 16r26 16r50 19r25 19r49 22r28 22r52
+. 25r28 25r52 28c9 31e14 2|9r56 11r11 22r34 31r36 40r26 40r50 49r25 49r49
+. 58r28 58r52 67r28 67r52
+6V13*ConstruireCoordonnees{3R9} 7>7 7>14 2|8b13 16l8 16t29 42s14 51s14 60s14
+. 69s14
+7i7 Ligne{integer} 2|9b7 13r20
+7i14 Colonne{integer} 2|9b27 14r20
+10V13*ObtenirLigne{integer} 10>27 2|22b13 25l8 25t20 42s36 51s36 60s36 69s36
+10r27 C{3R9} 2|22b27 24r23
+13V13*ObtenirColonne{integer} 13>29 2|31b13 34l8 34t22 42s55 51s55 60s53
+. 69s53
+13r29 C{3R9} 2|31b29 33r23
+16V13*Haut{3R9} 16>19 2|40b13 43l8 43t12
+16r19 C{3R9} 2|40b19 42r49 42r70
+19V13*Bas{3R9} 19>18 2|49b13 52l8 52t11
+19r18 C{3R9} 2|49b18 51r49 51r70
+22V13*droite{3R9} 22>21 2|58b13 61l8 61t14
+22r21 C{3R9} 2|58b21 60r49 60r68
+25V13*gauche{3R9} 25>21 2|67b13 70l8 70t14
+25r21 C{3R9} 2|67b21 69r49 69r68
+29i7*Ligne{integer} 2|13m9 24r25
+30i7*Colonne{integer} 2|14m9 33r25
 X 2 coordonnee.adb
-10r7 c{1|3R9} 12m7 13m7 14r15
+11r7 c{1|3R9} 13m7 14m7 15r15
 

@@ -64,68 +64,97 @@ package body Resolution_Takuzu is
 
    procedure ResoudreTakuzu (G : in out Type_Grille; Trouve : out Boolean) is
 
-      procedure test (R : in out Type_Rangee; I : in integer) is
+      procedure Test (R : in out Type_Rangee; I : in Integer) is
 
       begin
-         if SontDeuxChiffresDeGaucheEgaux (E => R, I => i) then
+         if SontDeuxChiffresDeGaucheEgaux (E => R, I => I) then
             R :=
               AjouterChiffre
-                (R => R, I => i,
-                 C =>
-                   Complement
-                     (C => chiffreDeGauche (E => R, I => i)));
-         elsif SontDeuxChiffresDeDroiteEgaux (E => R, I => i) then
+                (R => R, I => I,
+                 C => Complement (C => chiffreDeGauche (E => R, I => I)));
+         elsif SontDeuxChiffresDeDroiteEgaux (E => R, I => I) then
             R :=
               AjouterChiffre
-                (R => R, I => i,
-                 C =>
-                   Complement
-                     (C => chiffreDeDroite (E => R, I => i)));
+                (R => R, I => I,
+                 C => Complement (C => chiffreDeDroite (E => R, I => I)));
          else
-            if chiffreDeDroite (E => R, I => i) =
-              chiffreDeGauche (E => R, I => i) and
-              chiffreDeDroite (E => R, I => i) /= INCONNU and
-              chiffreDeGauche (E => R, I => i) /= INCONNU
+            if chiffreDeDroite (E => R, I => I) =
+              chiffreDeGauche (E => R, I => I) and
+              chiffreDeDroite (E => R, I => I) /= INCONNU and
+              chiffreDeGauche (E => R, I => I) /= INCONNU
             then
                R :=
                  AjouterChiffre
-                   (R => R, I => i,
-                    C =>
-                      Complement
-                        (C => chiffreDeDroite (E => R, I => i)));
+                   (R => R, I => I,
+                    C => Complement (C => chiffreDeDroite (E => R, I => I)));
             end if;
          end if;
-      end test;
+      end Test;
 
-      procedure fixage
-        (G : in out Type_Grille; R : in Type_Rangee; j : in Integer)
+      function FixageLigne
+        (G : in Type_Grille; R : in Type_Rangee; j : in Integer)
+         return Type_Grille
       is
-         C : Type_Coordonnee;
+         C    : Type_Coordonnee;
+         Gnew : Type_Grille := G;
       begin
 
-         for i in 1 .. Taille (G => G) loop
+         for i in 1 .. Taille (G => Gnew) loop
             C := ConstruireCoordonnees (Ligne => j, Colonne => i);
-            if estCaseVide (G => G, C => C) then
-               G :=
+            if estCaseVide (G => Gnew, C => C) then
+               Gnew :=
                  FixerChiffre
-                   (G => G, C => C, V => ObtenirChiffre (R => R, I => i));
+                   (G => Gnew, C => C, V => ObtenirChiffre (R => R, I => i));
             end if;
          end loop;
-      end fixage;
+         return Gnew;
+      end FixageLigne;
 
-      procedure completion(G : in out Type_Grille; R : in out Type_Rangee; I : in integer) is
+      function FixageColonne
+        (G : in Type_Grille; R : in Type_Rangee; j : in Integer)
+         return Type_Grille
+      is
+         C    : Type_Coordonnee;
+         Gnew : Type_Grille := G;
+      begin
+         for i in 1 .. Taille (G => Gnew) loop
+            C := ConstruireCoordonnees (Ligne => i, Colonne => j);
+            if estCaseVide (G => Gnew, C => C) then
+               Gnew :=
+                 FixerChiffre
+                   (G => Gnew, C => C, V => ObtenirChiffre (R => R, I => i));
+            end if;
+         end loop;
+         return Gnew;
+      end FixageColonne;
+
+      procedure CompletionLigne
+        (G : in out Type_Grille; R : in Type_Rangee; I : in Integer)
+      is
 
       begin
-         if nombreChiffresDeValeur (R => R, V => UN) = longueur / 2 then
-            CompleterColonne
-              (G => G, Col => j, V => Complement (C => UN));
+         if nombreChiffresDeValeur (R => R, V => UN) = Taille (G => G) / 2 then
+            CompleterLigne (G => G, L => I, V => Complement (C => UN));
          end if;
-         if nombreChiffresDeValeur (R => R, V => ZERO) = longueur / 2
+         if nombreChiffresDeValeur (R => R, V => ZERO) = Taille (G => G) / 2
          then
-            CompleterColonne
-              (G => G, Col => j, V => Complement (C => ZERO));
+            CompleterLigne (G => G, L => I, V => Complement (C => ZERO));
          end if;
-      end completion;
+      end CompletionLigne;
+
+      procedure CompletionColonne
+        (G : in out Type_Grille; R : in Type_Rangee; I : in Integer)
+      is
+
+      begin
+         if nombreChiffresDeValeur (R => R, V => UN) = Taille (G => G) / 2 then
+            CompleterColonne (G => G, Col => I, V => Complement (C => UN));
+         end if;
+         if nombreChiffresDeValeur (R => R, V => ZERO) = Taille (G => G) / 2
+         then
+            CompleterColonne (G => G, Col => I, V => Complement (C => ZERO));
+         end if;
+      end CompletionColonne;
 
       --  function ForceBrute (G : in Type_Grille) return Type_Grille is
       --     g      : Type_Grille := g;
@@ -143,53 +172,46 @@ package body Resolution_Takuzu is
       --              trouve := True
       --           end if;
       --        end loop;
-   --     end loop;
+      --     end loop;
 
       -- end ForceBrute;
 
       R        : Type_Rangee;
-      modif    : Boolean;
       longueur : Integer := Taille (G => G);
 
    begin
+      Trouve := False;
       -- la variable modif va permettre d'éviter d'avoir une boucle infini lorsque l'algorithme est bloqué et ne trouve plus de nouveau chiffre
-      while not EstRemplie (G => G) loop
+      while not Trouve loop
          -- travail sur chaque ligne
          R := ConstruireRangee (Taille (G => G));
          for j in 1 .. longueur loop
             R := extraireLigne (G => G, L => j);
             if not EstRemplie (R => R) then
                for i in 1 .. longueur loop
-                  test(R => R, I => i);
+                  Test (R => R, I => i);
                end loop;
                -- fixage
-               fixage (G => G, R => R, j => j);
-
+               G := FixageLigne (G => G, R => R, j => j);
                -- completion
                R := extraireLigne (G => G, L => j);
-               completion(G => G,
-                          R => R,
-                          I => j);
+               CompletionLigne (G => G, R => R, I => j);
             end if;
          end loop; -------------------------------------------------------------------
-
          -- travail sur chaque colonne
          R := ConstruireRangee (Taille (G => G));
          for j in 1 .. longueur loop
             R := extraireColonne (G => G, C => j);
             if not EstRemplie (R => R) then
                for i in 1 .. longueur loop
-                  test(R => R, I => i)
+                  Test (R => R, I => i);
                end loop;
-
                -- fixage
-               fixage (G => G, R => R, j => j);
+               G := FixageColonne (G => G, R => R, j => j);
 
                -- completion
                R := extraireColonne (G => G, C => j);
-               completion(G => G,
-                          R => R,
-                          I => j);
+               CompletionColonne (G => G, R => R, I => j);
             end if;
          end loop;
 
