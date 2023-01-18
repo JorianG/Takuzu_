@@ -40,13 +40,11 @@ package body Resolution_Takuzu is
    begin
       R := ConstruireRangee (T => Taille (G => G));
       R := extraireColonne (G => G, C => Col);
-
       for i in 1 .. Taille (G => G) loop
          if ObtenirChiffre (R => R, I => i) = INCONNU then
             R := AjouterChiffre (R => R, I => i, C => V);
          end if;
       end loop;
-
       for i in 1 .. Taille (G => G) loop
          C := ConstruireCoordonnees (Ligne => i, Colonne => Col);
          if estCaseVide (G => G, C => C) then
@@ -55,7 +53,6 @@ package body Resolution_Takuzu is
                 (G => G, C => C, V => ObtenirChiffre (R => R, I => i));
          end if;
       end loop;
-
    end CompleterColonne;
 
    --------------------
@@ -96,7 +93,6 @@ package body Resolution_Takuzu is
          C    : Type_Coordonnee;
          Gnew : Type_Grille := G;
       begin
-
          for i in 1 .. Taille (G => Gnew) loop
             C := ConstruireCoordonnees (Ligne => j, Colonne => i);
             if estCaseVide (G => Gnew, C => C) then
@@ -184,46 +180,44 @@ package body Resolution_Takuzu is
                   end loop;
                   -- fixage
                   G := FixageColonne (G => G, R => R, j => j);
-
                   -- completion
                   R := extraireColonne (G => G, C => j);
                   CompletionColonne (G => G, R => R, I => j);
                end if;
             end loop;
-
             if Gnew = G then
                trouve := False;
             end if;
          end loop;
       end naif;
 
-      procedure backtracking (G : in out Type_Grille; Trouve : in out Boolean)
+      procedure backtracking
+        (G : in out Type_Grille; Trouve : in out Boolean; T : in Integer)
       is
          C : Type_Coordonnee;
       begin
-
          if EstRemplie (G => G) then
             Trouve := True;
          end if;
          if not Trouve then
-				C := ObtenirCaseVide (G => G);
-				put(ObtenirLigne(c)); put( ObtenirColonne(c));
-				AfficherGrille(G => G);
-            if TestPropOK (G => G, C => C, x => ZERO) then
-               --Put ("test");
-               G := FixerChiffre (G => G, C => C, V => ZERO);
-               backtracking (G => G, Trouve => Trouve);
-
-            end if;
-            if not Trouve then
+            C := ObtenirCaseVide (G => G);
+            if TestPropOK (GR => G, C => C, x => ZERO, T => T) then
                if not estCaseVide (G => G, C => C) then
                   G := ViderCase (G => G, C => C);
                end if;
-               if TestPropOK (G => G, C => C, x => UN) then
-                  Put ("test2");
+               G := FixerChiffre (G => G, C => C, V => ZERO);
+               backtracking (G => G, Trouve => Trouve, T => T);
+            end if;
+            if not Trouve then
+               modifierTaille (G => G, T => T);
+               if TestPropOK (GR => G, C => C, x => UN, T => T) then
+                  if not estCaseVide (G => G, C => C) then
+                     G := ViderCase (G => G, C => C);
+                  end if;
                   G := FixerChiffre (G => G, C => C, V => UN);
-                  backtracking (G => G, Trouve => Trouve);
+                  backtracking (G => G, Trouve => Trouve, T => T);
                end if;
+               modifierTaille (G => G, T => T);
                if not Trouve then
                   if not estCaseVide (G => G, C => C) then
                      G := ViderCase (G => G, C => C);
@@ -234,14 +228,13 @@ package body Resolution_Takuzu is
          end if;
       end backtracking;
 
+      T : Integer := Taille (G => G);
+
    begin
       Trouve := False;
       -- la variable modif va permettre d'éviter d'avoir une boucle infini lorsque l'algorithme est bloqué et ne trouve plus de nouveau chiffre
       naif (G => G);
-      AfficherGrille (G => G);
-      backtracking (G => G, Trouve => Trouve);
-
-      AfficherGrille (G => G);
+      backtracking (G => G, Trouve => Trouve, T => T);
    end ResoudreTakuzu;
 
 end Resolution_Takuzu;

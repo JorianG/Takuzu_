@@ -1,7 +1,6 @@
 with Coordonnee; use Coordonnee;
 with Chiffre;    use Chiffre;
 with Rangee;     use Rangee;
-
 package Grille is
 
    type Type_Grille is private;
@@ -34,15 +33,19 @@ package Grille is
    function NombreChiffresConnus (G : in Type_Grille) return Integer;
 
    -- retourne VRAI si la grille est totalement remplie et FAUX sinon
-	function EstRemplie (G : in Type_Grille) return Boolean;
+   function EstRemplie (G : in Type_Grille) return Boolean;
 
-	-- Retourne vrai si la grille G1 est egal � la grille G2
-	function "=" (G1, G2 : in Type_Grille) return Boolean;
+   -- Retourne vrai si la grille G1 est egal Ã  la grille G2
+   function "=" (G1, G2 : in Type_Grille) return Boolean;
 
-	-- Retourne la coordonn�e de la premi�re case vide
-	function ObtenirCaseVide (G : in Type_Grille) return Type_Coordonnee;
+   -- Retourne la coordonnÃ©e de la premiÃ©re case vide
+   function ObtenirCaseVide (G : in Type_Grille) return Type_Coordonnee;
 
-	function TestPropOK (G : in Type_Grille; C : in Type_Coordonnee; x: Type_Chiffre) return Boolean;
+   function TestPropOK
+     (GR : in Type_Grille; C : in Type_Coordonnee; x : in Type_Chiffre;
+      T  : in Integer) return Boolean;
+
+   procedure modifierTaille (G : in out Type_Grille; T : in Integer);
 
    -- construit une rangee a partir de la ligne l de la grille g
    function extraireLigne
@@ -61,13 +64,11 @@ package Grille is
       return Type_Grille;
 
    -- construit une nouvelle grille dont les valeurs sont celles de g
-   -- SAUF la case de coordonnées c qui prend la valeur INCONNU
-   -- nécessite que la case c de la grille g ne soit pas vide
+   -- SAUF la case de coordonnÃÂ©es c qui prend la valeur INCONNU
+   -- nÃÂ©cessite que la case c de la grille g ne soit pas vide
    -- leve l'exception VIDER_CASE_VIDE si c est vide
    function ViderCase
      (G : in Type_Grille; C : in Type_Coordonnee) return Type_Grille;
-
-
 
 private
    TAILLE_MAX : constant Integer := 100;

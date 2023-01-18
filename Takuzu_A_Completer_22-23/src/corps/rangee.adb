@@ -52,7 +52,7 @@ package body Rangee is
       return R.Taille;
    end Taille;
 
-   -- retourne le chiffre place Ã  l'indice i de la rangee r
+   -- retourne le chiffre place Ã  l'indice i de la rangee r
    -- necessite 0 < i <= taille(r)
    -- leve l'exception TRANCHE_INVALIDE si i < 1 ou i > taille(r)
    function ObtenirChiffre
@@ -80,7 +80,6 @@ package body Rangee is
          compteur := compteur + 1;
       end loop;
       return nbConnus;
-
    end nombreChiffresConnus;
 
    -- retourne le nombre de chiffres de valeur v de la rangee r
@@ -101,7 +100,7 @@ package body Rangee is
       return nbChiffreValeur;
    end nombreChiffresDeValeur;
 
-   -- retourne le chiffre de droite de coordonnÃ©e c de la Rangee e
+   -- retourne le chiffre de droite de coordonnÃÂ©e c de la Rangee e
    -- necessite 0 < i <= taille(r)
    -- leve l'exception TRANCHE_INVALIDE si i < 1 ou i > taille(r)
    function chiffreDeDroite
@@ -117,7 +116,7 @@ package body Rangee is
       return E.R (I + 1);
    end chiffreDeDroite;
 
-   -- retourne le chiffre de gauche de coordonnÃ©e c de la Rangee e
+   -- retourne le chiffre de gauche de coordonnÃÂ©e c de la Rangee e
    -- necessite 0 < i <= taille(r)
    -- leve l'exception TRANCHE_INVALIDE si i < 1 ou i > taille(r)
    function chiffreDeGauche
@@ -133,8 +132,8 @@ package body Rangee is
       return E.R (I - 1);
    end chiffreDeGauche;
 
-   -- retourne VRAI si les chiffre de droite de coordonnÃ©e c
-   -- de la Rangee e sont Ã©gaux et FAUX sinon
+   -- retourne VRAI si les chiffre de droite de coordonnÃÂ©e c
+   -- de la Rangee e sont ÃÂ©gaux et FAUX sinon
    -- necessite 0 < i <= taille(r)
    -- leve l'exception TRANCHE_INVALIDE si i < 1 ou i > taille(r)
    function SontDeuxChiffresDeDroiteEgaux
@@ -146,15 +145,17 @@ package body Rangee is
       end if;
       if I >= E.Taille - 1 then
          return False;
-      elsif E.R (I + 1) = E.R (I + 2) and E.R(I+1) /= INCONNU and E.R(I+2) /= INCONNU then
+      elsif E.R (I + 1) = E.R (I + 2) and E.R (I + 1) /= INCONNU and
+        E.R (I + 2) /= INCONNU
+      then
          return True;
       else
          return False;
       end if;
    end SontDeuxChiffresDeDroiteEgaux;
 
-   -- retourne VRAI si les chiffre de gauche de coordonnÃ©e c
-   -- de la Rangee e sont Ã©gaux et FAUX sinon
+   -- retourne VRAI si les chiffre de gauche de coordonnÃÂ©e c
+   -- de la Rangee e sont ÃÂ©gaux et FAUX sinon
    -- necessite 0 < i <= taille(r)
    -- leve l'exception TRANCHE_INVALIDE si i < 1 ou i > taille(r)
    function SontDeuxChiffresDeGaucheEgaux
@@ -166,7 +167,9 @@ package body Rangee is
       end if;
       if I <= 2 then
          return False;
-      elsif E.R (I - 1) = E.R (I - 2) and E.R(I-1) /= INCONNU and E.R(I-2) /= INCONNU then
+      elsif E.R (I - 1) = E.R (I - 2) and E.R (I - 1) /= INCONNU and
+        E.R (I - 2) /= INCONNU
+      then
          return True;
       else
          return False;
@@ -208,22 +211,24 @@ package body Rangee is
       end if;
    end RetirerChiffre;
 
-   -- Teste l'�galit� de deux rang�es. Retourne True ou False.
+   -- Teste l'égalité de deux rangées. Retourne True ou False.
    function "=" (r1 : in Type_Rangee; r2 : in Type_Rangee) return Boolean is
    begin
-      for compteurTest in 1..r1.Taille loop
-         if r1.R(compteurTest) /= r2.R(compteurTest) then
+      for compteurTest in 1 .. r1.Taille loop
+         if r1.R (compteurTest) /= r2.R (compteurTest) then
             return False;
          end if;
       end loop;
       return True;
    end "=";
 
-   -- Test si une rang�e r peut accueillir le chiffre C.
-   -- Retourne un bool�en.
-   function TestChiffrePosable (r : in Type_Rangee; C : in Type_Chiffre) return Boolean is
+   -- Test si une rangée r peut accueillir le chiffre C.
+   -- Retourne un booléen.
+   function TestChiffrePosable
+     (r : in Type_Rangee; C : in Type_Chiffre) return Boolean
+   is
    begin
-      return nombreChiffresDeValeur(r,C) <= r.Taille/2;
+      return nombreChiffresDeValeur (r, C) <= r.Taille / 2;
    end TestChiffrePosable;
 
 end Rangee;

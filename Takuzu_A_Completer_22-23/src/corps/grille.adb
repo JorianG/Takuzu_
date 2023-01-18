@@ -1,5 +1,3 @@
--- TAD
-with Affichage; use Affichage;
 -- EntrÃ©es_sorties
 with Ada.Strings.Unbounded;         use Ada.Strings.Unbounded;
 with Ada.Strings.Unbounded.Text_IO; use Ada.Strings.Unbounded.Text_IO;
@@ -63,7 +61,6 @@ package body Grille is
       if estCaseVide (G, C) then
          raise CASE_VIDE;
       end if;
-
       return G.G (ObtenirLigne (C), ObtenirColonne (C));
    end ObtenirChiffre;
 
@@ -92,18 +89,13 @@ package body Grille is
 
    function EstRemplie (G : in Type_Grille) return Boolean is
    begin
-
       for y in 1 .. G.Taille loop
          for x in 1 .. G.Taille loop
-
             if estCaseVide (G, ConstruireCoordonnees (x, y)) then
-
                return False;
-
             end if;
          end loop;
       end loop;
-
       return True;
    end EstRemplie;
 
@@ -133,11 +125,9 @@ package body Grille is
       r : Type_Rangee;
    begin
       r := ConstruireRangee (G.Taille);
-
       for x in 1 .. G.Taille loop
          r := AjouterChiffre (r, x, G.G (x, C));
       end loop;
-
       return r;
    end extraireColonne;
 
@@ -154,119 +144,114 @@ package body Grille is
       if not estCaseVide (G, C) then
          raise FIXER_CHIFFRE_NON_NUL;
       end if;
-      gr := G;
-      --  for y in 1 .. G.Taille loop
-      --     for x in 1 .. G.Taille loop
-      --        gr.G (y, x) := G.G (y, x);
-      --     end loop;
-      --  end loop;
+      gr                                          := G;
       gr.G (ObtenirLigne (C), ObtenirColonne (C)) := V;
       return gr;
    end FixerChiffre;
+
+   --------------------
+   -- modifierTaille --
+   --------------------
+
+   procedure modifierTaille (G : in out Type_Grille; T : in Integer) is
+   begin
+      G.Taille := T;
+   end modifierTaille;
 
    ------------------
    -- Test Prop OK --
    ------------------
 
    function TestPropOK
-     (G : in Type_Grille; C : in Type_Coordonnee; x : Type_Chiffre)
-      return Boolean
+     (GR : in Type_Grille; C : in Type_Coordonnee; x : in Type_Chiffre;
+      T  : in Integer) return Boolean
    is
       r : Boolean := True;
-
+      G : Type_Grille;
    begin
-
       -- test rangée
+      G        := GR;
+      G.Taille := T;
       if TestChiffrePosable
           (extraireLigne (G => G, L => ObtenirLigne (C)), x) and
         TestChiffrePosable
           (extraireColonne (G => G, C => ObtenirColonne (C)), x)
       then
          if ObtenirLigne (C) > 2 then
-			put("haut");
-			if not estCaseVide (G, Haut (C)) and
-           not estCaseVide (G, Haut (Haut (C)))
-         then
-            if
-              (x = ObtenirChiffre (G, Haut (C)) and
-               x = ObtenirChiffre (G, Haut (Haut (C))))
+            if not estCaseVide (G, Haut (C)) and
+              not estCaseVide (G, Haut (Haut (C)))
             then
-               return False;
+               if
+                 (x = ObtenirChiffre (G, Haut (C)) and
+                  x = ObtenirChiffre (G, Haut (Haut (C))))
+               then
+                  return False;
+               end if;
             end if;
-			end if;
-		end if	;
-
-		if ObtenirLigne (C) < Taille (G) - 2 then
-			put("bas");
-			if not estCaseVide (G, Bas (C)) and
-			  not estCaseVide (G, Bas (Bas (C)))
-         then
-            if
-              (x = ObtenirChiffre (G, Bas (C)) and
-               x = ObtenirChiffre (G, Bas (Bas (C))))
+         end if;
+         if ObtenirLigne (C) < Taille (G) - 2 then
+            if not estCaseVide (G, Bas (C)) and
+              not estCaseVide (G, Bas (Bas (C)))
             then
-               return False;
+               if
+                 (x = ObtenirChiffre (G, Bas (C)) and
+                  x = ObtenirChiffre (G, Bas (Bas (C))))
+               then
+                  return False;
+               end if;
             end if;
-				end if;
-		end if	;
-
-		if ObtenirColonne (C) > 2 then
-				if not estCaseVide (G, gauche (C)) and
-           not estCaseVide (G, gauche (gauche ((C))))
-         then
-            if
-              (x = ObtenirChiffre (G, gauche (C)) and
-               x = ObtenirChiffre (G, gauche (gauche (C))))
+         end if;
+         if ObtenirColonne (C) > 2 then
+            if not estCaseVide (G, gauche (C)) and
+              not estCaseVide (G, gauche (gauche ((C))))
             then
-               Put ("2 a gauche");
-               return False;
+               if
+                 (x = ObtenirChiffre (G, gauche (C)) and
+                  x = ObtenirChiffre (G, gauche (gauche (C))))
+               then
+                  return False;
+               end if;
             end if;
-			end if;
-		end if;
-
-
-		if ObtenirColonne (C) < Taille (G) - 2 then
-			if not estCaseVide (G, droite (C)) and
-           not estCaseVide (G, droite (droite ((C))))
-         then
-            if
-              (x = ObtenirChiffre (G, droite (C)) and
-               x = ObtenirChiffre (G, droite (droite (C))))
+         end if;
+         if ObtenirColonne (C) < Taille (G) - 2 then
+            if not estCaseVide (G, droite (C)) and
+              not estCaseVide (G, droite (droite ((C))))
             then
-				Put ("2 a droite");
-               return False;
+               if
+                 (x = ObtenirChiffre (G, droite (C)) and
+                  x = ObtenirChiffre (G, droite (droite (C))))
+               then
+                  return False;
+               end if;
             end if;
-			end if;
-		end if;
+         end if;
          -- test si la case est entourré d'au moins une inconnue
          -- test Haut bas gauche droite
-
-      if ObtenirColonne (C) > 1 and ObtenirColonne (C) < Taille (G) - 1 then
-        if not estCaseVide (G, gauche (C)) and not estCaseVide (G, droite (C))
-			then
-				put("sandwich");
-            if
-              (x = ObtenirChiffre (G, gauche (C)) and
-               (x = ObtenirChiffre (G, droite (C))))
+         if ObtenirColonne (C) > 1 and ObtenirColonne (C) < Taille (G) - 1 then
+            if not estCaseVide (G, gauche (C)) and
+              not estCaseVide (G, droite (C))
             then
-               return False;
+               if
+                 (x = ObtenirChiffre (G, gauche (C)) and
+                  (x = ObtenirChiffre (G, droite (C))))
+               then
+                  return False;
+               end if;
             end if;
          end if;
-		end if;
-
-	   if  ObtenirLigne (C) > 1 and ObtenirLigne (C) < Taille (G) - 1
-		then
-			if not estCaseVide (G, Haut (C)) and not estCaseVide (G, Bas (C)) then
-            if
-              (x = ObtenirChiffre (G, Haut (C)) and
-               (x = ObtenirChiffre (G, Bas (C))))
+         if ObtenirLigne (C) > 1 and ObtenirLigne (C) < Taille (G) - 1 then
+            if not estCaseVide (G, Haut (C)) and not estCaseVide (G, Bas (C))
             then
-               return False;
+               if
+                 (x = ObtenirChiffre (G, Haut (C)) and
+                  (x = ObtenirChiffre (G, Bas (C))))
+               then
+                  return False;
+               end if;
             end if;
          end if;
-		end if;
-			-- test sandwich
-		return True;
+         -- test sandwich
+         return True;
       else
          return False;
       end if;
@@ -284,14 +269,8 @@ package body Grille is
       if estCaseVide (G, C) then
          raise VIDER_CASE_VIDE;
       end if;
-
-      for y in 1 .. G.Taille loop
-         for x in 1 .. G.Taille loop
-            gr.G (y, x) := G.G (y, x);
-         end loop;
-      end loop;
-
-      gr.G (ObtenirColonne (C), ObtenirLigne (C)) := INCONNU;
+      gr                                          := G;
+      gr.G (ObtenirLigne (C), ObtenirColonne (C)) := INCONNU;
       return gr;
    end ViderCase;
 
@@ -304,11 +283,9 @@ package body Grille is
    begin
       for y in 1 .. Taille (G1) loop
          for x in 1 .. Taille (G1) loop
-
             if G1.G (y, x) /= G2.G (y, x) then
                return False;
             end if;
-
          end loop;
       end loop;
       return True;
